@@ -3,8 +3,8 @@ exports.__esModule = true;
 var fs_1 = require("fs");
 var file = (0, fs_1.readFileSync)('puzzle.txt', 'utf-8');
 var arr = file.toString().trim().split('\n').map(function (line) { return line.replace('\r', ''); });
-part_1(arr);
-part_2(arr);
+console.log(part_1(arr));
+console.log(part_2(arr));
 function part_1(arr) {
     var counter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     var half = arr.length / 2;
@@ -21,7 +21,7 @@ function part_1(arr) {
         gamma += counter[i] > half ? '1' : '0';
         epsilon += counter[i] > half ? '0' : '1';
     }
-    console.log(parseInt(gamma, 2) * parseInt(epsilon, 2));
+    return parseInt(gamma, 2) * parseInt(epsilon, 2);
 }
 function part_2(arr) {
     var oxygen = arr;
@@ -49,5 +49,5 @@ function part_2(arr) {
     for (var i = 0; i < arr[0].length; i++) {
         _loop_1(i);
     }
-    console.log(parseInt(oxygen[0], 2) * parseInt(co2[0], 2));
+    return parseInt(oxygen[0], 2) * parseInt(co2[0], 2);
 }

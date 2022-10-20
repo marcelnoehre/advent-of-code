@@ -3,8 +3,8 @@ exports.__esModule = true;
 var fs_1 = require("fs");
 var file = (0, fs_1.readFileSync)('puzzle.txt', 'utf-8');
 var arr = file.toString().trim().split('\n').map(function (num) { return parseInt(num, 10); });
-part_1(arr);
-part_2(arr);
+console.log(part_1(arr));
+console.log(part_2(arr));
 function part_1(arr) {
     var counter = 0;
     for (var i = 0; i < arr.length - 1; i++) {
@@ -12,7 +12,7 @@ function part_1(arr) {
             counter++;
         }
     }
-    console.log(counter);
+    return counter;
 }
 function part_2(arr) {
     var counter = 0;
@@ -23,5 +23,5 @@ function part_2(arr) {
             counter++;
         }
     }
-    console.log(counter);
+    return counter;
 }

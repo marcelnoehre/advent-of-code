@@ -1,11 +1,11 @@
 import { readFileSync } from 'fs';
 
 const file:any = readFileSync('puzzle.txt', 'utf-8');
-let arr:[string, number] = file.toString().trim().split('\n').map((line) => [line.split(' ')[0], parseInt(line.split(' ')[1], 10)]);
-part_1(arr);
-part_2(arr);
+const arr:[string, number] = file.toString().trim().split('\n').map((line) => [line.split(' ')[0], parseInt(line.split(' ')[1], 10)]);
+console.log(part_1(arr));
+console.log(part_2(arr));
 
-function part_1(arr:[string, number]) {
+function part_1(arr:[string, number]): number {
     let horizontalPosition = 0;
     let depth = 0;
     for(let i = 0; i < arr.length; i++) {
@@ -17,10 +17,10 @@ function part_1(arr:[string, number]) {
             depth -= arr[i][1];
         }
     }
-    console.log(horizontalPosition * depth);
+    return horizontalPosition * depth;
 }
 
-function part_2(arr:[string, number]) {
+function part_2(arr:[string, number]): number {
     let horizontalPosition = 0;
     let depth = 0;
     let aim = 0;
@@ -34,5 +34,5 @@ function part_2(arr:[string, number]) {
             aim -= arr[i][1];
         }
     }
-    console.log(horizontalPosition * depth);
+    return horizontalPosition * depth;
 }

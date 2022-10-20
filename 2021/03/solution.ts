@@ -1,11 +1,11 @@
 import { readFileSync } from 'fs';
 
 const file:any = readFileSync('puzzle.txt', 'utf-8');
-let arr:string[] = file.toString().trim().split('\n').map((line) => line.replace('\r', ''));
-part_1(arr);
-part_2(arr);
+const arr:string[] = file.toString().trim().split('\n').map((line) => line.replace('\r', ''));
+console.log(part_1(arr));
+console.log(part_2(arr));
 
-function part_1(arr: string[]) {
+function part_1(arr: string[]):number {
     let counter: number[] = [0,0,0,0,0,0,0,0,0,0,0,0];
     let half: number = arr.length/2;
     for(let i = 0; i < arr.length; i++) {
@@ -21,10 +21,10 @@ function part_1(arr: string[]) {
         gamma += counter[i] > half ? '1' : '0';
         epsilon += counter[i] > half ? '0' : '1'; 
     }
-    console.log(parseInt(gamma, 2) * parseInt(epsilon, 2));
+    return parseInt(gamma, 2) * parseInt(epsilon, 2);
 }
 
-function part_2(arr: string[]) {
+function part_2(arr: string[]):number {
     let oxygen: string[] = arr;
     let co2: string[] = arr;
     for(let i = 0; i < arr[0].length; i++) {
@@ -47,5 +47,5 @@ function part_2(arr: string[]) {
             co2 = co2.filter((binary) => binary[i] != (counter < co2.length/2? '0' : '1'));
         }
     }
-    console.log(parseInt(oxygen[0], 2) * parseInt(co2[0], 2));
+    return parseInt(oxygen[0], 2) * parseInt(co2[0], 2);
 }
