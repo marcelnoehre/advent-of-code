@@ -5,7 +5,7 @@ const row:string= file.toString().trim();
 console.log(part_1(row));
 console.log(part_2(row));
 
-function part_1(row): number {
+function part_1(row: string): number {
     let floor: number = 0;
     for(let i = 0; i < row.length; i++) {
         floor += row[i] == '('? 1:-1;
@@ -13,7 +13,7 @@ function part_1(row): number {
     return floor;
 }
 
-function part_2(row): number {
+function part_2(row: string): number {
     let floor: number = 0;
     for(let i = 0; i < row.length; i++) {
         floor += row[i] == '('? 1:-1;
