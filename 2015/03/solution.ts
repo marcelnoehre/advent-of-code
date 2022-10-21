@@ -5,7 +5,7 @@ const row:string[]= file.toString().trim().split('');
 console.log(part_1(row));
 console.log(part_2(row));
 
-function part_1(row: string[]) {
+function part_1(row: string[]): number {
     let position: number[] = [0,0];
     let done: number[][] = [[0,0]];
     let houses: number = 1;
@@ -34,7 +34,7 @@ function part_1(row: string[]) {
     return houses;
 }
 
-function part_2(row: string[]) {
+function part_2(row: string[]): number {
     let santa: number[] = [0,0];
     let robo: number[] = [0,0];
     let done: number[][] = [[0,0]];

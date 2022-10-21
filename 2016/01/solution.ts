@@ -5,7 +5,7 @@ const arr:string[] = file.toString().trim().split(', ');
 console.log(part_1(arr));
 console.log(part_2(arr));
 
-function part_1(statements: string[]) {
+function part_1(statements: string[]): number {
     let position: number[] = [0,0];
     let direction: string = 'north';
     for(let i = 0; i < statements.length; i++) {
@@ -44,7 +44,7 @@ function part_1(statements: string[]) {
     return (position[0] + position[1]) * -1;
 }
 
-function part_2(statements: string[]) {
+function part_2(statements: string[]): number {
     let position: number[] = [0,0];
     let direction: string = 'north';
     let visited: number[][] = [[0,0]];

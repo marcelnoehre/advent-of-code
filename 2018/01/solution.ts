@@ -5,7 +5,7 @@ const arr:number[] = file.toString().trim().split('\n').map((num) => parseInt(nu
 console.log(part_1(arr));
 console.log(part_2(arr));
 
-function part_1(numbers: number[]) {
+function part_1(numbers: number[]): number {
     let frequency: number = 0;
     for(let i = 0; i < numbers.length; i++) {
         frequency += numbers[i];
@@ -13,7 +13,7 @@ function part_1(numbers: number[]) {
     return frequency;
 }
 
-function part_2(numbers: number[]) {
+function part_2(numbers: number[]):number {
     let frequencies: number[] = [0];
     let frequency: number = 0;
     do {

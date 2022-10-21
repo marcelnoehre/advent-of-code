@@ -5,7 +5,7 @@ const arr:number[] = file.toString().trim().split('').map((num) => parseInt(num,
 console.log(part_1(arr));
 console.log(part_2(arr));
 
-function part_1(numbers: number[]) {
+function part_1(numbers: number[]): number {
     let sum:number = 0;
     for(let i = 1; i < numbers.length; i++) {
         if(numbers[i] == numbers[i-1]) {
@@ -18,7 +18,7 @@ function part_1(numbers: number[]) {
     return sum;
 }
 
-function part_2(numbers: number[]) {
+function part_2(numbers: number[]): number {
     let sum:number = 0;
     let forward: number = numbers.length/2;
     for(let i = 0; i < numbers.length; i++) {
