@@ -7,7 +7,7 @@ const boards: number[][][] = arr.slice(1, arr.length).map((board) => board.split
 console.log(part_1(numbers, boards));
 console.log(part_2(numbers, boards));
 
-function part_1(numbers: number[], boards: number[][][]) {
+function part_1(numbers: number[], boards: number[][][]):number {
     let drawn: number[] = [];
     let latest: number;
     for(let i = 0; i < numbers.length; i++) {
