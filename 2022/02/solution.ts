@@ -5,14 +5,6 @@ const arr: number[] = file.toString().split('\r\n').map((tupel) => tupel.split('
 console.log(part_1(arr));
 console.log(part_2(arr));
 
-// A Rock
-// B Paper
-//C schere
-
-// X Rock 
-// y paper
-// Z schere
-
 function part_1(list: number[]):number {
     let sum: number = 0;
     list.forEach(tupel => {
