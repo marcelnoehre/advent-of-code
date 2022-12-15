@@ -35,7 +35,6 @@ function part_1(list) {
     return two * three;
 }
 function part_2(list) {
-    console.log('abcdef'.slice(0, 4) + 'abcdef'.slice(5, 'abcdef'.length));
     for (var x = 0; x < list.length; x++) {
         for (var y = 0; y < list.length; y++) {
             var difference = 0;
