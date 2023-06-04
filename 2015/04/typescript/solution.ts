@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import { Md5 } from 'ts-md5/dist/md5';
 
-const file:any = readFileSync('puzzle.txt', 'utf-8');
+const file:any = readFileSync('../puzzle.txt', 'utf-8');
 const row:string = file.toString().trim();
 console.log(part_1(row));
 console.log(part_2(row));

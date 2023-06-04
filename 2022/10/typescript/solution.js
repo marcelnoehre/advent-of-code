@@ -1,7 +1,7 @@
 "use strict";
 exports.__esModule = true;
 var fs_1 = require("fs");
-var file = (0, fs_1.readFileSync)('puzzle.txt', 'utf-8');
+var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');
 var arr = file.toString().split('\r\n').map(function (row) { return row.split(' '); });
 console.log(part_1(arr));
 part_2(arr);

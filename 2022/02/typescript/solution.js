@@ -1,16 +1,10 @@
 "use strict";
 exports.__esModule = true;
 var fs_1 = require("fs");
-var file = (0, fs_1.readFileSync)('puzzle.txt', 'utf-8');
+var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');
 var arr = file.toString().split('\r\n').map(function (tupel) { return tupel.split(' '); });
 console.log(part_1(arr));
 console.log(part_2(arr));
-// A Rock
-// B Paper
-//C schere
-// X Rock 
-// y paper
-// Z schere
 function part_1(list) {
     var sum = 0;
     list.forEach(function (tupel) {

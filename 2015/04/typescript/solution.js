@@ -2,7 +2,7 @@
 exports.__esModule = true;
 var fs_1 = require("fs");
 var md5_1 = require("ts-md5/dist/md5");
-var file = (0, fs_1.readFileSync)('puzzle.txt', 'utf-8');
+var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');
 var row = file.toString().trim();
 console.log(part_1(row));
 console.log(part_2(row));

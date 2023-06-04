@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('puzzle.txt', 'utf-8');
+const file:any = readFileSync('../puzzle.txt', 'utf-8');
 const arr:[string, number] = file.toString().trim().split('\n').map((line) => [line.split(' ')[0], parseInt(line.split(' ')[1], 10)]);
 console.log(part_1(arr));
 console.log(part_2(arr));

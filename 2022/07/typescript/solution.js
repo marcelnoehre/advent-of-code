@@ -1,11 +1,11 @@
 "use strict";
 exports.__esModule = true;
 var fs_1 = require("fs");
-var file = (0, fs_1.readFileSync)('puzzle.txt', 'utf-8');
+var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');
 var arr = file.toString().split('\r\n');
 var global_sum_1 = 0;
 var global_sum_2 = 0;
-var global_2 = [];
+var global_list_2 = [];
 console.log(part_1(arr));
 console.log(part_2(arr));
 function part_1(commands) {
@@ -54,7 +54,7 @@ function part_1(commands) {
             tmp_2.push('file_' + file_1[1] + '_' + file_1[0]);
         }
     });
-    global_sum_2 = sum_part_1(system);
+    global_sum_2 = recursive_1(system);
     return global_sum_1;
 }
 function part_2(commands) {
@@ -103,11 +103,10 @@ function part_2(commands) {
             tmp_4.push('file_' + file_2[1] + '_' + file_2[0]);
         }
     });
-    find_free(system);
-    global_2.sort(function (n1, n2) { return n1 - n2; });
-    return global_2[0];
+    recursive_2(system);
+    return global_list_2.sort(function (n1, n2) { return n1 - n2; })[0];
 }
-function sum_part_1(array) {
+function recursive_1(array) {
     var sum = 0;
     array.forEach(function (object) {
         if (typeof (object) == 'string') {
@@ -116,13 +115,13 @@ function sum_part_1(array) {
             }
         }
         else {
-            sum += sum_part_1(object);
+            sum += recursive_1(object);
         }
     });
     global_sum_1 += sum <= 100000 ? sum : 0;
     return sum;
 }
-function find_free(array) {
+function recursive_2(array) {
     var sum = 0;
     array.forEach(function (object) {
         if (typeof (object) == 'string') {
@@ -131,11 +130,11 @@ function find_free(array) {
             }
         }
         else {
-            sum += find_free(object);
+            sum += recursive_2(object);
         }
     });
     if (sum + 70000000 - global_sum_2 >= 30000000) {
-        global_2.push(sum);
+        global_list_2.push(sum);
     }
     return sum;
 }

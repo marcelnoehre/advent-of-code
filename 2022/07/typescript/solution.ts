@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('puzzle.txt', 'utf-8');
+const file:any = readFileSync('../puzzle.txt', 'utf-8');
 const arr: string[] = file.toString().split('\r\n');
 let global_sum_1 = 0;
 let global_sum_2: number = 0;
