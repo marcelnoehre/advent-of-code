@@ -4,7 +4,7 @@ import java.nio.file.*;
 import java.util.*;
 
 public class Solution {
-    private static Map<Integer, Integer> ELFS = new HashMap<Integer, Integer>();
+    private static List<Integer> ELVES = new ArrayList<Integer>();
     
     public static void main(String[] args) { 
         try {
@@ -17,22 +17,20 @@ public class Solution {
     }
     
 	private static Integer part1() {
-        return Collections.max(ELFS.values());
+        return Collections.max(ELVES);
     }
     
     private static Integer part2() {
-        return ELFS.values().stream().sorted(Collections.reverseOrder())
+        return ELVES.stream().sorted(Collections.reverseOrder())
                 .limit(3).mapToInt(Integer::intValue).sum();
     }
     
     private static void setElfs(List<String> input) {
-        int elf = 1;
         int sum = 0;
         for(String calory : input) {
             if(calory.isBlank()) {
-                ELFS.put(elf, sum);
+                ELVES.add(sum);
                 sum = 0;
-                elf++;
             } else {
                 sum += Integer.parseInt(calory);
             }

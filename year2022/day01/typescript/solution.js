@@ -3,34 +3,26 @@ exports.__esModule = true;
 var fs_1 = require("fs");
 var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');
 var arr = file.toString().trim().split('\r\n').map(function (num) { return parseInt(num, 10); });
-console.log(part_1(arr));
-console.log(part_2(arr));
-function part_1(list) {
-    var elves = [0];
-    var elveId = 0;
-    for (var i = 0; i < list.length; i++) {
-        if (isNaN(list[i])) {
-            elveId++;
-            elves.push(0);
-        }
-        else {
-            elves[elveId] += list[i];
-        }
-    }
+var elves = [];
+setElves();
+console.log(part_1());
+console.log(part_2());
+function part_1() {
     return Math.max.apply(Math, elves);
 }
-function part_2(list) {
-    var elves = [0];
-    var elveId = 0;
-    for (var i = 0; i < list.length; i++) {
-        if (isNaN(list[i])) {
-            elveId++;
-            elves.push(0);
+function part_2() {
+    elves.sort(function (a, b) { return b - a; });
+    return elves.slice(0, 3).reduce(function (acc, curr) { return acc + curr; }, 0);
+}
+function setElves() {
+    var sum = 0;
+    arr.forEach(function (calory) {
+        if (isNaN(calory)) {
+            elves.push(sum);
+            sum = 0;
         }
         else {
-            elves[elveId] += list[i];
+            sum += calory;
         }
-    }
-    elves.sort(function (a, b) { return b - a; });
-    return elves[0] + elves[1] + elves[2];
+    });
 }

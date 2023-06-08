@@ -2,34 +2,28 @@ import { readFileSync } from 'fs';
 
 const file:any = readFileSync('../puzzle.txt', 'utf-8');
 const arr: number[] = file.toString().trim().split('\r\n').map((num) => parseInt(num, 10));
-console.log(part_1(arr));
-console.log(part_2(arr));
+let elves: number[] = [];
+setElves();
+console.log(part_1());
+console.log(part_2());
 
-function part_1(list: number[]):number {
-    let elves: number[] = [0];
-    let elveId: number = 0;
-    for(let i = 0; i < list.length; i++) {
-        if(isNaN(list[i])) {
-            elveId++;
-            elves.push(0)
-        } else {
-            elves[elveId] += list[i];
-        }
-    }
+function part_1():number {
     return Math.max(...elves);
 }
 
-function part_2(list: number[]):number {
-    let elves: number[] = [0];
-    let elveId: number = 0;
-    for(let i = 0; i < list.length; i++) {
-        if(isNaN(list[i])) {
-            elveId++;
-            elves.push(0)
-        } else {
-            elves[elveId] += list[i];
-        }
-    }
+function part_2():number {
     elves.sort(function(a, b){return b-a});
-    return elves[0]+elves[1]+elves[2];
+    return elves.slice(0, 3).reduce((acc, curr) => acc + curr, 0);
+}
+
+function setElves() {
+    let sum = 0;
+    arr.forEach(calory => {
+        if(isNaN(calory)) {
+            elves.push(sum);
+            sum = 0;
+        } else {
+            sum += calory;
+        }
+    });
 }
