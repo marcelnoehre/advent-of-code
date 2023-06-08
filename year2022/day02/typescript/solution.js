@@ -3,76 +3,41 @@ exports.__esModule = true;
 var fs_1 = require("fs");
 var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');
 var arr = file.toString().split('\r\n').map(function (tupel) { return tupel.split(' '); });
-console.log(part_1(arr));
-console.log(part_2(arr));
-function part_1(list) {
+var RPS = {
+    A: { shape: 'rock', score: 1, result: 'lose', nemesis: 'paper' },
+    B: { shape: 'paper', score: 2, result: 'draw', nemesis: 'scissors' },
+    C: { shape: 'scissors', score: 3, result: 'win', nemesis: 'rock' },
+    X: { shape: 'rock', score: 1, result: 'lose', nemesis: 'paper' },
+    Y: { shape: 'paper', score: 2, result: 'draw', nemesis: 'scissors' },
+    Z: { shape: 'scissors', score: 3, result: 'win', nemesis: 'rock' }
+};
+console.log(part_1(RPS));
+console.log(part_2(RPS));
+function part_1(RPS) {
     var sum = 0;
-    list.forEach(function (tupel) {
-        if (tupel[1] == 'X') {
-            sum += 1;
-            if (tupel[0] == 'A') {
-                sum += 3;
-            }
-            else if (tupel[0] == 'C') {
-                sum += 6;
-            }
-        }
-        else if (tupel[1] == 'Y') {
-            sum += 2;
-            if (tupel[0] == 'B') {
-                sum += 3;
-            }
-            else if (tupel[0] == 'A') {
-                sum += 6;
-            }
-        }
-        else if (tupel[1] == 'Z') {
+    arr.forEach(function (round) {
+        if (RPS[round[0]].shape === RPS[round[1]].shape) {
             sum += 3;
-            if (tupel[0] == 'C') {
-                sum += 3;
-            }
-            else if (tupel[0] == 'B') {
-                sum += 6;
-            }
         }
+        else if (RPS[round[1]].shape === RPS[round[0]].nemesis) {
+            sum += 6;
+        }
+        sum += RPS[round[1]].score;
     });
     return sum;
 }
-function part_2(list) {
+function part_2(RPS) {
     var sum = 0;
-    list.forEach(function (tupel) {
-        if (tupel[0] == 'A') {
-            if (tupel[1] == 'X') {
-                sum += 0 + 3;
-            }
-            else if (tupel[1] == 'Y') {
-                sum += 3 + 1;
-            }
-            else {
-                sum += 6 + 2;
-            }
-        }
-        else if (tupel[0] == 'B') {
-            if (tupel[1] == 'X') {
-                sum += 0 + 1;
-            }
-            else if (tupel[1] == 'Y') {
-                sum += 3 + 2;
-            }
-            else {
-                sum += 6 + 3;
-            }
-        }
-        else if (tupel[0] == 'C') {
-            if (tupel[1] == 'X') {
-                sum += 0 + 2;
-            }
-            else if (tupel[1] == 'Y') {
-                sum += 3 + 3;
-            }
-            else {
-                sum += 6 + 1;
-            }
+    arr.forEach(function (round) {
+        switch (RPS[round[1]].result) {
+            case 'win':
+                sum += 6 + ((RPS[round[0]].score + 1) % 3 == 0 ? 3 : (RPS[round[0]].score + 1) % 3);
+                break;
+            case 'draw':
+                sum += 3 + RPS[round[0]].score;
+                break;
+            case 'lose':
+                sum += RPS[round[0]].score - 1 >= 1 ? RPS[round[0]].score - 1 : 3;
         }
     });
     return sum;

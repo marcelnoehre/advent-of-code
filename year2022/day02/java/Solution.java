@@ -46,18 +46,18 @@ public class Solution {
             return 3 + player.score;
         }
         switch(player.shape) {
-        case "Rock":
-            if(elf.shape.equals("Scissors")) {
+        case "rock":
+            if(elf.shape.equals("scissors")) {
                 return 6 + player.score;
             }
             break;
-        case "Paper":
-            if(elf.shape.equals("Rock")) {
+        case "paper":
+            if(elf.shape.equals("rock")) {
                 return 6 + player.score;
             }
             break;
-        case "Scissors":
-            if(elf.shape.equals("Paper")) {
+        case "scissors":
+            if(elf.shape.equals("paper")) {
                 return 6 + player.score;
             }
             break;
@@ -66,9 +66,9 @@ public class Solution {
     }
     
     private static int forcedRound(RPS elf, RPS player) {
-        if (player.result.equals("Win")) {
+        if (player.result.equals("win")) {
             return 6 + ((elf.score + 1) % 3 == 0 ? 3 : (elf.score + 1) % 3);
-        } else if (player.result.equals("Loss")) {
+        } else if (player.result.equals("lose")) {
             return elf.score - 1 >= 1 ? elf.score - 1 : 3;
         } else {
             return 3 + elf.score;
@@ -76,12 +76,12 @@ public class Solution {
     }
     
     private enum RPS {
-        A("Rock", 1, "Loss"),
-        B("Paper", 2, "Draw"),
-        C("Scissors", 3, "Win"),
-        X("Rock", 1, "Loss"),
-        Y("Paper", 2, "Draw"),
-        Z("Scissors", 3, "Win");
+        A("rock", 1, "lose"),
+        B("paper", 2, "draw"),
+        C("scissors", 3, "win"),
+        X("rock", 1, "lose"),
+        Y("paper", 2, "draw"),
+        Z("scissors", 3, "win");
         
         String shape;
         int score;
