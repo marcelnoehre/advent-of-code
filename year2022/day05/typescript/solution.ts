@@ -1,54 +1,36 @@
 import { readFileSync } from 'fs';
 
 const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr = file.toString().split('\r\n\r\n');
-console.log(part_1(arr[0].toString().split('\r\n'), arr[1].toString().split('\r\n').map((row) => row.split(' ').map((element) => parseInt(element)))));
-console.log(part_2(arr[0].toString().split('\r\n'), arr[1].toString().split('\r\n').map((row) => row.split(' ').map((element) => parseInt(element)))));
+const arr: string[] = file.toString().split('\r\n\r\n');
+const initalStacks: string[][] = setupStacks(arr[0].toString().split('\r\n').slice(0, -1).reverse());
+const instructions: number[][] = arr[1].toString().split('\r\n').map((row) => row.split(' ').map((element) => parseInt(element)));
+console.log(part_1());
+console.log(part_2());
 
-function part_1(initStacks: string[], instructions: number[]):string {
-    let stacks: string[][] = [[],[],[],[],[],[],[],[],[]];
-    let positions: number[] = [1, 5, 9, 13, 17, 21, 25, 29, 33];
-    for(let i = initStacks.length-2; i >= 0; i--) {
-        for(let s = 0; s < positions.length; s++) {
-            if(initStacks[i].charAt(positions[s]) !== ' ') {
-                stacks[s].push(initStacks[i].charAt(positions[s]));
-            }
-        };
-    }
-    instructions.forEach(instruction => {
-        for(let i = 0; i < instruction[1]; i++) {
-            stacks[instruction[5]-1].push(stacks[instruction[3]-1].pop());
-        }
+function part_1(): string {
+    let stacks: string[][] = initalStacks.map(stack => [...stack]);
+    instructions.forEach(move => {
+        stacks[move[5]-1].push(...stacks[move[3]-1].splice(stacks[move[3]-1].length - move[1], move[1]).reverse());
     });
-    let key: string = '';
-    for(let i = 0; i < positions.length; i++) {
-        key += stacks[i].pop();
-    }
-    return key;
+    return stacks.map((_, i) => stacks[i].pop()).join('');
 }
 
-function part_2(initStacks: string[], instructions: number[]):string {
-    let stacks: string[][] = [[],[],[],[],[],[],[],[],[]];
-    let positions: number[] = [1, 5, 9, 13, 17, 21, 25, 29, 33];
-    for(let i = initStacks.length-2; i >= 0; i--) {
-        for(let s = 0; s < positions.length; s++) {
-            if(initStacks[i].charAt(positions[s]) !== ' ') {
-                stacks[s].push(initStacks[i].charAt(positions[s]));
+function part_2(): string {
+    let stacks: string[][] = initalStacks.map(stack => [...stack]);
+    instructions.forEach(move => {
+        stacks[move[5] - 1].push(...stacks[move[3] - 1].splice(-move[1]));
+      });
+    return stacks.map((_, i) => stacks[i].pop()).join('');
+}
+
+function setupStacks(input: string[]) {
+    let build: string[][] = [...Array(9)].map(() => []);
+    for(let i = 1; i < input[0].length; i += 4) {
+        input.forEach(stack => {
+            if(/[A-Z]/.test(stack.charAt(i))) {
+                build[Math.floor(i / 4)].push(stack.charAt(i));
             }
-        };
+        });
     }
-    instructions.forEach(instruction => {
-        let tmp: string[] = [];
-        for(let i = 0; i < instruction[1]; i++) {
-            tmp.push(stacks[instruction[3]-1].pop());
-        }
-        for(let i = tmp.length-1; i >= 0; i--) {
-            stacks[instruction[5]-1].push(tmp[i]);
-        }
-    });
-    let key: string = '';
-    for(let i = 0; i < positions.length; i++) {
-        key += stacks[i].pop();
-    }
-    return key;
+    return build;
 }
