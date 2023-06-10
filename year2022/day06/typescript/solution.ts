@@ -2,31 +2,25 @@ import { readFileSync } from 'fs';
 
 const file:any = readFileSync('../puzzle.txt', 'utf-8');
 const arr: string[] = file.toString().trim().split('');
-console.log(part_1(arr));
-console.log(part_2(arr));
+console.log(part_1());
+console.log(part_2());
 
-function part_1(stream: string[]):number {
-    for(let i = 0; i < stream.length-3; i++) {
-        let key: string[] = [];
-        for(let j = 0; j <= 3; j++) {
-            key.push(stream[i+j]);
-        }
-        if((new Set(key)).size === key.length) {
-            return i+4;
-        }
-    }
-    return null;
+function part_1():number {
+    return getMarker(4);
 }
 
-function part_2(stream: string[]):number {
-    for(let i = 0; i < stream.length-3; i++) {
+function part_2():number {
+    return getMarker(14);
+}
+
+function getMarker(length: number): number {
+    for(let i = 0; i < arr.length - 3; i++) {
         let key: string[] = [];
-        for(let j = 0; j <= 13; j++) {
-            key.push(stream[i+j]);
+        for(let j = 0; j <= length - 1; j++) {
+            key.push(arr[i + j]);
         }
         if((new Set(key)).size === key.length) {
-            return i+14;
+            return i + length;
         }
     }
-    return null;
 }
