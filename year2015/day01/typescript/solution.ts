@@ -1,25 +1,13 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const row:string= file.toString().trim();
-console.log(part_1(row));
-console.log(part_2(row));
+const file: string = readFileSync('../puzzle.txt', 'utf-8').toString().trim();
+console.log(part_1());
+console.log(part_2());
 
-function part_1(row: string): number {
-    let floor: number = 0;
-    for(let i = 0; i < row.length; i++) {
-        floor += row[i] == '('? 1:-1;
-    }
-    return floor;
+function part_1(): number {
+    return file.split('').reduce((acc, char) => acc + (char === '(' ? 1 : -1), 0);
 }
 
-function part_2(row: string): number {
-    let floor: number = 0;
-    for(let i = 0; i < row.length; i++) {
-        floor += row[i] == '('? 1:-1;
-        if(floor == -1) {
-            return i+1;
-        }
-    }
-    return -1;
+function part_2(): number {
+    return file.split('').findIndex((_, i, a) => a.slice(0, i + 1).reduce((s, c) => s + (c === '(' ? 1 : -1), 0) === -1) + 1;
 }
