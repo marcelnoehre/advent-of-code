@@ -2,53 +2,51 @@ import { readFileSync } from 'fs';
 
 const file:any = readFileSync('../puzzle.txt', 'utf-8');
 const arr: any[][] = file.toString().split('\r\n').map((row) => row.split(' '));
-console.log(part_1(arr));
-part_2(arr);
+let stages: number[] = [20,60,100,140,180,220];
+console.log(part_1());
+console.log(part_2());
 
-function part_1(list: any[][]):number {
-    let stages: number[] = [20,60,100,140,180,220];
+function part_1(): number {
     let cycle: number = 0;
     let sum: number = 0;
     let x: number = 1;
-    list.forEach(instruction => {
+    arr.forEach(instruction => {
         cycle++;
         if(stages.includes(cycle)) {
-            sum += cycle*x;
+            sum += cycle * x;
         }
-        if(instruction.length == 2) {
+        if(instruction.length === 2) {
             cycle++;
             if(stages.includes(cycle)) {
-                sum += cycle*x;
+                sum += cycle * x;
             }
-            x += parseInt(instruction[1],10);
+            x += parseInt(instruction[1], 10);
         }
     });
     return sum;
 }
 
-function part_2(list: any[]): void {
-    let stages: number[] = [40,80,120,160,200,240];
+function part_2(): string {
+    stages = stages.map((num) => num + 20);
+    let sprite: number[] = [0, 1, 2];
     let cycle: number = 1;
-    let sprite: number[] = [0,1,2];
-    let x: number = 1;
     let row: string = '';
-    list.forEach(instruction => {
-        if(stages.includes(cycle-1)) {
-            console.log(row);
-            row = '';
+    let x: number = 1;
+    arr.forEach(instruction => {
+        if(stages.includes(cycle - 1)) {
+            row += '\n';
         }
-        row += sprite.includes((cycle-1) % 40) ? '#' : '.'
+        row += sprite.includes((cycle - 1) % 40) ? '#' : '.';
         cycle++;
-        if(instruction.length == 2) {
-            if(stages.includes(cycle-1)) {
-                console.log(row);
-                row = '';
+        if(instruction.length === 2) {
+            if(stages.includes(cycle - 1)) {
+                row += '\n';
             }
-            row += sprite.includes((cycle-1) % 40) ? '#' : '.'
-            x += parseInt(instruction[1],10);
-            sprite = [x-1, x, x+1];
+            row += sprite.includes((cycle - 1) % 40) ? '#' : '.';
+            x += parseInt(instruction[1], 10);
+            sprite = [x - 1, x, x + 1];
             cycle++;
         }
     });
-    console.log(row);
+    return row;
 }
