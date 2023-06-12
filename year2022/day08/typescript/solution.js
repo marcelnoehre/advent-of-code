@@ -3,43 +3,31 @@ exports.__esModule = true;
 var fs_1 = require("fs");
 var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');
 var arr = file.toString().trim().split('\r\n').map(function (row) { return row.split('').map(function (num) { return parseInt(num, 10); }); });
-console.log(part_1(arr));
-console.log(part_2(arr));
-function part_1(board) {
+var _a = [arr[0].length, arr.length], width = _a[0], height = _a[1];
+var directions = [
+    [1, 0],
+    [-1, 0],
+    [0, 1],
+    [0, -1]
+];
+console.log(part_1());
+console.log(part_2());
+function part_1() {
     var sum = 0;
-    for (var i = 0; i < board.length; i++) {
-        for (var j = 0; j < board[i].length; j++) {
-            if (i === 0 || j === 0 || i === board.length - 1 || j === board[i].length - 1) {
-                sum++;
-            }
-            else {
-                var up = true;
-                var down = true;
-                var left = true;
-                var right = true;
-                for (var x = 0; x < board.length; x++) {
-                    if (board[i][j] <= board[i][x]) {
-                        if (x < j) {
-                            up = false;
-                        }
-                        else if (x > j) {
-                            down = false;
-                        }
+    for (var _i = 0, directions_1 = directions; _i < directions_1.length; _i++) {
+        var _a = directions_1[_i], dx = _a[0], dy = _a[1];
+        for (var y = 0; y < height; y++) {
+            for (var x = 0; x < width; x++) {
+                var i = y + dy;
+                var j = x + dx;
+                while (i >= 0 && i < height && j >= 0 && j < width) {
+                    if (arr[i][j] >= arr[y][x]) {
+                        break;
                     }
+                    i += dy;
+                    j += dx;
                 }
-                if (!up && !down) {
-                    for (var x = 0; x < board[i].length; x++) {
-                        if (board[i][j] <= board[x][j]) {
-                            if (x < i) {
-                                left = false;
-                            }
-                            else if (x > i) {
-                                right = false;
-                            }
-                        }
-                    }
-                }
-                if (up || down || left || right) {
+                if (i < 0 || i >= height || j < 0 || j >= width) {
                     sum++;
                 }
             }
@@ -47,40 +35,27 @@ function part_1(board) {
     }
     return sum;
 }
-function part_2(board) {
+function part_2() {
     var result = 0;
-    for (var i = 0; i < board.length; i++) {
-        for (var j = 0; j < board[i].length; j++) {
-            board[i][j];
-            var up = 0;
-            for (var x = i - 1; x >= 0; x--) {
-                up++;
-                if (board[x][j] >= board[i][j]) {
-                    x = -1;
+    for (var y = 0; y < height; y++) {
+        for (var x = 0; x < width; x++) {
+            var distance = 1;
+            for (var _i = 0, directions_2 = directions; _i < directions_2.length; _i++) {
+                var _a = directions_2[_i], dx = _a[0], dy = _a[1];
+                var i = y + dy;
+                var j = x + dx;
+                var sum = 0;
+                while (i >= 0 && i < height && j >= 0 && j < width) {
+                    sum++;
+                    if (arr[i][j] >= arr[y][x]) {
+                        break;
+                    }
+                    i += dy;
+                    j += dx;
                 }
+                distance *= sum;
             }
-            var down = 0;
-            for (var x = i + 1; x < board.length; x++) {
-                down++;
-                if (board[x][j] >= board[i][j]) {
-                    x = board.length;
-                }
-            }
-            var left = 0;
-            for (var x = j - 1; x >= 0; x--) {
-                left++;
-                if (board[i][x] >= board[i][j]) {
-                    x = -1;
-                }
-            }
-            var right = 0;
-            for (var x = j + 1; x < board[i].length; x++) {
-                right++;
-                if (board[i][x] >= board[i][j]) {
-                    x = board[i].length;
-                }
-            }
-            result = (up * down * left * right) > result ? (up * down * left * right) : result;
+            result = Math.max(result, distance);
         }
     }
     return result;
