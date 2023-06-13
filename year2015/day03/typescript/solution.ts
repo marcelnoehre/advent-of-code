@@ -1,87 +1,33 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const row:string[]= file.toString().trim().split('');
-console.log(part_1(row));
-console.log(part_2(row));
+const file: any = readFileSync('../puzzle.txt', 'utf-8');
+const arr: string[] = file.toString().trim().split('');
+const directions = {
+    '^': [0, 1],
+    'v': [0, -1],
+    '<': [-1, 0],
+    '>': [1, 0]
+}
+console.log(part_1());
+console.log(part_2());
 
-function part_1(row: string[]): number {
-    let position: number[] = [0,0];
-    let done: number[][] = [[0,0]];
-    let houses: number = 1;
-    for(let i = 0; i < row.length; i++) {
-        if(row[i] == '^') {
-            position[1]++;
-        } else if(row[i] == 'v') {
-            position[1]--;
-        } else if(row[i] == '>') {
-            position[0]++;
-        } else if(row[i] == '<') {
-            position[0]--;
-        }
-        let check = true;
-        for(let j = 0; j < done.length; j++) {
-            if(done[j][0] == position[0] && done[j][1] == position[1]) {
-                check = false;
-                j = done.length;
-            }
-        }
-        if(check) {
-            done.push([...[position[0], position[1]]]);
-            houses++;
-        }
-    }
-    return houses;
+function part_1(): number {
+    return new Set(decodeInstructions(arr)).size;
 }
 
-function part_2(row: string[]): number {
-    let santa: number[] = [0,0];
-    let robo: number[] = [0,0];
-    let done: number[][] = [[0,0]];
-    let houses: number = 1;
-    for(let i = 0; i < row.length; i++) {
-        let check = true;
-        if(i%2==1) {
-            if(row[i] == '^') {
-                santa[1]++;
-            } else if(row[i] == 'v') {
-                santa[1]--;
-            } else if(row[i] == '>') {
-                santa[0]++;
-            } else if(row[i] == '<') {
-                santa[0]--;
-            }
-            for(let j = 0; j < done.length; j++) {
-                if(done[j][0] == santa[0] && done[j][1] == santa[1]) {
-                    check = false;
-                    j = done.length;
-                }
-            }
-            if(check) {
-                done.push([...[santa[0], santa[1]]]);
-                houses++;
-            }
-        } else {
-            if(row[i] == '^') {
-                robo[1]++;
-            } else if(row[i] == 'v') {
-                robo[1]--;
-            } else if(row[i] == '>') {
-                robo[0]++;
-            } else if(row[i] == '<') {
-                robo[0]--;
-            }
-            for(let j = 0; j < done.length; j++) {
-                if(done[j][0] == robo[0] && done[j][1] == robo[1]) {
-                    check = false;
-                    j = done.length;
-                }
-            }
-            if(check) {
-                done.push([...[robo[0], robo[1]]]);
-                houses++;
-            }
-        }
-    }
-    return houses;
+function part_2(): number {
+    const [odds, evens] = arr.reduce(([odd, even], element, index) => index % 2 === 1
+            ? [odd.concat(element), even] : [odd, even.concat(element)], [[], []]);
+    return new Set([...decodeInstructions(odds), ...decodeInstructions(evens)]).size;
+}
+
+function decodeInstructions(instructions: string[]) {
+    const houses: [number, number][] = [[0, 0]];
+    let [x, y] = [0, 0];
+    instructions.forEach((instruction) => {
+        x += directions[instruction][0];
+        y += directions[instruction][1];
+        houses.push([x, y]);
+    });
+    return houses.map((house) => house.join());
 }

@@ -1,96 +1,43 @@
 "use strict";
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 exports.__esModule = true;
 var fs_1 = require("fs");
 var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');
-var row = file.toString().trim().split('');
-console.log(part_1(row));
-console.log(part_2(row));
-function part_1(row) {
-    var position = [0, 0];
-    var done = [[0, 0]];
-    var houses = 1;
-    for (var i = 0; i < row.length; i++) {
-        if (row[i] == '^') {
-            position[1]++;
-        }
-        else if (row[i] == 'v') {
-            position[1]--;
-        }
-        else if (row[i] == '>') {
-            position[0]++;
-        }
-        else if (row[i] == '<') {
-            position[0]--;
-        }
-        var check = true;
-        for (var j = 0; j < done.length; j++) {
-            if (done[j][0] == position[0] && done[j][1] == position[1]) {
-                check = false;
-                j = done.length;
-            }
-        }
-        if (check) {
-            done.push([position[0], position[1]]);
-            houses++;
-        }
-    }
-    return houses;
+var arr = file.toString().trim().split('');
+var directions = {
+    '^': [0, 1],
+    'v': [0, -1],
+    '<': [-1, 0],
+    '>': [1, 0]
+};
+console.log(part_1());
+console.log(part_2());
+function part_1() {
+    return new Set(decodeInstructions(arr)).size;
 }
-function part_2(row) {
-    var santa = [0, 0];
-    var robo = [0, 0];
-    var done = [[0, 0]];
-    var houses = 1;
-    for (var i = 0; i < row.length; i++) {
-        var check = true;
-        if (i % 2 == 1) {
-            if (row[i] == '^') {
-                santa[1]++;
-            }
-            else if (row[i] == 'v') {
-                santa[1]--;
-            }
-            else if (row[i] == '>') {
-                santa[0]++;
-            }
-            else if (row[i] == '<') {
-                santa[0]--;
-            }
-            for (var j = 0; j < done.length; j++) {
-                if (done[j][0] == santa[0] && done[j][1] == santa[1]) {
-                    check = false;
-                    j = done.length;
-                }
-            }
-            if (check) {
-                done.push([santa[0], santa[1]]);
-                houses++;
-            }
-        }
-        else {
-            if (row[i] == '^') {
-                robo[1]++;
-            }
-            else if (row[i] == 'v') {
-                robo[1]--;
-            }
-            else if (row[i] == '>') {
-                robo[0]++;
-            }
-            else if (row[i] == '<') {
-                robo[0]--;
-            }
-            for (var j = 0; j < done.length; j++) {
-                if (done[j][0] == robo[0] && done[j][1] == robo[1]) {
-                    check = false;
-                    j = done.length;
-                }
-            }
-            if (check) {
-                done.push([robo[0], robo[1]]);
-                houses++;
-            }
-        }
-    }
-    return houses;
+function part_2() {
+    var _a = arr.reduce(function (_a, element, index) {
+        var odd = _a[0], even = _a[1];
+        return index % 2 === 1
+            ? [odd.concat(element), even] : [odd, even.concat(element)];
+    }, [[], []]), odds = _a[0], evens = _a[1];
+    return new Set(__spreadArray(__spreadArray([], decodeInstructions(odds), true), decodeInstructions(evens), true)).size;
+}
+function decodeInstructions(instructions) {
+    var houses = [[0, 0]];
+    var _a = [0, 0], x = _a[0], y = _a[1];
+    instructions.forEach(function (instruction) {
+        x += directions[instruction][0];
+        y += directions[instruction][1];
+        houses.push([x, y]);
+    });
+    return houses.map(function (house) { return house.join(); });
 }
