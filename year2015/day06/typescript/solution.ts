@@ -1,84 +1,42 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr:string[][] = file.toString().split('\n').map((instruction) => instruction.replace('\r','').split(' '));
-console.log(part_1(arr));
-console.log(part_2(arr));
+const file: any = readFileSync('../puzzle.txt', 'utf-8');
+const arr: string[][] = file.toString().split('\n').map((instruction) => instruction.replace('\r','').split(' '));
+console.log(part_1());
+console.log(part_2());
 
-function part_1(instructions: string[][]) {
-    let lights: boolean[][] = [];
-    for(let i = 0; i < 1000; i++) {
-        let row: boolean[] = [];
-        for(let j = 0; j < 1000; j++) {
-            row.push(false);
-        }
-        lights.push(row);
-    }
-    for(let i = 0; i < instructions.length; i++) {
-        if(instructions[i][0] == 'turn') {
-            let newStatus: boolean = instructions[i][1] == 'on';
-            let start: number[] = instructions[i][2].split(',').map((position) => parseInt(position, 10));
-            let end: number[] = instructions[i][4].split(',').map((position) => parseInt(position, 10));
-            for(let x = start[0]; x <= end[0]; x++) {
-                for(let y = start[1]; y <= end[1]; y++) {
-                    lights[x][y] = newStatus;
-                }
-            }
-        } else {
-            let start: number[] = instructions[i][1].split(',').map((position) => parseInt(position, 10));
-            let end: number[] = instructions[i][3].split(',').map((position) => parseInt(position, 10));
-            for(let x = start[0]; x <= end[0]; x++) {
-                for(let y = start[1]; y <= end[1]; y++) {
-                    lights[x][y] = !lights[x][y];
-                }
-            }
-        }
-    }
-    let counter: number = 0;
-    for(let x = 0; x < 1000; x++) {
-        for(let y = 0; y < 1000; y++) {
-            if(lights[x][y]) {
-                counter++;
-            }
-        }
-    }
-    return counter;
+function part_1(): number {
+    const lights: number[][] = Array.from({ length: 1000 }, () => new Array(1000).fill(0));
+    arr.forEach((instruction) => {
+        const toggle: number = instruction[0] === 'toggle' ? -1 : 0;
+        toggleLights(lights,
+            instruction[2 + toggle].split(',').map(num => parseInt(num, 10)), 
+            instruction[4 + toggle].split(',').map(num => parseInt(num, 10)),
+            toggle === -1 ? toggle : instruction[1] === 'on' ? 1 : 0, true);
+    });
+    return lights.flatMap(row => row.filter(light => light === 1)).length;
 }
-function part_2(instructions: string[][]) {
-    let lights: number[][] = [];
-    for(let i = 0; i < 1000; i++) {
-        let row: number[] = [];
-        for(let j = 0; j < 1000; j++) {
-            row.push(0);
-        }
-        lights.push(row);
-    }
 
-    for(let i = 0; i < instructions.length; i++) {
-        if(instructions[i][0] == 'turn') {
-            let changes: number = instructions[i][1] == 'on'? 1 : -1;
-            let start: number[] = instructions[i][2].split(',').map((position) => parseInt(position, 10));
-            let end: number[] = instructions[i][4].split(',').map((position) => parseInt(position, 10));
-            for(let x = start[0]; x <= end[0]; x++) {
-                for(let y = start[1]; y <= end[1]; y++) {
-                    lights[x][y] = lights[x][y] + changes < 0 ? 0 : lights[x][y] + changes;
-                }
-            }
-        } else {
-            let start: number[] = instructions[i][1].split(',').map((position) => parseInt(position, 10));
-            let end: number[] = instructions[i][3].split(',').map((position) => parseInt(position, 10));
-            for(let x = start[0]; x <= end[0]; x++) {
-                for(let y = start[1]; y <= end[1]; y++) {
-                    lights[x][y] += 2;
-                }
+function part_2(): number {
+    const lights: number[][] = Array.from({ length: 1000 }, () => new Array(1000).fill(0));
+    arr.forEach((instruction) => {
+        const toggle: number = instruction[0] === 'toggle' ? 0 : 1;
+        toggleLights(lights,
+            instruction[1 + toggle].split(',').map(num => parseInt(num, 10)),
+            instruction[3 + toggle].split(',').map(num => parseInt(num, 10)),
+            toggle === 0 ? toggle : instruction[1] === 'on' ? 1 : -1, false);
+    });
+    return lights.reduce((acc, row) => acc + row.reduce((sum, brightness) => sum + brightness, 0), 0);
+}
+
+function toggleLights(array: number[][], start: number[], end: number[], newState: number, first: boolean): void {
+    for(let x = start[0]; x <= end[0]; x++) {
+        for(let y = start[1]; y <= end[1]; y++) {
+            if(first) {
+                array[x][y] = newState === -1 ? (array[x][y] + 1) % 2 : newState;
+            } else {
+                array[x][y] += newState === 0 ? 2 : array[x][y] + newState < 0 ? 0 : newState;
             }
         }
     }
-    let counter: number = 0;
-    for(let x = 0; x < 1000; x++) {
-        for(let y = 0; y < 1000; y++) {
-            counter += lights[x][y];
-        }
-    }
-    return counter;
 }
