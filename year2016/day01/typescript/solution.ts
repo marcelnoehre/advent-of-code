@@ -2,116 +2,41 @@ import { readFileSync } from 'fs';
 
 const file:any = readFileSync('../puzzle.txt', 'utf-8');
 const arr:string[] = file.toString().trim().split(', ');
-console.log(part_1(arr));
-console.log(part_2(arr));
+const directions = {
+    0: [0, 1],
+    1: [1, 0],
+    2: [0, -1],
+    3: [-1, 0]
+};
+console.log(part_1());
+console.log(part_2());
 
-function part_1(statements: string[]): number {
-    let position: number[] = [0,0];
-    let direction: string = 'north';
-    for(let i = 0; i < statements.length; i++) {
-        if(statements[i][0] == 'R') {
-            if(direction == 'north') {
-                direction = 'east';
-            } else if(direction == 'east') {
-                direction = 'south';
-            } else if(direction == 'south') {
-                direction = 'west';
-            } else if(direction == 'west') {
-                direction = 'north';
-            }
-        } else if(statements[i][0] == 'L') {
-            if(direction == 'north') {
-                direction = 'west';
-            } else if(direction == 'west') {
-                direction = 'south';
-            } else if(direction == 'south') {
-                direction = 'east';
-            } else if(direction == 'east') {
-                direction = 'north';
-            }
-        }
-        parseInt(statements[i].substring(1))
-        if(direction == 'north') {
-            position[1] += parseInt(statements[i].substring(1), 10);
-        } else if(direction == 'west') {
-            position[0] -= parseInt(statements[i].substring(1), 10);
-        } else if(direction == 'south') {
-            position[1] -= parseInt(statements[i].substring(1), 10);
-        } else if(direction == 'east') {
-            position[0] += parseInt(statements[i].substring(1), 10);
-        }
-    }
-    return (position[0] + position[1]) * -1;
+function part_1(): number {
+    const pos: number[] = [0, 0];
+    let direction: number = 0;
+    arr.forEach((move) => {
+        direction = (direction + (move.charAt(0) === 'R' ? 1 : -1) + 4) % 4;
+        pos[0] += parseInt(move.substring(1), 10) * directions[direction][0];
+        pos[1] += parseInt(move.substring(1), 10) * directions[direction][1];
+    });
+    return -(pos[0] + pos[1]);
 }
 
-function part_2(statements: string[]): number {
-    let position: number[] = [0,0];
-    let direction: string = 'north';
-    let visited: number[][] = [[0,0]];
-    for(let i = 0; i < statements.length; i++) {
-        if(statements[i][0] == 'R') {
-            if(direction == 'north') {
-                direction = 'east';
-            } else if(direction == 'east') {
-                direction = 'south';
-            } else if(direction == 'south') {
-                direction = 'west';
-            } else if(direction == 'west') {
-                direction = 'north';
-            }
-        } else if(statements[i][0] == 'L') {
-            if(direction == 'north') {
-                direction = 'west';
-            } else if(direction == 'west') {
-                direction = 'south';
-            } else if(direction == 'south') {
-                direction = 'east';
-            } else if(direction == 'east') {
-                direction = 'north';
+function part_2(): number {
+    let visited: Set<String> = new Set<String>();
+    const pos: number[] = [0, 0];
+    let direction: number = 0;
+    for(const move of arr) {
+        direction = (direction + (move.charAt(0) === 'R' ? 1 : -1) + 4) % 4;
+        const max = parseInt(move.substring(1), 10) * directions[direction][directions[direction][0] === 0 ? 1 : 0];
+        for(let i = 0; i < (max < 0 ? max * -1 : max); i++) {
+            pos[0] += directions[direction][0];
+            pos[1] += directions[direction][1];
+            if(visited.has(pos.join(','))) {
+                return -(pos[0] + pos[1]);
+            } else {
+                visited.add(pos.join(','));
             }
         }
-        if(direction == 'north') {
-            for(let j = 0; j < parseInt(statements[i].substring(1), 10); j++) {
-                position[1]++;
-                for(let j = 0; j < visited.length; j++) {
-                    if(visited[j][0] == position[0] && visited[j][1] == position[1]) {
-                        return (position[0] + position[1]) * -1;
-                    }
-                }
-                visited.push([...[position[0], position[1]]]);
-            }
-        } else if(direction == 'west') {
-            for(let j = 0; j < parseInt(statements[i].substring(1), 10); j++) {
-                position[0]--;
-                for(let j = 0; j < visited.length; j++) {
-                    if(visited[j][0] == position[0] && visited[j][1] == position[1]) {
-                        return (position[0] + position[1]) * -1;
-                    }
-                }
-                visited.push([...[position[0], position[1]]]);
-            }
-        } else if(direction == 'south') {
-            for(let j = 0; j < parseInt(statements[i].substring(1), 10); j++) {
-                position[1]--;
-                for(let j = 0; j < visited.length; j++) {
-                    if(visited[j][0] == position[0] && visited[j][1] == position[1]) {
-                        return (position[0] + position[1]) * -1;
-                    }
-                }
-                visited.push([...[position[0], position[1]]]);
-            }
-        } else if(direction == 'east') {
-            for(let j = 0; j < parseInt(statements[i].substring(1), 10); j++) {
-                position[0]++;
-                for(let j = 0; j < visited.length; j++) {
-                    if(visited[j][0] == position[0] && visited[j][1] == position[1]) {
-                        return (position[0] + position[1]) * -1;
-                    }
-                }
-                visited.push([...[position[0], position[1]]]);
-            }
-        }
-        
-    }
-    return null;
+    };
 }
