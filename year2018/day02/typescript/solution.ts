@@ -2,52 +2,35 @@ import { readFileSync } from 'fs';
 
 const file:any = readFileSync('../puzzle.txt', 'utf-8');
 const arr:string[] = file.toString().trim().split('\r\n');
-console.log(part_1(arr));
-console.log(part_2(arr));
+console.log(part_1());
+console.log(part_2());
 
-function part_1(list: string[]): number {
-    let two: number = 0;
-    let three: number = 0;
-    list.forEach(row => {
-        let checkTwo: boolean = false;
-        let checkThree: boolean = false;
-        for(let i = 0; i < row.length; i++) {
-            let counter: number = 0;
-            for(let j = 0; j < row.length; j++) {
-                if(i !== j && row.charAt(i) === row.charAt(j)) {
-                    counter++;
-                }
-            }
-            if(counter === 1) {
-                checkTwo = true;
-            } else if(counter === 2) {
-                checkThree = true;
-            }
-        }
-        if(checkTwo) {
-            two++;
-        }
-        if(checkThree) {
-            three++;
-        }
+function part_1(): number {
+    let [twice, thrice] = [0, 0];  
+    arr.forEach((row) => {
+        const counter: { [char: string]: number } = {};
+        row.split('').forEach((char) => {
+            counter[char] = (counter[char] || 0) + 1;
+        });
+        twice += Object.values(counter).includes(2) ? 1 : 0;
+        thrice += Object.values(counter).includes(3) ? 1 : 0;
     });
-    return two*three;
+    return twice * thrice;
 }
+  
 
-function part_2(list: string[]):string {
-    for(let x = 0; x < list.length; x++) {
-        for(let y = 0; y < list.length; y++) {
-            let difference: number = 0;
-            let position: number = 0;
-            for(let z = 0; z < list[x].length; z++) {
-                if(list[x].charAt(z) !== list[y].charAt(z)) {
-                    position = z;
-                    difference++;
+function part_2():string {
+    for(let x = 0; x < arr.length; x++) {
+        for(let y = 0; y < arr.length; y++) {
+            let [difference, position] = [0, 0];
+            for(let z = 0; z < arr[x].length; z++) {
+                if(arr[x].charAt(z) !== arr[y].charAt(z)) {
+                    [position, difference] = [z, difference + 1];
                 }
             }
             if(difference === 1) {
-                return list[x].slice(0,position)+list[x].slice(position+1,list[x].length);
+                return arr[x].slice(0, position) + arr[x].slice(position + 1, arr[x].length);
             }
         }
     }
-}
+}  
