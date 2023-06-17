@@ -2,49 +2,50 @@ import { readFileSync } from 'fs';
 
 const file:any = readFileSync('../puzzle.txt', 'utf-8');
 const arr:string[] = file.toString().trim().split('\r\n');
-console.log(part_1(arr));
-console.log(part_2(arr));
-
-function part_1(information: string[]): number {
-    let x: number = 0;
-    let y: number = 0;
-    let password: string = '';
-    let buttons: number[][] = [[1,2,3],[4,5,6],[7,8,9]];
-    for(let i = 0; i < information.length; i++) {
-        for(let j = 0; j < information[i].length; j++) {
-            if(information[i][j] == 'L' && x > 0) {
-                x--;
-            } else if(information[i][j] == 'R' && x < 2) {
-                x++;
-            } else if(information[i][j] == 'U' && y > 0) {
-                y--;
-            } else if(information[i][j] == 'D' && y < 2) {
-                y++;
-            }
-        }
-        password += buttons[y][x];
-    }
-    return parseInt(password, 10);
+const directions = {
+    'L': [-1, 0],    
+    'R': [1, 0],
+    'U': [0, 1],
+    'D': [0, -1]
 }
-function part_2(information: string[]): string {
-    let x: number = 0;
-    let y: number = 2;
-    let password: string = '';
-    let buttons: string[][] = [[null,null,'1',null,null],[null,'2','3','4',null],['5','6','7','8','9'],[null,'A','B','C',null],[null,null,'D',null,null]];
-    for(let i = 0; i < information.length; i++) {
-        for(let j = 0; j < information[i].length; j++) {
-            //TODO: handle new lock field
-            if(information[i][j] == 'L' && x > 0 && buttons[y][x-1] != null) {
-                x--;
-            } else if(information[i][j] == 'R' && x < 4 && buttons[y][x+1] != null) {
-                x++;
-            } else if(information[i][j] == 'U' && y > 0 && buttons[y-1][x] != null) {
-                y--;
-            } else if(information[i][j] == 'D' && y < 4 && buttons[y+1][x] != null) {
-                y++;
+console.log(part_1());
+console.log(part_2());
+
+function part_1(): string {
+    let [password, x, y] = ['', 1, 1];
+    const keypad: number[][] = [
+        [7, 4, 1],
+        [8, 5, 2],
+        [9, 6, 3]
+    ];
+    arr.forEach((sequenz) => {
+        sequenz.split('').forEach((move) => {
+            x = Math.min(Math.max(x + directions[move][0], 0), 2);
+            y = Math.min(Math.max(y + directions[move][1], 0), 2);
+        });
+        password += keypad[x][y];
+    });
+    return password;
+}
+function part_2(): string {
+    let [password, x, y] = ['', 1, 3];
+    const keypad: string[][] = [
+        [null, null, null, null, null, null, null],
+        [null, null, null, '5', null, null, null],
+        [null, null, 'A', '6', '2', null, null],
+        [null, 'D', 'B', '7', '3', '1', null],
+        [null, null, 'C', '8', '4', null, null],
+        [null, null, null, '9', null, null, null],
+        [null, null, null, null, null, null, null]
+    ];
+    arr.forEach((sequenz) => {
+        sequenz.split('').forEach((move) => {
+            if(keypad[x + directions[move][0]][y + directions[move][1]] !== null) {
+                x += directions[move][0];
+                y += directions[move][1];
             }
-        }
-        password += buttons[y][x];
-    }
+        });
+        password += keypad[x][y];
+    });
     return password;
 }

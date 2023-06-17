@@ -3,54 +3,49 @@ exports.__esModule = true;
 var fs_1 = require("fs");
 var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');
 var arr = file.toString().trim().split('\r\n');
-console.log(part_1(arr));
-console.log(part_2(arr));
-function part_1(information) {
-    var x = 0;
-    var y = 0;
-    var password = '';
-    var buttons = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
-    for (var i = 0; i < information.length; i++) {
-        for (var j = 0; j < information[i].length; j++) {
-            if (information[i][j] == 'L' && x > 0) {
-                x--;
-            }
-            else if (information[i][j] == 'R' && x < 2) {
-                x++;
-            }
-            else if (information[i][j] == 'U' && y > 0) {
-                y--;
-            }
-            else if (information[i][j] == 'D' && y < 2) {
-                y++;
-            }
-        }
-        password += buttons[y][x];
-    }
-    return parseInt(password, 10);
+var directions = {
+    'L': [-1, 0],
+    'R': [1, 0],
+    'U': [0, 1],
+    'D': [0, -1]
+};
+console.log(part_1());
+console.log(part_2());
+function part_1() {
+    var _a = ['', 1, 1], password = _a[0], x = _a[1], y = _a[2];
+    var keypad = [
+        [7, 4, 1],
+        [8, 5, 2],
+        [9, 6, 3]
+    ];
+    arr.forEach(function (sequenz) {
+        sequenz.split('').forEach(function (move) {
+            x = Math.min(Math.max(x + directions[move][0], 0), 2);
+            y = Math.min(Math.max(y + directions[move][1], 0), 2);
+        });
+        password += keypad[x][y];
+    });
+    return password;
 }
-function part_2(information) {
-    var x = 0;
-    var y = 2;
-    var password = '';
-    var buttons = [[null, null, '1', null, null], [null, '2', '3', '4', null], ['5', '6', '7', '8', '9'], [null, 'A', 'B', 'C', null], [null, null, 'D', null, null]];
-    for (var i = 0; i < information.length; i++) {
-        for (var j = 0; j < information[i].length; j++) {
-            //TODO: handle new lock field
-            if (information[i][j] == 'L' && x > 0 && buttons[y][x - 1] != null) {
-                x--;
+function part_2() {
+    var _a = ['', 1, 3], password = _a[0], x = _a[1], y = _a[2];
+    var keypad = [
+        [null, null, null, null, null, null, null],
+        [null, null, null, '5', null, null, null],
+        [null, null, 'A', '6', '2', null, null],
+        [null, 'D', 'B', '7', '3', '1', null],
+        [null, null, 'C', '8', '4', null, null],
+        [null, null, null, '9', null, null, null],
+        [null, null, null, null, null, null, null]
+    ];
+    arr.forEach(function (sequenz) {
+        sequenz.split('').forEach(function (move) {
+            if (keypad[x + directions[move][0]][y + directions[move][1]] !== null) {
+                x += directions[move][0];
+                y += directions[move][1];
             }
-            else if (information[i][j] == 'R' && x < 4 && buttons[y][x + 1] != null) {
-                x++;
-            }
-            else if (information[i][j] == 'U' && y > 0 && buttons[y - 1][x] != null) {
-                y--;
-            }
-            else if (information[i][j] == 'D' && y < 4 && buttons[y + 1][x] != null) {
-                y++;
-            }
-        }
-        password += buttons[y][x];
-    }
+        });
+        password += keypad[x][y];
+    });
     return password;
 }
