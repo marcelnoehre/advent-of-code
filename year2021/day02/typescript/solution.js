@@ -3,39 +3,19 @@ exports.__esModule = true;
 var fs_1 = require("fs");
 var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');
 var arr = file.toString().trim().split('\n').map(function (line) { return [line.split(' ')[0], parseInt(line.split(' ')[1], 10)]; });
-console.log(part_1(arr));
-console.log(part_2(arr));
-function part_1(arr) {
-    var horizontalPosition = 0;
-    var depth = 0;
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i][0] == 'forward') {
-            horizontalPosition += arr[i][1];
-        }
-        else if (arr[i][0] == 'down') {
-            depth += arr[i][1];
-        }
-        else if (arr[i][0] == 'up') {
-            depth -= arr[i][1];
-        }
-    }
-    return horizontalPosition * depth;
+console.log(part_1());
+console.log(part_2());
+function part_1() {
+    return arr.reduce(function (_a, _b) {
+        var h = _a[0], d = _a[1];
+        var ac = _b[0], v = _b[1];
+        return ac === 'forward' ? [h + v, d] : ac === 'down' ? [h, d + v] : [h, d - v];
+    }, [0, 0]).reduce(function (a, b) { return a * b; });
 }
-function part_2(arr) {
-    var horizontalPosition = 0;
-    var depth = 0;
-    var aim = 0;
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i][0] == 'forward') {
-            horizontalPosition += arr[i][1];
-            depth += aim * arr[i][1];
-        }
-        else if (arr[i][0] == 'down') {
-            aim += arr[i][1];
-        }
-        else if (arr[i][0] == 'up') {
-            aim -= arr[i][1];
-        }
-    }
-    return horizontalPosition * depth;
+function part_2() {
+    return arr.reduce(function (_a, _b) {
+        var h = _a[0], d = _a[1], a = _a[2];
+        var ac = _b[0], v = _b[1];
+        return (ac === 'forward' ? [h + v, d + a * v, a] : ac === 'down' ? [h, d, a + v] : [h, d, a - v]);
+    }, [0, 0, 0]).slice(0, 2).reduce(function (a, b) { return a * b; });
 }
