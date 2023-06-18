@@ -1,86 +1,54 @@
 import { readFileSync } from 'fs';
 
 const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr:number[][] = file.toString().trim().split('\n').map((row) => row.split(' -> ').map((side) => side.split(',').map((num) => parseInt(num, 10))));
-console.log(part_1(arr));
-console.log(part_2(arr));
+const arr:number[][][] = file.toString().trim().split('\n').map((row) => row.split(' -> ').map((side) => side.split(',').map((num) => parseInt(num, 10))));
+console.log(part_1());
+console.log(part_2());
 
-function part_1(lines: number[][]):number {
-    let field: number[][] = []
-    for(let y = 0; y < 1000; y++) {
-        let row: number[] = []; 
-        for(let x = 0; x < 1000; x++) {
-            row.push(0);
+
+function part_1(): number {
+    let [seen, duplicated] = [new Set<string>(), new Set<string>()];
+    for (const row of arr) {
+        if (!(row[0][0] !== row[1][0] && row[0][1] !== row[1][1])) {
+            [seen, duplicated] = checkRow(iterate(row), seen, duplicated);
         }
-        field.push(row);
-    }
-    for(let i = 0; i < lines.length; i++) {
-        if(lines[i][0][0] === lines[i][1][0]) {
-            let lower: number = lines[i][0][1] < lines[i][1][1] ? lines[i][0][1] : lines[i][1][1]; 
-            let upper: number = lines[i][0][1] < lines[i][1][1] ? lines[i][1][1] : lines[i][0][1];
-            for(let y = lower; y <= upper; y++) {
-                field[lines[i][0][0]][y]++;
-            }
-        } else if(lines[i][0][1] === lines[i][1][1]) {
-            let lower: number = lines[i][0][0] < lines[i][1][0] ? lines[i][0][0] : lines[i][1][0]; 
-            let upper: number = lines[i][0][0] < lines[i][1][0] ? lines[i][1][0] : lines[i][0][0];
-            for(let x = lower; x <= upper; x++) {
-                field[x][lines[i][0][1]]++;
-            }
-        }
-    }
-    let counter: number = 0;
-    for(let y = 0; y < 1000; y++) {
-        for(let x = 0; x < 1000; x++) {
-            if(field[x][y] >= 2) {
-                counter++;
-            }
-        }
-    }
-    return counter;
+    };
+    return duplicated.size;
 }
 
-function part_2(lines: number[][]):number {
-    let field: number[][] = []
-    for(let y = 0; y < 1000; y++) {
-        let row: number[] = []; 
-        for(let x = 0; x < 1000; x++) {
-            row.push(0);
-        }
-        field.push(row);
+function part_2(): number {
+    let [seen, duplicated] = [new Set<string>(), new Set<string>()];
+    for (const row of arr) {
+        [seen, duplicated] = checkRow(iterate(row), seen, duplicated);
     }
-    for(let i = 0; i < lines.length; i++) {
-        if(lines[i][0][0] === lines[i][1][0]) {
-            let lower: number = lines[i][0][1] < lines[i][1][1] ? lines[i][0][1] : lines[i][1][1]; 
-            let upper: number = lines[i][0][1] < lines[i][1][1] ? lines[i][1][1] : lines[i][0][1];
-            for(let y = lower; y <= upper; y++) {
-                field[lines[i][0][0]][y]++;
-            }
-        } else if(lines[i][0][1] === lines[i][1][1]) {
-            let lower: number = lines[i][0][0] < lines[i][1][0] ? lines[i][0][0] : lines[i][1][0]; 
-            let upper: number = lines[i][0][0] < lines[i][1][0] ? lines[i][1][0] : lines[i][0][0];
-            for(let x = lower; x <= upper; x++) {
-                field[x][lines[i][0][1]]++;
-            }
-        } else {
-            let lowerX: number = lines[i][0][0] < lines[i][1][0] ? lines[i][0][0] : lines[i][1][0]; 
-            let upperX: number = lines[i][0][0] < lines[i][1][0] ? lines[i][1][0] : lines[i][0][0];
-            let lowerY: number = lines[i][0][1] < lines[i][1][1] ? lines[i][0][1] : lines[i][1][1]; 
-            let y: number = lines[i][0][0] < lines[i][1][0] ? lines[i][0][1] : lines[i][1][1];
-            let direction: number = y == lowerY ? 1 : -1; 
-            for(let x = lowerX; x <= upperX; x++) {
-                field[x][y]++;
-                y += direction;
-            }
+    return duplicated.size;
+}
+
+function checkRow(iterator: Generator<[number, number]>, seen: Set<string>, duplicated: Set<string>): [Set<string>, Set<string>] {
+    let iteration: IteratorResult<[number, number]> = iterator.next();
+    while(!iteration.done) {
+        const [x, y] = iteration.value;
+        const coordinate = `${x},${y}`;
+        if (seen.has(coordinate)) {
+            duplicated.add(coordinate);
         }
+        seen.add(coordinate);
+        iteration = iterator.next();
     }
-    let counter: number = 0;
-    for(let y = 0; y < 1000; y++) {
-        for(let x = 0; x < 1000; x++) {
-            if(field[x][y] >= 2) {
-                counter++;
-            }
+    return [seen, duplicated];
+}
+
+function* iterate(row: number[][], ): Generator<[number, number]> {
+    const [dx, dy] = [Math.sign(row[1][0] - row[0][0]), Math.sign(row[1][1] - row[0][1])];
+    let [x, y] = [row[0][0], row[0][1]];
+    yield [x, y];
+    while (x !== row[1][0] || y !== row[1][1]) {
+        if (x !== row[1][0]) {
+            x += dx;
         }
+        if (y !== row[1][1]) {
+            y += dy;
+        }
+        yield [x, y];
     }
-    return counter;
 }
