@@ -5,28 +5,24 @@ const arr:number[] = file.toString().trim().split(',').map((num) => parseInt(num
 console.log(part_1([...arr]));
 console.log(part_2([...arr]));
 
-function part_1(list: number[]):number {
-    for(let j = 0; j < 80; j++) {
-        let length: number = list.length;
+function part_1(arr: number[]):number {
+    for(let _ = 0; _ < 80; _++) {
+        const length = arr.length;
         for(let i = 0; i < length; i++) {
-            if(list[i] === 0) {
-                list[i] = 6;
-                list.push(8);
-            } else {
-                list[i]--;
+            if(arr[i] === 0) {
+                arr.push(8);
             }
+            arr[i] = arr[i] === 0 ? 6 : arr[i] - 1;
         }
     }
-    return list.length;
+    return arr.length;
 }
 
 function part_2(arr: number[]):number {
-    let occurence: number[] = [0,0,0,0,0,0,0,0,0];
-    for(let i = 0; i < arr.length; i++) {
-        occurence[arr[i]]++;
-    }
-    for(let j = 0; j < 256; j++) {
-        let newOccurence: number[] = [0,0,0,0,0,0,0,0,0];
+    let occurence: number[] = new Array(9).fill(0);
+    arr.forEach((timer) => occurence[timer]++);
+    for(let _ = 0; _ < 256; _++) {
+        let newOccurence: number[] = new Array(9).fill(0);
         for(let i = 0; i < 8; i++) {
             newOccurence[i] = occurence[i+1];
             if(i === 6) {
@@ -36,9 +32,5 @@ function part_2(arr: number[]):number {
         }
         occurence = [...newOccurence];
     }
-    let sum: number = 0;
-    occurence.forEach(element => {
-        sum += element;
-    })
-    return sum;
+    return occurence.reduce((acc, val) => acc + val, 0);
 }
