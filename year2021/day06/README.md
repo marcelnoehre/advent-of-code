@@ -1,3 +1,8 @@
+# Answers
+| Part 1 | Part 2 |
+| ------ | ------ |
+| `386536` | `1732821262171` |
+
 ## --- Day 6: Lanternfish ---
 The sea floor is getting steeper. Maybe the sleigh keys got carried this way?
 
