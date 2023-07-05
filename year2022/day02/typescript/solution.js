@@ -1,8 +1,8 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var fs_1 = require("fs");
 var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');
-var arr = file.toString().split('\r\n').map(function (tupel) { return tupel.split(' '); });
+var arr = file.toString().split('\n').map(function (tupel) { return tupel.split(' '); });
 var RPS = {
     A: { shape: 'rock', score: 1, result: 'lose', nemesis: 'paper' },
     B: { shape: 'paper', score: 2, result: 'draw', nemesis: 'scissors' },

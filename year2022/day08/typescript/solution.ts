@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 
 const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr: number[][] = file.toString().trim().split('\r\n').map((row) => row.split('').map((num) => parseInt(num, 10)));
+const arr: number[][] = file.toString().trim().split('\n').map((row) => row.split('').map((num) => parseInt(num, 10)));
 const [width, height] = [arr[0].length, arr.length];
 const directions: [number, number][] = [
     [1, 0],

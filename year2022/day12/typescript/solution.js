@@ -1,12 +1,12 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var fs_1 = require("fs");
 var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');
 var directions = [[1, 0], [-1, 0], [0, 1], [0, -1]];
 console.log(part_1());
 console.log(part_2());
 function part_1() {
-    var _a = [[0, 0], [0, 0], file.split('\r\n').map(function (row) { return row.split(''); })], start = _a[0], end = _a[1], chars = _a[2];
+    var _a = [[0, 0], [0, 0], file.split('\n').map(function (row) { return row.split(''); })], start = _a[0], end = _a[1], chars = _a[2];
     chars.forEach(function (row, i) {
         row.forEach(function (char, j) {
             var _a, _b;
@@ -19,7 +19,7 @@ function part_1() {
     return findShortestPass(chars, start, end, chars.length * chars[0].length);
 }
 function part_2() {
-    var _a = [[], [0, 0], file.split('\r\n').map(function (row) { return row.split(''); })], starts = _a[0], end = _a[1], chars = _a[2];
+    var _a = [[], [0, 0], file.split('\n').map(function (row) { return row.split(''); })], starts = _a[0], end = _a[1], chars = _a[2];
     chars.forEach(function (row, i) {
         row.forEach(function (char, j) {
             var _a;

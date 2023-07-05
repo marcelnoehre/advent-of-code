@@ -1,8 +1,8 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var fs_1 = require("fs");
 var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');
-var arr = file.toString().trim().split('\r\n').map(function (row) { return row.split('').map(function (num) { return parseInt(num, 10); }); });
+var arr = file.toString().trim().split('\n').map(function (row) { return row.split('').map(function (num) { return parseInt(num, 10); }); });
 var _a = [arr[0].length, arr.length], width = _a[0], height = _a[1];
 var directions = [
     [1, 0],

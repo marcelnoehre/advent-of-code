@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 
 const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr: string[][] = file.toString().split('\r\n').map((tupel) => tupel.split(' '));
+const arr: string[][] = file.toString().split('\n').map((tupel) => tupel.split(' '));
 const RPS = {
     A: {shape: 'rock', score: 1, result: 'lose', nemesis: 'paper'},
     B: {shape: 'paper', score: 2, result: 'draw', nemesis: 'scissors'},

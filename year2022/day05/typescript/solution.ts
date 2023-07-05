@@ -1,9 +1,9 @@
 import { readFileSync } from 'fs';
 
 const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr: string[] = file.toString().split('\r\n\r\n');
-const initalStacks: string[][] = setupStacks(arr[0].toString().split('\r\n').slice(0, -1).reverse());
-const instructions: number[][] = arr[1].toString().split('\r\n').map((row) => row.split(' ').map((element) => parseInt(element)));
+const arr: string[] = file.toString().split('\n\n');
+const initalStacks: string[][] = setupStacks(arr[0].toString().split('\n').slice(0, -1).reverse());
+const instructions: number[][] = arr[1].toString().split('\n').map((row) => row.split(' ').map((element) => parseInt(element)));
 console.log(part_1());
 console.log(part_2());
 

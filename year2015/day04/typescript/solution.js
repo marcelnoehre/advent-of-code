@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var fs_1 = require("fs");
 var md5_1 = require("ts-md5/dist/md5");
 var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');

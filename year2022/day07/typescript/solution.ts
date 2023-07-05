@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 
 const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr: string[] = file.toString().split('\r\n');
+const arr: string[] = file.toString().split('\n');
 const filesystem: { [key: string]: number } = {};
 setFileSystem();
 console.log(part_1());

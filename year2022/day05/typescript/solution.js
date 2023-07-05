@@ -8,12 +8,12 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     }
     return to.concat(ar || Array.prototype.slice.call(from));
 };
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var fs_1 = require("fs");
 var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');
-var arr = file.toString().split('\r\n\r\n');
-var initalStacks = setupStacks(arr[0].toString().split('\r\n').slice(0, -1).reverse());
-var instructions = arr[1].toString().split('\r\n').map(function (row) { return row.split(' ').map(function (element) { return parseInt(element); }); });
+var arr = file.toString().split('\n\n');
+var initalStacks = setupStacks(arr[0].toString().split('\n').slice(0, -1).reverse());
+var instructions = arr[1].toString().split('\n').map(function (row) { return row.split(' ').map(function (element) { return parseInt(element); }); });
 console.log(part_1());
 console.log(part_2());
 function part_1() {

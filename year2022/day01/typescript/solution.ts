@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 
 const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr: number[] = file.toString().trim().split('\r\n').map((num) => parseInt(num, 10));
+const arr: number[] = file.toString().trim().split('\n').map((num) => parseInt(num, 10));
 let elves: number[] = [];
 setElves();
 console.log(part_1());

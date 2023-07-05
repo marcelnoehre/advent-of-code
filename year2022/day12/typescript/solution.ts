@@ -6,7 +6,7 @@ console.log(part_1());
 console.log(part_2());
 
 function part_1(): number {
-    let [start, end, chars] = [[0, 0], [0, 0], file.split('\r\n').map((row) => row.split(''))];
+    let [start, end, chars] = [[0, 0], [0, 0], file.split('\n').map((row) => row.split(''))];
     chars.forEach((row, i) => {
         row.forEach((char, j) => {
             if (char === 'E') [end, chars[i][j]] = [[i, j], 'z'];
@@ -17,7 +17,7 @@ function part_1(): number {
 }
 
 function part_2(): number {
-    let [starts, end, chars] = [[], [0, 0], file.split('\r\n').map((row) => row.split(''))];
+    let [starts, end, chars] = [[], [0, 0], file.split('\n').map((row) => row.split(''))];
     chars.forEach((row, i) => {
         row.forEach((char, j) => {
             if (char === 'a') starts.push([i, j]);

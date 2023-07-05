@@ -1,8 +1,8 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var fs_1 = require("fs");
 var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');
-var arr = file.toString().split('\r\n').map(function (row) { return row.split(' '); });
+var arr = file.toString().split('\n').map(function (row) { return row.split(' '); });
 var stages = [20, 60, 100, 140, 180, 220];
 console.log(part_1());
 console.log(part_2());

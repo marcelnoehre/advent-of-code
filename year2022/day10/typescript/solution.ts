@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 
 const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr: any[][] = file.toString().split('\r\n').map((row) => row.split(' '));
+const arr: any[][] = file.toString().split('\n').map((row) => row.split(' '));
 let stages: number[] = [20,60,100,140,180,220];
 console.log(part_1());
 console.log(part_2());

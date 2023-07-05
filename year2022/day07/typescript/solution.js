@@ -8,10 +8,10 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     }
     return to.concat(ar || Array.prototype.slice.call(from));
 };
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var fs_1 = require("fs");
 var file = (0, fs_1.readFileSync)('../puzzle.txt', 'utf-8');
-var arr = file.toString().split('\r\n');
+var arr = file.toString().split('\n');
 var filesystem = {};
 setFileSystem();
 console.log(part_1());
