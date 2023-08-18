@@ -15,4 +15,4 @@ function part_2(): number {
             arr.slice(index + 1).reduce((innerResult, innerNum) =>
             arr.slice(index + 2).reduce((finalResult, finalNum) =>
             num + innerNum + finalNum === 2020 ? num * innerNum * finalNum : finalResult, innerResult), result), 0);
-  }
+}
