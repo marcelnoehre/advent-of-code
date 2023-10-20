@@ -28,7 +28,7 @@ function setupRocks(arr) {
                     rocks.add([structure[i][0], y]);
                 }
             }
-            else if (structure[i + 1][1] === structure[i + 1][1]) {
+            else if (structure[i][1] === structure[i + 1][1]) {
                 for (var x = Math.min(structure[i][0], structure[i + 1][0]); x <= Math.max(structure[i][0], structure[i + 1][0]); x++) {
                     rocks.add([x, structure[i + 1][1]]);
                 }

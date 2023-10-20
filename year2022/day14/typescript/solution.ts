@@ -29,7 +29,7 @@ function setupRocks(arr: number[][]):  [Set<[number, number]>, number] {
                 for (let y = Math.min(structure[i][1], structure[i+1][1]); y <= Math.max(structure[i][1], structure[i+1][1]); y++) {
                     rocks.add([structure[i][0], y]);
                 }
-            } else if (structure[i+1][1] === structure[i+1][1]) {
+            } else if (structure[i][1] === structure[i+1][1]) {
                 for (let x = Math.min(structure[i][0], structure[i+1][0]); x <= Math.max(structure[i][0], structure[i+1][0]); x++) {
                     rocks.add([x, structure[i+1][1]]);
                 }
