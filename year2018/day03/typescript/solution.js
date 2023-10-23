@@ -23,8 +23,8 @@ function part_2() {
     for (var _i = 0, arr_1 = arr; _i < arr_1.length; _i++) {
         var _b = arr_1[_i], id = _b[0], x = _b[1], y = _b[2], w = _b[3], h = _b[4];
         noOverlap.add(Number(id));
-        for (var i = Number(x); i < Number(x) + Number(w); i++) {
-            for (var j = Number(y); j < Number(y) + Number(h); j++) {
+        for (var i = Number(x); i < Number(x + w); i++) {
+            for (var j = Number(y); j < Number(y + h); j++) {
                 fabric[i][j] === 0 ? fabric[i][j] = Number(id) : (noOverlap.delete(Number(id)), noOverlap.delete(fabric[i][j]));
             }
         }
