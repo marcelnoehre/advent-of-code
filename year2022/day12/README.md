@@ -1,4 +1,4 @@
-# Answers
+# 🎄 Advent of Code - 2022 🎄
 | Part 1 | Part 2 |
 | ------ | ------ |
 | `534` | `525` |
