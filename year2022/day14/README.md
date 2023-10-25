@@ -3,30 +3,19 @@
 | ------ | ------ |
 | `755` | `29805` |
 
-## --- Day 14: Regolith Reservoir ---
-
-The distress signal leads you to a giant waterfall! Actually, hang on - the signal seems like it's coming from the waterfall itself, and that doesn't make any sense. However, you do notice a little path that leads behind the waterfall.
-
-Correction: the distress signal leads you behind a giant waterfall! There seems to be a large cave system here, and the signal definitely leads further inside.
-
-As you begin to make your way deeper underground, you feel the ground rumble for a moment. Sand begins pouring into the cave! If you don't quickly figure out where the sand is going, you could quickly become trapped!
-
-Fortunately, your familiarity with analyzing the path of falling material will come in handy here. You scan a two-dimensional vertical slice of the cave above you (your puzzle input) and discover that it is mostly air with structures made of rock.
-
-Your scan traces the path of each solid rock structure and reports the x,y coordinates that form the shape of the path, where x represents distance to the right and y represents distance down. Each path appears as a single line of text in your scan. After the first point of each path, each point indicates the end of a straight horizontal or vertical line to be drawn from the previous point. For example:
-
-<pre><code>498,4 -> 498,6 -> 496,6
-503,4 -> 502,4 -> 502,9 -> 494,9
+<h2>--- Day 14: Regolith Reservoir ---</h2><p>The distress signal leads you to a giant waterfall! Actually, hang on - the signal seems like it's coming from the waterfall itself, and that doesn't make any sense. However, you do notice a little path that leads <em>behind</em> the waterfall.</p>
+<p>Correction: the distress signal leads you behind a giant waterfall! There seems to be a large cave system here, and the signal definitely leads further inside.</p>
+<p>As you begin to make your way deeper underground, you feel the ground rumble for a moment. Sand begins pouring into the cave! If you don't quickly figure out where the sand is going, you could quickly become trapped!</p>
+<p>Fortunately, your familiarity with analyzing the path of falling material will come in handy here. You scan a two-dimensional vertical slice of the cave above you (your puzzle input) and discover that it is mostly <em>air</em> with structures made of <em>rock</em>.</p>
+<p>Your scan traces the path of each solid rock structure and reports the <code>x,y</code> coordinates that form the shape of the path, where <code>x</code> represents distance to the right and <code>y</code> represents distance down. Each path appears as a single line of text in your scan. After the first point of each path, each point indicates the end of a straight horizontal or vertical line to be drawn from the previous point. For example:</p>
+<pre><code>498,4 -&gt; 498,6 -&gt; 496,6
+503,4 -&gt; 502,4 -&gt; 502,9 -&gt; 494,9
 </code></pre>
-
-This scan means that there are two paths of rock; the first path consists of two straight lines, and the second path consists of three straight lines. (Specifically, the first path consists of a line of rock from 498,4 through 498,6 and another line of rock from 498,6 through 496,6.)
-
-The sand is pouring into the cave from point 500,0.
-
-Drawing rock as #, air as ., and the source of the sand as +, this becomes:
-
-
-<pre><code>  4     5  5
+<p>This scan means that there are two paths of rock; the first path consists of two straight lines, and the second path consists of three straight lines. (Specifically, the first path consists of a line of rock from <code>498,4</code> through <code>498,6</code> and another line of rock from <code>498,6</code> through <code>496,6</code>.)</p>
+<p>The sand is pouring into the cave from point <code>500,0</code>.</p>
+<p>Drawing rock as <code>#</code>, air as <code>.</code>, and the source of the sand as <code>+</code>, this becomes:</p>
+<pre><code>
+  4     5  5
   9     0  0
   4     0  3
 0 ......+...
@@ -40,13 +29,9 @@ Drawing rock as #, air as ., and the source of the sand as +, this becomes:
 8 ........#.
 9 #########.
 </code></pre>
-
-Sand is produced one unit at a time, and the next unit of sand is not produced until the previous unit of sand comes to rest. A unit of sand is large enough to fill one tile of air in your scan.
-
-A unit of sand always falls down one step if possible. If the tile immediately below is blocked (by rock or sand), the unit of sand attempts to instead move diagonally one step down and to the left. If that tile is blocked, the unit of sand attempts to instead move diagonally one step down and to the right. Sand keeps moving as long as it is able to do so, at each step trying to move down, then down-left, then down-right. If all three possible destinations are blocked, the unit of sand comes to rest and no longer moves, at which point the next unit of sand is created back at the source.
-
-So, drawing sand that has come to rest as o, the first unit of sand simply falls straight down and then stops:
-
+<p>Sand is produced <em>one unit at a time</em>, and the next unit of sand is not produced until the previous unit of sand <em>comes to rest</em>. A unit of sand is large enough to fill one tile of air in your scan.</p>
+<p>A unit of sand always falls <em>down one step</em> if possible. If the tile immediately below is blocked (by rock or sand), the unit of sand attempts to instead move diagonally <em>one step down and to the left</em>. If that tile is blocked, the unit of sand attempts to instead move diagonally <em>one step down and to the right</em>. Sand keeps moving as long as it is able to do so, at each step trying to move down, then down-left, then down-right. If all three possible destinations are blocked, the unit of sand <em>comes to rest</em> and no longer moves, at which point the next unit of sand is created back at the source.</p>
+<p>So, drawing sand that has come to rest as <code>o</code>, the first unit of sand simply falls straight down and then stops:</p>
 <pre><code>......+...
 ..........
 ..........
@@ -55,12 +40,10 @@ So, drawing sand that has come to rest as o, the first unit of sand simply falls
 ....#...#.
 ..###...#.
 ........#.
-......o.#.
+......<em>o</em>.#.
 #########.
 </code></pre>
-
-The second unit of sand then falls straight down, lands on the first one, and then comes to rest to its left:
-
+<p>The second unit of sand then falls straight down, lands on the first one, and then comes to rest to its left:</p>
 <pre><code>......+...
 ..........
 ..........
@@ -72,9 +55,7 @@ The second unit of sand then falls straight down, lands on the first one, and th
 .....oo.#.
 #########.
 </code></pre>
-
-After a total of five units of sand have come to rest, they form this pattern:
-
+<p>After a total of five units of sand have come to rest, they form this pattern:</p>
 <pre><code>......+...
 ..........
 ..........
@@ -86,9 +67,7 @@ After a total of five units of sand have come to rest, they form this pattern:
 ....oooo#.
 #########.
 </code></pre>
-
-After a total of 22 units of sand:
-
+<p>After a total of 22 units of sand:</p>
 <pre><code>......+...
 ..........
 ......o...
@@ -100,23 +79,19 @@ After a total of 22 units of sand:
 ...ooooo#.
 #########.
 </code></pre>
-
-Finally, only two more units of sand can possibly come to rest:
-
+<p>Finally, only two more units of sand can possibly come to rest:</p>
 <pre><code>......+...
 ..........
 ......o...
 .....ooo..
 ....#ooo##
-...o#ooo#.
+...<em>o</em>#ooo#.
 ..###ooo#.
 ....oooo#.
-.o.ooooo#.
+.<em>o</em>.ooooo#.
 #########.
 </code></pre>
-
-Once all 24 units of sand shown above have come to rest, all further sand flows out the bottom, falling into the endless void. Just for fun, the path any new sand takes before falling forever is shown here with ~:
-
+<p>Once all <code><em>24</em></code> units of sand shown above have come to rest, all further sand flows out the bottom, falling into the endless void. Just for fun, the path any new sand takes before falling forever is shown here with <code>~</code>:</p>
 <pre><code>.......+...
 .......~...
 ......~o...
@@ -131,17 +106,11 @@ Once all 24 units of sand shown above have come to rest, all further sand flows 
 ~..........
 ~..........
 </code></pre>
+<p>Using your scan, simulate the falling sand. <em>How many units of sand come to rest before sand starts flowing into the abyss below?</em></p>
 
-Using your scan, simulate the falling sand. How many units of sand come to rest before sand starts flowing into the abyss below?
-
-## --- Part Two ---
-
-You realize you misread the scan. There isn't an endless void at the bottom of the scan - there's floor, and you're standing on it!
-
-You don't have time to scan the floor, so assume the floor is an infinite horizontal line with a y coordinate equal to two plus the highest y coordinate of any point in your scan.
-
-In the example above, the highest y coordinate of any point is 9, and so the floor is at y=11. (This is as if your scan contained one extra rock path like -infinity,11 -> infinity,11.) With the added floor, the example above now looks like this:
-
+<h2 id="part2">--- Part Two ---</h2><p>You realize you misread the scan. There isn't an <span title="Endless Void is my C cover band.">endless void</span> at the bottom of the scan - there's floor, and you're standing on it!</p>
+<p>You don't have time to scan the floor, so assume the floor is an infinite horizontal line with a <code>y</code> coordinate equal to <em>two plus the highest <code>y</code> coordinate</em> of any point in your scan.</p>
+<p>In the example above, the highest <code>y</code> coordinate of any point is <code>9</code>, and so the floor is at <code>y=11</code>. (This is as if your scan contained one extra rock path like <code>-infinity,11 -&gt; infinity,11</code>.) With the added floor, the example above now looks like this:</p>
 <pre><code>        ...........+........
         ....................
         ....................
@@ -153,11 +122,9 @@ In the example above, the highest y coordinate of any point is 9, and so the flo
         .............#......
         .....#########......
         ....................
-<-- etc #################### etc -->
+&lt;-- etc #################### etc --&gt;
 </code></pre>
-
-To find somewhere safe to stand, you'll need to simulate falling sand until a unit of sand comes to rest at 500,0, blocking the source entirely and stopping the flow of sand into the cave. In the example above, the situation finally looks like this after 93 units of sand come to rest:
-
+<p>To find somewhere safe to stand, you'll need to simulate falling sand until a unit of sand comes to rest at <code>500,0</code>, blocking the source entirely and stopping the flow of sand into the cave. In the example above, the situation finally looks like this after <code><em>93</em></code> units of sand come to rest:</p>
 <pre><code>............o............
 ...........ooo...........
 ..........ooooo..........
@@ -171,5 +138,4 @@ To find somewhere safe to stand, you'll need to simulate falling sand until a un
 ..ooooo.......ooooooooo..
 #########################
 </code></pre>
-
-Using your scan, simulate the falling sand until the source of the sand becomes blocked. How many units of sand come to rest?
+<p>Using your scan, simulate the falling sand until the source of the sand becomes blocked. <em>How many units of sand come to rest?</em></p>

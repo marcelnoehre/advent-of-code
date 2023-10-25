@@ -1,6 +1,5 @@
 import os
 import re
-import shutil
 import requests
 
 def main():
@@ -12,7 +11,7 @@ def main():
         readme = parser(f.read(), response.text, year, day)
     
     if readme is not None:
-        with open(os.path.join(f'year{year}', f'day{day}', 'README.md'), 'w', encoding='utf-8') as f:
+        with open(os.path.join(f'year{year}', f'day{('0' + day) if int(day) < 10 else day}', 'README.md'), 'w', encoding='utf-8') as f:
             f.write(readme)
 
 
@@ -32,6 +31,7 @@ def parser(template, puzzle, year, day):
             template = template.replace('SOLUTION_PART_2', answer[1])
         
         return f"{template}\n\n{'\n'.join(description)}"
+    
     except Exception as e:
         print(f'Failed to parse puzzle description.\nError: {e}')
         return None
