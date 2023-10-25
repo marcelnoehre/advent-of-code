@@ -6,7 +6,7 @@ import java.util.*;
 public class Solution {
     public static void main(String[] args) { 
         try {
-            Files.readAllLines(Paths.get("../puzzle.txt"));
+            Files.readAllLines(Paths.get("../example.txt"));
             System.out.println(part1());
             System.out.println(part2());
         } catch(Exception e) {
