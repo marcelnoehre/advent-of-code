@@ -1,4 +1,4 @@
 # 🎄 Advent of Code - YYYY 🎄
 | Part 1 | Part 2 |
 | ------ | ------ |
-| `abc` | `xyz` |
+| `SOLUTION_PART_1` | `SOLUTION_PART_2` |
