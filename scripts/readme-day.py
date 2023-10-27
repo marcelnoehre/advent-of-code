@@ -7,7 +7,7 @@ def main():
     day = input('Day:')
     response = requests.get(f'https://adventofcode.com/{year}/day/{day}', cookies={'session': os.getenv('AOC_SESSION_COOKIE')})
 
-    with open(os.path.join('templates', 'readme', 'README.md' if int(day) != 25 else 'README_25.md'), 'r', encoding='utf-8') as f:
+    with open(os.path.join('templates', 'readme', 'readme-day.md' if int(day) != 25 else 'readme-day-25.md'), 'r', encoding='utf-8') as f:
         readme = parser(f.read(), response.text, year, day)
     
     if readme is not None:
