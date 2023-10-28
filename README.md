@@ -339,7 +339,8 @@
 <img height=20 src="assets/typescript.svg"></a>
 </td>
 <td>
-<a href="https://github.com/marcelnoehre/advent-of-code">04</a>
+<a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2019/day04">04
+<img height=20 src="assets/typescript.svg"></a>
 </td>
 <td>
 <a href="https://github.com/marcelnoehre/advent-of-code">05</a>
