@@ -1,6 +1,7 @@
 import os
 import re
 import requests
+from bs4 import BeautifulSoup
 
 def main():
     with open(os.path.join('templates', 'readme', 'readme-overview.md'), 'r', encoding='utf-8') as f:
@@ -17,14 +18,14 @@ def parse(year):
     response = requests.get(f'https://adventofcode.com/{year}', cookies={'session': os.getenv('AOC_SESSION_COOKIE')})
 
     templates = {
-        'start': '\n<table>\n<tr>\n<th colspan="10" style="text-align:center">{YYYY}</th>\n</tr>',
-        'row1': '\n<tr>\n<td>\n<a href="{HREF}">{DD}{LANGS}</a>\n</td>', 
-        'row0': '\n<td>\n<a href="{HREF}">{DD}{LANGS}</a>\n</td>\n</tr>',
-        'row': '\n<td>\n<a href="{HREF}">{DD}{LANGS}</a>\n</td>',
-        'lang': '\n<img height=20 src="assets/{LANG}.svg">',
+        'start': '<table><tr><th colspan="10" style="text-align:center">{YYYY}</th></tr>',
+        'row1': '<tr><td><a href="{HREF}">{DD}{LANGS}</a></td>', 
+        'row0': '<td><a href="{HREF}">{DD}{LANGS}</a></td></tr>',
+        'row': '<td><a href="{HREF}">{DD}{LANGS}</a></td>',
+        'lang': '<img height="20" src="assets/{LANG}.svg">',
         'href': 'https://github.com/marcelnoehre/advent-of-code/tree/master/year{YYYY}/day{DD}',
         'aoc': 'https://github.com/marcelnoehre/advent-of-code',
-        'end': '\n</table>\n\n<hr>\n'
+        'end': '</table><hr>'
     }
     
     html = templates['start'].replace('{YYYY}', year)
@@ -39,7 +40,7 @@ def parse(year):
 
         html += (templates['row1'] if day % 5 == 1 else (templates['row0'] if day % 5 == 0 else templates['row'])).replace('{HREF}', href).replace('{DD}', day_str).replace('{LANGS}', langs)
 
-    return html + templates['end']
+    return BeautifulSoup(html + templates['end'], "html.parser").prettify()
 
 
 def remove_empty_folders(directory):
