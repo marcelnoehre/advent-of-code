@@ -7,23 +7,19 @@ console.log(part_1());
 console.log(part_2());
 function part_1() {
     return arr.filter(function (_a) {
-        var range1 = _a[0], range2 = _a[1];
-        return overlaps(range1, range2);
+        var pair1 = _a[0], pair2 = _a[1];
+        return overlaps(pair1, pair2);
     }).length;
 }
 function part_2() {
     return arr.filter(function (_a) {
-        var range1 = _a[0], range2 = _a[1];
-        return contains(range1, range2);
+        var pair1 = _a[0], pair2 = _a[1];
+        return contains(pair1, pair2);
     }).length;
 }
-function overlaps(range1, range2) {
-    return ((range1[0] <= range2[0] && range1[1] >= range2[1]) ||
-        (range2[0] <= range1[0] && range2[1] >= range1[1]));
+function overlaps(pair1, pair2) {
+    return ((pair1[0] <= pair2[0] && pair1[1] >= pair2[1]) || (pair2[0] <= pair1[0] && pair2[1] >= pair1[1]));
 }
-function contains(range1, range2) {
-    return ((range1[0] >= range2[0] && range1[0] <= range2[1]) ||
-        (range2[0] >= range1[0] && range2[0] <= range1[1]) ||
-        (range1[1] <= range2[1] && range1[1] >= range2[0]) ||
-        (range2[1] <= range1[1] && range2[1] >= range1[0]));
+function contains(pair1, pair2) {
+    return ((pair1[0] >= pair2[0] && pair1[0] <= pair2[1]) || (pair2[0] >= pair1[0] && pair2[0] <= pair1[1]) || (pair1[1] <= pair2[1] && pair1[1] >= pair2[0]) || (pair2[1] <= pair1[1] && pair2[1] >= pair1[0]));
 }
