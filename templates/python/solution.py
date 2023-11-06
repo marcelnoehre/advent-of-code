@@ -1,9 +1,9 @@
 def main():
-    with open('example.txt') as file:
+    with open('../example.txt') as file:
         input = [row for row in file]
     
-    part1(input)
-    part2(input)
+    print(part1(input))
+    print(part2(input))
 
 
 def part1(input):
