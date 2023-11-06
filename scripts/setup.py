@@ -6,7 +6,7 @@ def main():
     year = input('Year:')
     day = input('Day:')
     lang = input('Lang:')
-    while lang not in ['typescript', 'java']: lang = input('Lang:').lower()
+    while lang not in ['typescript', 'java', 'python']: lang = input('Lang:').lower()
 
     response = requests.get(f'https://adventofcode.com/{year}/day/{day}/input', cookies={'session': os.getenv('AOC_SESSION_COOKIE')})
 

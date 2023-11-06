@@ -36,7 +36,7 @@ def parse(year):
             href, langs = templates['aoc'], ''
         else:
             href = templates['href'].replace('{YYYY}', year).replace('{DD}', day_str)
-            langs = ''.join(templates['lang'].replace('{LANG}', lang) for lang in ['typescript', 'java'] if os.path.exists(os.path.join('year' + year, 'day' + day_str, lang)))
+            langs = ''.join(templates['lang'].replace('{LANG}', lang) for lang in ['typescript', 'java', 'python'] if os.path.exists(os.path.join('year' + year, 'day' + day_str, lang)))
 
         html += (templates['row1'] if day % 5 == 1 else (templates['row0'] if day % 5 == 0 else templates['row'])).replace('{HREF}', href).replace('{DD}', day_str).replace('{LANGS}', langs)
 
