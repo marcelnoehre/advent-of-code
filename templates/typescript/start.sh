@@ -1,1 +1,1 @@
-tsc solution.ts && node solution.js
+ts-node solution.ts
