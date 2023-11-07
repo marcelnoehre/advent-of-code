@@ -1,3 +1,3 @@
 @echo off
 ts-node solution.ts
-npx jest solution.spec.ts
+jest solution-YYYY-DD.spec.ts
