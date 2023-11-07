@@ -1,20 +1,22 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr:number[] = file.toString().split('\n').map(Number);
-console.log(part_1());
-console.log(part_2());
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
+const input: number[] = file.toString().split('\n').map(Number);
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
+}
 
-function part_1(): number {
+export function part_1(): number {
     return iterate(1);
 }
 
-function part_2(): number {
+export function part_2(): number {
     return iterate(2);
 }
 
 function iterate(part: number): number {
-    const numbers = part === 1 ? arr : arr.map(x => x * 811589153);
+    const numbers = part === 1 ? input : input.map(x => x * 811589153);
     let [q, c] = [numbers.slice().map((v, i) => [i, v]), 0];
     for (let m = 0; m < (part === 2 ? 10 : 1); m++) {
         for (let i = 0; i < q.length; i++) {

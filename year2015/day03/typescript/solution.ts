@@ -1,22 +1,24 @@
 import { readFileSync } from 'fs';
 
 const file: any = readFileSync('../puzzle.txt', 'utf-8');
-const arr: string[] = file.toString().trim().split('');
+const input: string[] = file.toString().trim().split('');
 const directions = {
     '^': [0, 1],
     'v': [0, -1],
     '<': [-1, 0],
     '>': [1, 0]
 }
-console.log(part_1());
-console.log(part_2());
-
-function part_1(): number {
-    return new Set(decodeInstructions(arr)).size;
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
 }
 
-function part_2(): number {
-    const [odds, evens] = arr.reduce(([odd, even], element, index) => index % 2 === 1
+export function part_1(): number {
+    return new Set(decodeInstructions(input)).size;
+}
+
+export function part_2(): number {
+    const [odds, evens] = input.reduce(([odd, even], element, index) => index % 2 === 1
             ? [odd.concat(element), even] : [odd, even.concat(element)], [[], []]);
     return new Set([...decodeInstructions(odds), ...decodeInstructions(evens)]).size;
 }

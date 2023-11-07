@@ -1,13 +1,15 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr:string[] = file.toString().trim().split('\n\n');
-const numbers: number[] = arr[0].trim().split(",").map(Number);
-const boards: number[][][] = arr.slice(1, arr.length).map((board) => board.split('\n').map((row) => row.trim().split(/\s+/).map((number) => parseInt(number, 10))))
-console.log(part_1());
-console.log(part_2());
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
+const input: string[] = file.toString().trim().split('\n\n');
+const numbers: number[] = input[0].trim().split(",").map(Number);
+const boards: number[][][] = input.slice(1, input.length).map((board) => board.split('\n').map((row) => row.trim().split(/\s+/).map(Number)))
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
+}
 
-function part_1(): number {
+export function part_1(): number {
     const marked: Set<number> = new Set<number>();
     for(const num of numbers) {
         marked.add(num);
@@ -19,7 +21,7 @@ function part_1(): number {
     }
 }
 
-function part_2(): number {
+export function part_2(): number {
     const [won, marked] = [new Set<number>(), new Set<number>()];
     for (const num of numbers) {
         marked.add(num);

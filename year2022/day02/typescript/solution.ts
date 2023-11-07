@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr: string[][] = file.toString().split('\n').map((tupel) => tupel.split(' '));
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
+const input: string[][] = file.toString().split('\n').map((tupel) => tupel.split(' '));
 const RPS = {
     A: {shape: 'rock', score: 1, result: 'lose', nemesis: 'paper'},
     B: {shape: 'paper', score: 2, result: 'draw', nemesis: 'scissors'},
@@ -13,9 +13,9 @@ const RPS = {
 console.log(part_1(RPS));
 console.log(part_2(RPS));
 
-function part_1(RPS: Object):number {
+export function part_1(RPS: Object):number {
     let sum = 0;
-    arr.forEach(round => {
+    input.forEach(round => {
         if(RPS[round[0]].shape === RPS[round[1]].shape) {
             sum += 3;
         } else if (RPS[round[1]].shape === RPS[round[0]].nemesis) {
@@ -26,9 +26,9 @@ function part_1(RPS: Object):number {
     return sum;
 }
 
-function part_2(RPS: Object):number {
+export function part_2(RPS: Object):number {
     let sum = 0;
-    arr.forEach(round => {
+    input.forEach(round => {
         switch(RPS[round[1]].result) {
             case 'win':
                 sum += 6 + ((RPS[round[0]].score + 1) % 3 == 0 ? 3 : (RPS[round[0]].score + 1) % 3);

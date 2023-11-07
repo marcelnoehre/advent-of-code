@@ -1,23 +1,25 @@
 import { readFileSync } from 'fs';
 
 const file: any = readFileSync('../puzzle.txt', 'utf-8');
-const arr: string[] = file.toString().split('\n');
+const input: string[] = file.toString().split('\n');
 const serialize = (map) => { return Object.keys(map).sort().map(key => `${key}:${map[key].join('')}`).join(',') };
-const [start, end, maps] = [{ x: 1, y: 0, steps: 0 }, { x: arr[0].length - 2, y: arr.length - 1, steps: 0 }, []]; setup();
-console.log(part_1());
-console.log(part_2());
+const [start, end, maps] = [{ x: 1, y: 0, steps: 0 }, { x: input[0].length - 2, y: input.length - 1, steps: 0 }, []]; setup();
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
+}
 
-function part_1(): number {
+export function part_1(): number {
     return simulate(maps, start, end);
 }
 
-function part_2(): number {
+export function part_2(): number {
     return simulate(maps, start, end, simulate(maps, end, start, simulate(maps, start, end, 0)));
 }
 
 function setup(): void {
     let map = { [`${start.x},${start.y - 1}`]: ['#'], [`${end.x},${end.y + 1}`]: ['#'] };
-    arr.forEach((line, y) => {line.split('').map((cell, x) => {if (cell !== '.') map[`${x},${y}`] = (map[`${x},${y}`] || []).concat([cell])})});
+    input.forEach((line, y) => {line.split('').map((cell, x) => {if (cell !== '.') map[`${x},${y}`] = (map[`${x},${y}`] || []).concat([cell])})});
     const serialized = serialize(map);
     do { 
         maps.push(map);
@@ -26,10 +28,10 @@ function setup(): void {
             const [x, y] = key.split(',').map(n => +n);
             map[key].forEach((dir) => {
                 let pos = key;
-                if (dir === '>') pos = `${x === arr[0].length - 2 ? 1 : x + 1},${y}`;
-                if (dir === '<') pos = `${x === 1 ? arr[0].length - 2 : x - 1},${y}`;
-                if (dir === 'v') pos = `${x},${y === arr.length - 2 ? 1 : y + 1}`;
-                if (dir === '^') pos = `${x},${y === 1 ? arr.length - 2 : y - 1}`;
+                if (dir === '>') pos = `${x === input[0].length - 2 ? 1 : x + 1},${y}`;
+                if (dir === '<') pos = `${x === 1 ? input[0].length - 2 : x - 1},${y}`;
+                if (dir === 'v') pos = `${x},${y === input.length - 2 ? 1 : y + 1}`;
+                if (dir === '^') pos = `${x},${y === 1 ? input.length - 2 : y - 1}`;
                 nxt[pos] = (nxt[pos] || []).concat([dir]);
             });
         });

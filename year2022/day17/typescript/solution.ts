@@ -1,16 +1,18 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const jetPattern = file.toString();
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
+const input: string = file.toString();
 const rocks: any[] = [{row:[['#','#','#','#']]},{row:[['.','#','.'],['#','#','#'],['.','#','.']]},{row:[['.','.','#'],['.','.','#'],['#','#','#']] },{row:[['#'],['#'],['#'],['#']]},{row:[['#','#'],['#','#']]}];
-console.log(part_1());
-console.log(part_2());
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
+}
 
-function part_1(): number {
+export function part_1(): number {
     return simulate(2022);
 }
 
-function part_2(): number {
+export function part_2(): number {
     return simulate(1000000000000);
 }
   
@@ -30,9 +32,9 @@ function simulate(iterations: number): number {
         for (let j = rocks[i % rocks.length].row.length + 3 - (chamber.length - (highest + 1)); j > 0; --j) chamber.push(Array(7).fill('.'));
         let [rowId, colId] = [highest + 3 + rocks[i % rocks.length].row.length, 2]
         while (true) {
-            let newColIdx = colId + ((jetPattern[jet] === '<') ? -1 : (jetPattern[jet] === '>') ? 1 : 0);
+            let newColIdx = colId + ((input[jet] === '<') ? -1 : (input[jet] === '>') ? 1 : 0);
             colId = isValidPosition(rocks[i % rocks.length].row, chamber, rowId, newColIdx) ? newColIdx : colId;
-            jet = (jet + 1) % jetPattern.length;
+            jet = (jet + 1) % input.length;
             if (!isValidPosition(rocks[i % rocks.length].row, chamber, rowId - 1, colId)) break;
             --rowId;
         }

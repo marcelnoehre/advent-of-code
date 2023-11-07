@@ -1,17 +1,19 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
 const pattern = /Blueprint (\d+): Each ore robot costs (\d+) ore. Each clay robot costs (\d+) ore. Each obsidian robot costs (\d+) ore and (\d+) clay. Each geode robot costs (\d+) ore and (\d+) obsidian./;
-const arr: number[][] = file.toString().split('\n').map((bp) => bp.match(pattern).slice(1, 8).map(Number));
-console.log(part_1());
-console.log(part_2());
-
-function part_1(): number {
-    return arr.reduce((sum, bp, i) => sum + (i + 1) * simulateBp(bp[1], bp[2], bp[3], bp[4], bp[5], bp[6], 24), 0);
+const input: number[][] = file.toString().split('\n').map((bp) => bp.match(pattern).slice(1, 8).map(Number));
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
 }
 
-function part_2(): number {
-    return arr.slice(0, 3).reduce((prod, bp) => prod * simulateBp(bp[1], bp[2], bp[3], bp[4], bp[5], bp[6], 32), 1);
+export function part_1(): number {
+    return input.reduce((sum, bp, i) => sum + (i + 1) * simulateBp(bp[1], bp[2], bp[3], bp[4], bp[5], bp[6], 24), 0);
+}
+
+export function part_2(): number {
+    return input.slice(0, 3).reduce((prod, bp) => prod * simulateBp(bp[1], bp[2], bp[3], bp[4], bp[5], bp[6], 32), 1);
 }
 
 function simulateBp(Co: number, Cc: number, Co1: number, Co2: number, Cg1: number, Cg2: number, T: number): number {

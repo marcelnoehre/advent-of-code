@@ -1,26 +1,26 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr:number[] = file.toString().trim().split(',').map((num) => parseInt(num, 10));
-console.log(part_1([...arr]));
-console.log(part_2([...arr]));
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
+const input: number[] = file.toString().trim().split(',').map(Number);
+console.log(part_1([...input]));
+console.log(part_2([...input]));
 
-function part_1(arr: number[]):number {
+export function part_1(input: number[]):number {
     for(let _ = 0; _ < 80; _++) {
-        const length = arr.length;
+        const length = input.length;
         for(let i = 0; i < length; i++) {
-            if(arr[i] === 0) {
-                arr.push(8);
+            if(input[i] === 0) {
+                input.push(8);
             }
-            arr[i] = arr[i] === 0 ? 6 : arr[i] - 1;
+            input[i] = input[i] === 0 ? 6 : input[i] - 1;
         }
     }
-    return arr.length;
+    return input.length;
 }
 
-function part_2(arr: number[]):number {
+export function part_2(input: number[]):number {
     let occurence: number[] = new Array(9).fill(0);
-    arr.forEach((timer) => occurence[timer]++);
+    input.forEach((timer) => occurence[timer]++);
     for(let _ = 0; _ < 256; _++) {
         let newOccurence: number[] = new Array(9).fill(0);
         for(let i = 0; i < 8; i++) {

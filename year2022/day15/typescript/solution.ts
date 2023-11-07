@@ -1,14 +1,16 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
 const pattern: RegExp = /Sensor at x=(-?\d+), y=(-?\d+): closest beacon is at x=(-?\d+), y=(-?\d+)/;
-const arr: number[][] = file.toString().split('\n').map((pos) => pos.match(pattern).slice(1, 5).map(Number));
-console.log(part_1());
-console.log(part_2());
+const input: number[][] = file.toString().split('\n').map((pos) => pos.match(pattern).slice(1, 5).map(Number));
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
+}
 
-function part_1(): number {
+export function part_1(): number {
     const [row, beacons]: Set<number>[] = [new Set(), new Set()];
-    arr.forEach((tuple) => {
+    input.forEach((tuple) => {
         const dist: number = Math.abs(tuple[0] - tuple[2]) + Math.abs(tuple[1] - tuple[3]);
         for (let i = tuple[0] - (dist - Math.abs(tuple[1] - 2000000)); i <= tuple[0] + (dist - Math.abs(tuple[1] - 2000000)); i++) row.add(i);
         if (tuple[3] === 2000000) beacons.add(tuple[2]);
@@ -16,9 +18,9 @@ function part_1(): number {
     return Array.from(row).filter((x) => !beacons.has(x)).length;
 }
 
-function part_2(): number {
+export function part_2(): number {
     const [sensors, minx, miny, maxx, maxy] = [[], 0, 0, 4000000, 4000000];
-    arr.forEach((tuple) => sensors.push([tuple[0], tuple[1], Math.abs(tuple[0] - tuple[2]) + Math.abs(tuple[1] - tuple[3])]));
+    input.forEach((tuple) => sensors.push([tuple[0], tuple[1], Math.abs(tuple[0] - tuple[2]) + Math.abs(tuple[1] - tuple[3])]));
     for(let sensor of sensors) {
         for (let [x, y] of generateField(sensor)) {            
             if (minx <= x && x <= maxx && miny <= y && y <= maxy && sensors.every(([sx, sy, diff]) => Math.abs(x - sx) + Math.abs(y - sy) > diff)) {

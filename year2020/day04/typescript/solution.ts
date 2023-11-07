@@ -1,17 +1,19 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr:string[][] = file.toString().split('\n\n').map((passport) => passport.split(/\s+/));
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
+const input: string[][] = file.toString().split('\n\n').map((passport) => passport.split(/\s+/));
 const required: string[] = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'];
-console.log(part_1());
-console.log(part_2());
-
-function part_1(): number {
-    return arr.filter(passport => required.every(field => new Set(passport.map(seq => seq.split(":")[0])).has(field))).length;
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
 }
 
-function part_2(): number {
-    return arr.filter(passport => validate(Object.fromEntries(passport.map(seq => seq.split(':'))))).length;
+export function part_1(): number {
+    return input.filter(passport => required.every(field => new Set(passport.map(seq => seq.split(":")[0])).has(field))).length;
+}
+
+export function part_2(): number {
+    return input.filter(passport => validate(Object.fromEntries(passport.map(seq => seq.split(':'))))).length;
 }
 
 function validate(dict: Object): boolean {

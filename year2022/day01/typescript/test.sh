@@ -1,2 +1,1 @@
-ts-node solution.ts
-npx jest solution.spec.ts
+jest solution-2022-01.spec.ts

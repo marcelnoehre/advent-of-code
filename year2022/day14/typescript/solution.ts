@@ -1,11 +1,13 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
 const [rocks, top] = setupRocks(file.toString().split('\n').map((row) => row.split(' -> ').map((pair) => pair.split(',').map(Number))));
-console.log(part_1());
-console.log(part_2());
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
+}
 
-function part_1(): number {
+export function part_1(): number {
     let [sand, xy]: [Set<string>, [number, number] | null] = [new Set(), null];
     while ((xy = simulate(500, 0, (x, y) => !Array.from(rocks).some(pt => pt[0] === x && pt[1] === y) && !sand.has(`${x},${y}`), top)) !== null) {
         sand.add(`${xy[0]},${xy[1]}`);
@@ -13,7 +15,7 @@ function part_1(): number {
     return sand.size;
 }
 
-function part_2(): number {
+export function part_2(): number {
     const sand: Set<string> = new Set();
     while (!sand.has('500,0')) {
         sand.add(`${simulate(500, 0, (x, y) => y < top + 2 && !Array.from(rocks).some(point => point[0] === x && point[1] === y) && !sand.has(`${x},${y}`), top + 2).join(',')}`);
@@ -21,9 +23,9 @@ function part_2(): number {
     return sand.size;
 }
 
-function setupRocks(arr: number[][]):  [Set<[number, number]>, number] {
+function setupRocks(input: number[][]):  [Set<[number, number]>, number] {
     let [rocks, max] = [new Set<[number, number]>(), 0];    
-    arr.forEach((structure) => {
+    input.forEach((structure) => {
         for(let i = 0; i < structure.length - 1; i++) {
             if(structure[i][0] === structure[i+1][0]) {
                 for (let y = Math.min(structure[i][1], structure[i+1][1]); y <= Math.max(structure[i][1], structure[i+1][1]); y++) {

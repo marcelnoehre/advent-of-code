@@ -1,11 +1,13 @@
 import { readFileSync } from "fs";
 
-const file: any = readFileSync('../puzzle.txt', 'utf-8');
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
 const directions: number[][] = [[1, 0], [-1, 0], [0, 1], [0, -1]];  
-console.log(part_1());
-console.log(part_2());
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
+}
 
-function part_1(): number {
+export function part_1(): number {
     let [start, end, chars] = [[0, 0], [0, 0], file.split('\n').map((row) => row.split(''))];
     chars.forEach((row, i) => {
         row.forEach((char, j) => {
@@ -16,7 +18,7 @@ function part_1(): number {
     return findShortestPass(chars, start, end, chars.length * chars[0].length);
 }
 
-function part_2(): number {
+export function part_2(): number {
     let [starts, end, chars] = [[], [0, 0], file.split('\n').map((row) => row.split(''))];
     chars.forEach((row, i) => {
         row.forEach((char, j) => {

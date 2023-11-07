@@ -1,14 +1,15 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr:number[][][] = file.toString().trim().split('\n').map((row) => row.split(' -> ').map((side) => side.split(',').map((num) => parseInt(num, 10))));
-console.log(part_1());
-console.log(part_2());
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
+const input: number[][][] = file.toString().trim().split('\n').map((row) => row.split(' -> ').map((side) => side.split(',').map(Number)));
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
+}
 
-
-function part_1(): number {
+export function part_1(): number {
     let [seen, duplicated] = [new Set<string>(), new Set<string>()];
-    for (const row of arr) {
+    for (const row of input) {
         if (!(row[0][0] !== row[1][0] && row[0][1] !== row[1][1])) {
             [seen, duplicated] = checkRow(iterate(row), seen, duplicated);
         }
@@ -16,9 +17,9 @@ function part_1(): number {
     return duplicated.size;
 }
 
-function part_2(): number {
+export function part_2(): number {
     let [seen, duplicated] = [new Set<string>(), new Set<string>()];
-    for (const row of arr) {
+    for (const row of input) {
         [seen, duplicated] = checkRow(iterate(row), seen, duplicated);
     }
     return duplicated.size;

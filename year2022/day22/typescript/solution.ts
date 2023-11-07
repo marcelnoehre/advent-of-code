@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr = file.toString().split('\n\n');
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
+const input = file.toString().split('\n\n');
 const squares: any[] = [
     { x: 50, y: 0, wrap: [null, null, [4, 0], [5, 0]] },
     { x: 100, y: 0, wrap: [[3, 2], [2, 2], null, [5, 3]] },
@@ -10,14 +10,16 @@ const squares: any[] = [
     { x: 0, y: 100, wrap: [null, null, [0, 0], [2, 0]] },
     { x: 0, y: 150, wrap: [[3, 3], [1, 1], [0, 1], null] },
 ];
-console.log(part_1());
-console.log(part_2());
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
+}
 
-function part_1(): number {
+export function part_1(): number {
     return password(wrap2D);
 }
 
-function part_2(): number {
+export function part_2(): number {
     return password(wrap3D(50));
 }
   
@@ -49,7 +51,7 @@ function walk(maze: string[][], pos: number[], steps: number, wrapLogic: Functio
 }
 
 function password(wrapLogic): number {
-    let [pos, maze, directions] = [[0, 0, 0], arr[0].split('\n').map(row => row.split('')), arr[1].replace(/(R|L)/g, ',$1,').split(',')];
+    let [pos, maze, directions] = [[0, 0, 0], input[0].split('\n').map(row => row.split('')), input[1].replace(/(R|L)/g, ',$1,').split(',')];
     while(maze[pos[1]][pos[0]] != '.') pos[0]++;
     while(directions.length > 0) {
         const dir = directions.shift()!;

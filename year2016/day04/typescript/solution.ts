@@ -1,17 +1,19 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
 const pattern: RegExp = /^([a-z\-]+)-(\d+)\[([a-z]+)\]$/;
-const arr: string[][] = file.toString().split('\n').map((room) => room.match(pattern).slice(1, 4));
-console.log(part_1());
-console.log(part_2());
-
-function part_1(): number {
-    return arr.reduce((acc, room) => acc + (sortChars(room[0].replace(/-/g, '')).slice(0, 5).join('') === room[2] ? Number(room[1]) : 0), 0);
+const input: string[][] = file.toString().split('\n').map((room) => room.match(pattern).slice(1, 4));
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
 }
 
-function part_2(): number {
-    return Number(arr.find((room) => (room[0] = room[0].replace(/-/g, ' ').split('').map(c => String.fromCharCode((c.charCodeAt(0) - 0x61 + Number(room[1])) % 26 + 0x61)).join("")).includes("north"))[1]);
+export function part_1(): number {
+    return input.reduce((acc, room) => acc + (sortChars(room[0].replace(/-/g, '')).slice(0, 5).join('') === room[2] ? Number(room[1]) : 0), 0);
+}
+
+export function part_2(): number {
+    return Number(input.find((room) => (room[0] = room[0].replace(/-/g, ' ').split('').map(c => String.fromCharCode((c.charCodeAt(0) - 0x61 + Number(room[1])) % 26 + 0x61)).join("")).includes("north"))[1]);
 }
 
 function sortChars(inputString: string): string[] {

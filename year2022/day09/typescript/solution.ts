@@ -1,17 +1,17 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr: string[][] = file.toString().trim().split('\n').map((pair) => pair.split(' '));
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
+const input: string[][] = file.toString().trim().split('\n').map((pair) => pair.split(' '));
 const directions = {
     U: [0, 1],
     D: [0, -1],
     L: [-1, 0],
     R: [1, 0]
 }
-console.log(part_1(arr));
-console.log(part_2(arr));
+console.log(part_1(input));
+console.log(part_2(input));
 
-function part_1(list: string[][]):number {
+export function part_1(list: string[][]):number {
     const tailPositions: number[][] = [[0,0]];
     let head: number[] = [0,0];
     let tail: number[] = [0,0];
@@ -35,7 +35,7 @@ function part_1(list: string[][]):number {
     return tailPositions.length;
 }
 
-function part_2(list: string[][]):number {
+export function part_2(list: string[][]):number {
     let tailPositions: number[][] = [[0,0]];
     let head: number[] = [0,0];
     let tail: number[][] = Array.from({ length: 9 }, () => [0, 0]);

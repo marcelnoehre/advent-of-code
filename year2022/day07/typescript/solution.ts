@@ -1,19 +1,21 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr: string[] = file.toString().split('\n');
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
+const input: string[] = file.toString().split('\n');
 const filesystem: { [key: string]: number } = {};
 setFileSystem();
-console.log(part_1());
-console.log(part_2());
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
+}
 
-function part_1(): number {
+export function part_1(): number {
     return Object.values(filesystem)
             .filter((size: number) => size <= 100000)
             .reduce((acc: number, size: number) => acc + size, 0);
 }
 
-function part_2(): number {
+export function part_2(): number {
     return Math.min(...Object.values(filesystem)
             .filter((size: number) => size >= (30000000 - (70000000 - filesystem['/']))));
 }
@@ -21,7 +23,7 @@ function part_2(): number {
 function setFileSystem(): { [key: string]: number } {
     const visited: Set<string> = new Set();
     let current: string[] = [];
-    arr.forEach(command => {
+    input.forEach(command => {
         if(command.match(/^\$ cd (.+)$/)) {
             current = command.split(' ')[2] === '..' ? current.slice(0, -1) : [...current, command.split(' ')[2]];
         } else if(command.match(/^(\d+) (.+)$/)) {

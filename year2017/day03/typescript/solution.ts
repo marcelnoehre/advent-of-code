@@ -1,11 +1,13 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const input:number = Number(file.toString());
-console.log(part_1());
-console.log(part_2());
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
+const input: number = Number(file.toString());
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
+}
 
-function part_1(): number {
+export function part_1(): number {
     let [steps, x, y] = [ Infinity,
         Math.pow(((Math.floor(Math.sqrt(input - 1) / 2) + 1) * 2 - 1), 2),
         Math.pow(((Math.floor(Math.sqrt(input - 1) / 2) + 1) * 2 + 1), 2)];
@@ -15,7 +17,7 @@ function part_1(): number {
     return steps + (Math.floor(Math.sqrt(input - 1) / 2) + 1);
 }
 
-function part_2(): number {
+export function part_2(): number {
     const grid: { [key: string]: number } = {};
     for (const [x, y] of generateField()) {
         const value: number = [-1, 0, 1].reduce((sum, i) => {                

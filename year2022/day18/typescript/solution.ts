@@ -1,18 +1,20 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr:number[][] = file.toString().split('\n').map((row) => row.split(',').map(Number));
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
+const input: number[][] = file.toString().split('\n').map((row) => row.split(',').map(Number));
 const neighbors: number[][] = [[0, 0, 1],[0, 0, -1],[0, 1, 0],[0, -1, 0],[1, 0, 0],[-1, 0, 0]];
-const Pts: Set<string> = new Set([...arr].map(String));
-console.log(part_1());
-console.log(part_2());
-
-function part_1(): number {
-    return arr.reduce((exposedSides, point) => exposedSides + neighbors.filter(delta => !arr.some(p => p.every((coord, index) => coord === point[index] + delta[index]))).length, 0);
+const Pts: Set<string> = new Set([...input].map(String));
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
 }
 
-function part_2(): number {
-    return arr.reduce((result, [x, y, z]) => result + neighbors.filter(([dx, dy, dz]) => outside(x + dx, y + dy, z + dz)).length, 0);
+export function part_1(): number {
+    return input.reduce((exposedSides, point) => exposedSides + neighbors.filter(delta => !input.some(p => p.every((coord, index) => coord === point[index] + delta[index]))).length, 0);
+}
+
+export function part_2(): number {
+    return input.reduce((result, [x, y, z]) => result + neighbors.filter(([dx, dy, dz]) => outside(x + dx, y + dy, z + dz)).length, 0);
 }
 
 function outside(x: number, y: number, z: number): boolean {

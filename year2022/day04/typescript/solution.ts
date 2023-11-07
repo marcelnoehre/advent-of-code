@@ -1,16 +1,18 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr: number[][][] = file.toString().trim().split('\n').map((group) => group.split(',').map(tupel => tupel.split('-').map(num => parseInt(num, 10))));
-console.log(part_1());
-console.log(part_2());
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
+const input: number[][][] = file.toString().trim().split('\n').map((group) => group.split(',').map(tupel => tupel.split('-').map(Number)));
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
+}
 
-function part_1() {
-    return arr.filter(([pair1, pair2]) => overlaps(pair1, pair2)).length;
+export function part_1() {
+    return input.filter(([pair1, pair2]) => overlaps(pair1, pair2)).length;
   }
   
-function part_2() {
-    return arr.filter(([pair1, pair2]) => contains(pair1, pair2)).length;
+export function part_2() {
+    return input.filter(([pair1, pair2]) => contains(pair1, pair2)).length;
 }
   
 function overlaps(pair1, pair2) {

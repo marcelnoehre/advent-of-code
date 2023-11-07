@@ -1,16 +1,18 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
-const arr:any[][] = file.toString().split('\n\n').map((pair) => pair.split('\n').map((item) => JSON.parse(item)));
-console.log(part_1());
-console.log(part_2());
-
-function part_1(): number {
-    return arr.reduce((sum, curr, i) => compare(curr[0], curr[1]) ? sum + i + 1 : sum, 0);
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
+const input: any[][] = file.toString().split('\n\n').map((pair) => pair.split('\n').map((item) => JSON.parse(item)));
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
 }
 
-function part_2(): number {
-    const tmp = [[[2]], [[6]]].concat(...arr).sort((a, b) => compare(a, b) ? -1 : 1);
+export function part_1(): number {
+    return input.reduce((sum, curr, i) => compare(curr[0], curr[1]) ? sum + i + 1 : sum, 0);
+}
+
+export function part_2(): number {
+    const tmp = [[[2]], [[6]]].concat(...input).sort((a, b) => compare(a, b) ? -1 : 1);
     return ((tmp.findIndex(item => JSON.stringify(item) === JSON.stringify([[2]])) + 1) ?? 1)
         * ((tmp.findIndex(item => JSON.stringify(item) === JSON.stringify([[6]])) + 1) ?? 1);
 }

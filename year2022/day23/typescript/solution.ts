@@ -1,11 +1,13 @@
 import { readFileSync } from 'fs';
 
-const file:any = readFileSync('../puzzle.txt', 'utf-8');
+const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
 let [elves, directions] = [new Set(), ['N', 'S', 'W', 'E']];
-console.log(part_1());
-console.log(part_2());
+if(process.argv[2] === 'puzzle') {
+    console.log(part_1());
+    console.log(part_2());
+}
 
-function part_1(): number {
+export function part_1(): number {
     file.toString().split('\n').map((row, y) => row.split('').map((dir, x) => {if (dir === '#') elves.add(`${x},${y}`)}));
     [...Array(10)].map(round);
     const keys = [...elves.keys()].map((key: string) => key.split(','));
@@ -13,7 +15,7 @@ function part_1(): number {
     return (xs.at(0) - xs.at(-1) + 1) * (ys.at(0) - ys.at(-1) + 1) - elves.size;
 }
 
-function part_2(): number {
+export function part_2(): number {
     [elves, directions] = [new Set(), ['N', 'S', 'W', 'E']];
     file.toString().split('\n').map((row, y) => row.split('').map((dir, x) => {if (dir === '#') elves.add(`${x},${y}`)}));
     let i = 1; for (i; round() > 0; i++); return i;
