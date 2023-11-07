@@ -7,11 +7,11 @@ setElves();
 console.log(part_1());
 console.log(part_2());
 
-function part_1():number {
+export function part_1(): number {
     return Math.max(...elves);
 }
 
-function part_2():number {
+export function part_2(): number {
     elves.sort(function(a, b){return b-a});
     return elves.slice(0, 3).reduce((acc, curr) => acc + curr, 0);
 }
