@@ -1,15 +1,13 @@
-package year2022.day04.java;
-
 import java.nio.file.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class Solution {
-    private static List<List<List<Integer>>> input = new ArrayList<>();
+    private static List<List<List<Integer>>> INPUT = new ArrayList<>();
 
     public static void main(String[] args) { 
         try {
-            parseInput(Files.readAllLines(Paths.get("../puzzle.txt")));
+            setup(Files.readAllLines(Paths.get("../puzzle.txt")));
             System.out.println(part1());
             System.out.println(part2());
         } catch(Exception e) {
@@ -17,16 +15,16 @@ public class Solution {
         }
     }
     
-	private static Integer part1() {
-        return (int) input.stream().filter(pairs -> overlaps(pairs.get(0), pairs.get(1))).count();
+	public static Integer part1() {
+        return (int) INPUT.stream().filter(pairs -> overlaps(pairs.get(0), pairs.get(1))).count();
     }
     
-    private static Integer part2() {
-        return (int) input.stream().filter(pairs -> contains(pairs.get(0), pairs.get(1))).count();
+    public static Integer part2() {
+        return (int) INPUT.stream().filter(pairs -> contains(pairs.get(0), pairs.get(1))).count();
     }
 
-    private static void parseInput(List<String> file) {
-        input = file.stream().map(group -> Arrays.stream(group.split(",")).map(tuple -> Arrays.stream(tuple.split("-"))
+    public static void setup(List<String> input) {
+        INPUT = input.stream().map(group -> Arrays.stream(group.split(",")).map(tuple -> Arrays.stream(tuple.split("-"))
             .map(Integer::parseInt).collect(Collectors.toList())).collect(Collectors.toList())).collect(Collectors.toList());
     }
 

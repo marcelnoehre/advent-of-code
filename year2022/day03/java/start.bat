@@ -1,2 +1,2 @@
 @echo off
-java Solution.java
+java -ea Solution.java

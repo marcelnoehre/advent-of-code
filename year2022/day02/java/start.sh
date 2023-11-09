@@ -1,1 +1,1 @@
-java solution.java
+java -ea Solution.java

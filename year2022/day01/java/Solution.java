@@ -1,5 +1,3 @@
-package year2022.day01.java;
-
 import java.nio.file.*;
 import java.util.*;
 
@@ -8,7 +6,7 @@ public class Solution {
     
     public static void main(String[] args) { 
         try {
-            setElfs(Files.readAllLines(Paths.get("../puzzle.txt")));
+            setup(Files.readAllLines(Paths.get("../puzzle.txt")));
             System.out.println(part1());
             System.out.println(part2());
         } catch(Exception e) {
@@ -16,16 +14,16 @@ public class Solution {
         }
     }
     
-	private static Integer part1() {
+	public static Integer part1() {
         return Collections.max(ELVES);
     }
     
-    private static Integer part2() {
+    public static Integer part2() {
         return ELVES.stream().sorted(Collections.reverseOrder())
                 .limit(3).mapToInt(Integer::intValue).sum();
     }
     
-    private static void setElfs(List<String> input) {
+    public static void setup(List<String> input) {
         int sum = 0;
         for(String calory : input) {
             if(calory.isBlank()) {

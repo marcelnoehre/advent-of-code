@@ -1,5 +1,3 @@
-package year2022.day02.java;
-
 import java.nio.file.*;
 import java.util.*;
 
@@ -8,7 +6,7 @@ public class Solution {
     
     public static void main(String[] args) { 
         try {
-            setMatches(Files.readAllLines(Paths.get("../puzzle.txt")));
+            setup(Files.readAllLines(Paths.get("../puzzle.txt")));
             System.out.println(part1());
             System.out.println(part2());
         } catch(Exception e) {
@@ -16,7 +14,7 @@ public class Solution {
         }
     }
     
-    private static Integer part1() {
+    public static Integer part1() {
         int score = 0;
         for(RPS[] match : MATCHES) {
             score += round(match[0], match[1]);
@@ -24,7 +22,7 @@ public class Solution {
         return score;
     }
     
-    private static Integer part2() {
+    public static Integer part2() {
         int score = 0;
         for(RPS[] match : MATCHES) {
             score += forcedRound(match[0], match[1]);
@@ -32,7 +30,7 @@ public class Solution {
         return score;
     }
     
-    private static void setMatches(List<String> input) {
+    public static void setup(List<String> input) {
         for(String match : input) {
             MATCHES.add(new RPS[] {
                 RPS.valueOf(String.valueOf(match.charAt(0))),

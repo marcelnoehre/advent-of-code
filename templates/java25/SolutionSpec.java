@@ -5,7 +5,7 @@ public class SolutionSpec {
     public static void main(String[] args) { 
         try {
             Solution.setup(Files.readAllLines(Paths.get("../example.txt")));
-            System.out.println(Solution.part1());
+            test(1, Solution.part1(), null);
         } catch(Exception e) {
             e.printStackTrace();
         }
