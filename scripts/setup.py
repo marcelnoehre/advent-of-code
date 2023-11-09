@@ -48,13 +48,6 @@ def lang_specific_changes(lang, year, day):
             f.write(ts_spec.replace('Advent of Code {YYYY}, Day {DD}', f'Advent of Code {year}, Day {day if int(day) > 9 else '0' + day}'))
 
         os.rename(os.path.join(f'year{year}', f'day{day if int(day) > 9 else '0' + day}', lang, 'solution.spec.ts'), os.path.join(f'year{year}', f'day{day if int(day) > 9 else '0' + day}', lang, f'solution-{year}-{day if int(day) > 9 else '0' + day}.spec.ts'))
-            
-    elif lang == 'java':
-        with open(os.path.join(f'year{year}', f'day{day if int(day) > 9 else '0' + day}', lang, 'Solution.java'), 'r', encoding='utf-8') as f:
-            java = f.read()
-
-        with open(os.path.join(f'year{year}', f'day{day if int(day) > 9 else '0' + day}', lang, 'Solution.java'), 'w', encoding='utf-8') as f:
-            f.write(java.replace('package yearYYYY.dayDD.java;', f'package year{year}.day{day if int(day) > 9 else '0' + day}.java;'))
 
 
 def remove_empty_folders(directory):
