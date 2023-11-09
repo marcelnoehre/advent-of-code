@@ -1,5 +1,5 @@
 def main():
-    with open('../example.txt') as file:
+    with open('../puzzle.txt') as file:
         input = [row for row in file]
     
     print(part1(input))
