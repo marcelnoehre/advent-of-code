@@ -13,6 +13,6 @@ public class SolutionSpec {
     
     public static void test(int part, int solution, int expected) {
         assert solution == expected : "Part_" + part + ": FAILED - " + "[expected: " + expected + ", solution: " + solution + "]";
-        System.out.println("Part_" + part + ": SUCCESS")
+        System.out.println("Part_" + part + ": SUCCESS");
     }
 }
