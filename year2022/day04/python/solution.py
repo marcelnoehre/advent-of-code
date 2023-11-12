@@ -2,15 +2,15 @@ def main():
     with open('../puzzle.txt') as file:
         input = [list(map(lambda tupel: list(map(int, tupel.split('-'))), group.split(','))) for group in file.read().split('\n')]
     
-    print(part1(input))
-    print(part2(input))
+    print(part_1(input))
+    print(part_2(input))
 
 
-def part1(input):
+def part_1(input):
     return len(list(filter(lambda pair: overlaps(pair[0], pair[1]), input)))
 
 
-def part2(input):
+def part_2(input):
     return len(list(filter(lambda pair: contains(pair[0], pair[1]), input)))
 
 

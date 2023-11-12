@@ -2,11 +2,11 @@ def main():
     with open('../puzzle.txt') as file:
         input = [row.strip() for row in file]
     
-    print(part1(input))
-    print(part2(input))
+    print(part_1(input))
+    print(part_2(input))
 
 
-def part1(input):
+def part_1(input):
     g, e = '', ''
 
     for i in range(len(input[0])):
@@ -22,7 +22,7 @@ def part1(input):
     return int(g, 2) * int(e, 2)
 
 
-def part2(input):
+def part_2(input):
     o, c = input, input
 
     for i in range(len(o[0])):

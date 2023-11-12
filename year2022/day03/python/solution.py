@@ -4,11 +4,11 @@ def main():
     with open('../puzzle.txt') as file:
         input = [row.rstrip('\n') for row in file]
     
-    print(part1(input))
-    print(part2(input))
+    print(part_1(input))
+    print(part_2(input))
 
 
-def part1(input):
+def part_1(input):
     sum = 0
     for rucksack in input:
         compartments = re.findall(f".{{1,{len(rucksack) // 2}}}", rucksack)
@@ -17,7 +17,7 @@ def part1(input):
     return sum
 
 
-def part2(input):
+def part_2(input):
     sum = 0
     groups = [input[i:i+3] + [None] * (3 - len(input[i:i+3])) for i in range(0, len(input), 3)]
     for group in groups:

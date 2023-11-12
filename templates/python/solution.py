@@ -2,15 +2,15 @@ def main():
     with open('../puzzle.txt') as file:
         input = [row for row in file]
     
-    print(part1(input))
-    print(part2(input))
+    print(part_1(input))
+    print(part_2(input))
 
 
-def part1(input):
+def part_1(input):
     pass
 
 
-def part2(input):
+def part_2(input):
     pass
 
 

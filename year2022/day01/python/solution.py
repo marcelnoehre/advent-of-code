@@ -2,15 +2,15 @@ def main():
     with open('../puzzle.txt') as file:
         input = [sum(map(int, input_string.split())) for input_string in file.read().split('\n\n')]
     
-    print(part1(input))
-    print(part2(input))
+    print(part_1(input))
+    print(part_2(input))
 
 
-def part1(input):
+def part_1(input):
     return max(input)
 
 
-def part2(input):
+def part_2(input):
     return sum(sorted(input, reverse=True)[:3])
 
 

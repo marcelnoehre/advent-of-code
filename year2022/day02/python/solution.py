@@ -2,11 +2,11 @@ def main():
     with open('../puzzle.txt') as file:
         input = [row.replace('\n', '').split() for row in file]
     
-    print(part1(input))
-    print(part2(input))
+    print(part_1(input))
+    print(part_2(input))
 
 
-def part1(input):
+def part_1(input):
     sum = 0
     for round in input:
         if RPS[round[0]]['shape'] == RPS[round[1]]['shape']:
@@ -20,7 +20,7 @@ def part1(input):
     return sum
 
 
-def part2(input):
+def part_2(input):
     sum = 0
     for round in input:
         if RPS[round[1]]['result'] == 'win':
