@@ -40,7 +40,7 @@
 [<img src="https://badgen.net/badge/02/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day02/java)
 [<img src="https://badgen.net/badge/03/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day03/java)
 [<img src="https://badgen.net/badge/04/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day04/java)
-![05](https://badgen.net/badge/05/☆☆/black)
+[<img src="https://badgen.net/badge/05/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day05/java)
 
 ![06](https://badgen.net/badge/06/☆☆/black)
 ![07](https://badgen.net/badge/07/☆☆/black)
