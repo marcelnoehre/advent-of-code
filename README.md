@@ -77,6 +77,7 @@ test.bat
     05
     <img height="20" src="assets/typescript.svg"/>
     <img height="20" src="assets/java.svg"/>
+    <img height="20" src="assets/python.svg"/>
    </a>
   </td>
  </tr>
