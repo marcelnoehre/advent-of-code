@@ -18,11 +18,7 @@ export function part_2():number {
 function getMarker(length: number): number {
     for(let i = 0; i < input.length - 3; i++) {
         let key: string[] = [];
-        for(let j = 0; j <= length - 1; j++) {
-            key.push(input[i + j]);
-        }
-        if((new Set(key)).size === key.length) {
-            return i + length;
-        }
+        for(let j = 0; j <= length - 1; j++) key.push(input[i + j]);
+        if((new Set(key)).size === key.length) return i + length;
     }
 }
