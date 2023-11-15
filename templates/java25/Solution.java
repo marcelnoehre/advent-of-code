@@ -4,7 +4,7 @@ import java.util.*;
 public class Solution {
     public static void main(String[] args) { 
         try {
-            setup(Files.readAllLines(Paths.get("../puzzle.txt")));
+            setup(Files.readString(Paths.get("../puzzle.txt")));
             System.out.println(part1());
         } catch(Exception e) {
             e.printStackTrace();
@@ -15,7 +15,7 @@ public class Solution {
         return null;
     }
 
-    public static void setup() {
+    public static void setup(String input) {
         
     }
 }

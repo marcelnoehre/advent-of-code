@@ -4,7 +4,7 @@ import java.util.*;
 public class SolutionSpec {
     public static void main(String[] args) { 
         try {
-            Solution.setup(Files.readAllLines(Paths.get("../example.txt")));
+            Solution.setup(Files.readString(Paths.get("../example.txt")));
             test(1, Solution.part1(), null);
             test(2, Solution.part2(), null);
         } catch(Exception e) {
