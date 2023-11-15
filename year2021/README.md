@@ -70,7 +70,7 @@
 [<img src="https://badgen.net/badge/01/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day01/python)
 [<img src="https://badgen.net/badge/02/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day02/python)
 [<img src="https://badgen.net/badge/03/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day03/python)
-![04](https://badgen.net/badge/04/☆☆/black)
+[<img src="https://badgen.net/badge/04/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day04/python)
 [<img src="https://badgen.net/badge/05/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day05/python)
 
 ![06](https://badgen.net/badge/06/☆☆/black)
