@@ -18,8 +18,7 @@ export function part_1(): number {
 }
 
 export function part_2(): number {
-    const [odds, evens] = input.reduce(([odd, even], element, index) => index % 2 === 1
-            ? [odd.concat(element), even] : [odd, even.concat(element)], [[], []]);
+    const [odds, evens] = input.reduce(([odd, even], element, index) => index % 2 === 1 ? [odd.concat(element), even] : [odd, even.concat(element)], [[], []]);
     return new Set([...decodeInstructions(odds), ...decodeInstructions(evens)]).size;
 }
 
