@@ -1,0 +1,1 @@
+java -ea Solution.java
