@@ -240,6 +240,7 @@ test.bat
    <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day03">
     03
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
    </a>
   </td>
