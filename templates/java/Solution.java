@@ -12,12 +12,12 @@ public class Solution {
         }
     }
     
-	public static Integer part1() {
-        return null;
+	public static int part1() {
+        return -1;
     }
     
-    public static Integer part2() {
-        return null;
+    public static int part2() {
+        return -1;
     }
 
     public static void setup(String input) {

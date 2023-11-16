@@ -5,8 +5,8 @@ public class SolutionSpec {
     public static void main(String[] args) { 
         try {
             Solution.setup(Files.readString(Paths.get("../example.txt")));
-            test(1, Solution.part1(), null);
-            test(2, Solution.part2(), null);
+            test(1, Solution.part1(), -1);
+            test(2, Solution.part2(), -1);
         } catch(Exception e) {
             e.printStackTrace();
         }
