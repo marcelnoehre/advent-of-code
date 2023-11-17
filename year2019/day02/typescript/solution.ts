@@ -9,7 +9,6 @@ if(process.argv[2] === 'puzzle') {
 
 export function part_1(): number {
     return simulate([...input], 12, 2);
-    
 }
 
 export function part_2(): number {
