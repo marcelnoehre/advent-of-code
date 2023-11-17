@@ -20,10 +20,7 @@ export function part_1(): number {
 }
 
 export function part_2(): number {
-    return Math.min(...panel.map(([x, y]) => 
-        wire1.findIndex(([a, b]) => a === x && b === y) 
-        + wire2.findIndex(([a, b]) => a === x && b === y))
-    ) + 2;
+    return Math.min(...panel.map(([x, y]) => wire1.findIndex(([a, b]) => a === x && b === y) + wire2.findIndex(([a, b]) => a === x && b === y))) + 2;
 }
 
 function decodeWire(wire: string[]) {
