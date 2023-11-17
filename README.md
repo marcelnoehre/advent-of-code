@@ -569,6 +569,7 @@ test.bat
    <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2019/day05">
     05
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/python.svg"/>
    </a>
   </td>
  </tr>
