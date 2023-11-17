@@ -36,7 +36,7 @@
 ![25](https://badgen.net/badge/25/☆☆/black)
 
 ## Java
-![01](https://badgen.net/badge/01/☆☆/black)
+[<img src="https://badgen.net/badge/01/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2019/day01/java)
 ![02](https://badgen.net/badge/02/☆☆/black)
 ![03](https://badgen.net/badge/03/☆☆/black)
 ![04](https://badgen.net/badge/04/☆☆/black)
