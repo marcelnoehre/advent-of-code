@@ -713,6 +713,7 @@ test.bat
    <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2018/day03">
     03
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>

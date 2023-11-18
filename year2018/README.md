@@ -38,7 +38,7 @@
 ## Java
 [<img src="https://badgen.net/badge/01/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2018/day01/java)
 [<img src="https://badgen.net/badge/02/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2018/day02/java)
-![03](https://badgen.net/badge/03/☆☆/black)
+[<img src="https://badgen.net/badge/03/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2018/day03/java)
 ![04](https://badgen.net/badge/04/☆☆/black)
 ![05](https://badgen.net/badge/05/☆☆/black)
 
