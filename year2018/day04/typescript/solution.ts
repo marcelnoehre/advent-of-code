@@ -16,9 +16,9 @@ export function part_1(): number {
 }
 
 export function part_2(): number {
-    let [sleepiestMinute, sleepiestFrequency, sleepiestGuard] = [0, 0, 0];
-    for (let [guard, record] of input.entries()) for (let minute = 0; minute < 60; minute++) if (record[minute] > sleepiestFrequency) [sleepiestMinute, sleepiestFrequency, sleepiestGuard] = [minute, record[minute], guard];
-    return sleepiestGuard * sleepiestMinute;;
+    let [sMin, sFreq, sGuard] = [0, 0, 0];
+    for (let [guard, record] of input.entries()) for (let minute = 0; minute < 60; minute++) if (record[minute] > sFreq) [sMin, sFreq, sGuard] = [minute, record[minute], guard];
+    return sGuard * sMin;
 }
 
 function setup(lines: string[]): Map<number, number[]> {
