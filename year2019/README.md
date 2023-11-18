@@ -39,7 +39,7 @@
 [<img src="https://badgen.net/badge/01/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2019/day01/java)
 [<img src="https://badgen.net/badge/02/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2019/day02/java)
 [<img src="https://badgen.net/badge/03/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2019/day03/java)
-![04](https://badgen.net/badge/04/☆☆/black)
+[<img src="https://badgen.net/badge/04/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2019/day04/java)
 ![05](https://badgen.net/badge/05/☆☆/black)
 
 ![06](https://badgen.net/badge/06/☆☆/black)
