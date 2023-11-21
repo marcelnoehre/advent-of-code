@@ -1030,8 +1030,9 @@ test.bat
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2016/day05">
     05
+    <img height="20" src="assets/typescript.svg"/>
    </a>
   </td>
  </tr>
