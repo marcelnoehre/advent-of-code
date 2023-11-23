@@ -1,16 +1,11 @@
 from itertools import chain
 
 def main():
-    with open('../puzzle.txt') as file:
-        input = file.read().split('\n\n')
-        numbers = [int(num) for num in input[0].split(',')]
-        boards = [[[int(cell) for cell in row.split()] for row in board.split('\n')] for board in input[1:]]
-
-    print(part_1(numbers, boards))
-    print(part_2(numbers, boards))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(numbers, boards):
+def part_1():
     marked = set()
     for num in numbers:
         marked.add(num)
@@ -20,7 +15,7 @@ def part_1(numbers, boards):
                 return num * sum(x for x in chain.from_iterable(board) if x not in marked)
             
 
-def part_2(numbers, boards):
+def part_2():
     won = set()
     marked = set()
     for num in numbers:
@@ -37,7 +32,18 @@ def part_2(numbers, boards):
                 
                 if len(won) == len(boards):
                     return num * sum(x for row in b for x in row if x not in marked)
+                
+
+def setup(path):
+    global numbers
+    global boards
+    
+    with open(path, 'r') as file:
+        input = file.read().split('\n\n')
+        numbers = [int(num) for num in input[0].split(',')]
+        boards = [[[int(cell) for cell in row.split()] for row in board.split('\n')] for board in input[1:]]
 
 
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

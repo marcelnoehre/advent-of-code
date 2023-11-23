@@ -1,16 +1,13 @@
 def main():
-    with open('../puzzle.txt') as file:
-        input = file.read().split()
-    
-    print(part_1(input))
-    print(part_2(input))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     return (len(react(input)))
 
 
-def part_2(input):
+def part_2():
     best = {"unit": None, "reacted": input}
     for i in range(26):
         reacted = react([unit for unit in input if unit.lower() != chr(ord('a') + i)])
@@ -19,6 +16,13 @@ def part_2(input):
             best = {"unit": chr(ord('a') + i), "reacted": reacted}
 
     return len(best["reacted"])
+
+
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = file.read().split()
 
 
 def react(units):
@@ -34,4 +38,5 @@ def react(units):
 
 
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

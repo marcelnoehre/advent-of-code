@@ -1,14 +1,11 @@
 import re
 
-def main():
-    with open('../puzzle.txt') as file:
-        input = [row.rstrip('\n') for row in file]
-    
-    print(part_1(input))
-    print(part_2(input))
+def main():    
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     sum = 0
     for rucksack in input:
         compartments = re.findall(f".{{1,{len(rucksack) // 2}}}", rucksack)
@@ -17,7 +14,7 @@ def part_1(input):
     return sum
 
 
-def part_2(input):
+def part_2():
     sum = 0
     groups = [input[i:i+3] + [None] * (3 - len(input[i:i+3])) for i in range(0, len(input), 3)]
     for group in groups:
@@ -26,9 +23,17 @@ def part_2(input):
     return sum
 
 
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = [row.rstrip('\n') for row in file]
+
+
 def get_char_value(c):
     return ord(c) - (ord(c) > 96 and 96 or 38)
 
 
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

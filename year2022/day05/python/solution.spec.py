@@ -1,4 +1,4 @@
-from solution import part_1, part_2, setup_stacks
+from solution import setup, part_1, part_2
 import unittest
 import logging
 
@@ -8,20 +8,16 @@ class UnitTest(unittest.TestCase):
     
     @classmethod
     def setUp(self):
+        setup('../example.txt')
         logging.addLevelName(111, 'part_1')
         logging.addLevelName(222, 'part_2')
-
-        with open('../example.txt') as file:
-            input = file.read().split('\n\n')
-            self.intial_stacks = setup_stacks(input[0].split('\n')[:-1][::-1])
-            self.instructions = [[int(value) if value.isdigit() or (value[1:].isdigit() and value[0] == '-') else float('nan') for value in row.split(' ')] for row in input[1].split('\n')]
 
 
     def test_part_1(self):
         print('\n----------------------------------------------------------------------')
 
         try:
-            solution_1, expected = part_1(self.intial_stacks, self.instructions), 'CMZ'
+            solution_1, expected = part_1(), 'CMZ'
             self.assertEqual(solution_1, expected)
             logging.getLogger(' SUCCESS').log(111, '')
             
@@ -33,7 +29,7 @@ class UnitTest(unittest.TestCase):
         print('\n----------------------------------------------------------------------')
         
         try:
-            solution_2, expected = part_2(self.intial_stacks, self.instructions), 'MCD'
+            solution_2, expected = part_2(), 'MCD'
             self.assertEqual(solution_2, expected)
             logging.getLogger(' SUCCESS').log(222, '')
             

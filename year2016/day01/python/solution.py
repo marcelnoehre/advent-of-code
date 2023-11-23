@@ -1,12 +1,9 @@
-def main():
-    with open('../puzzle.txt') as file:
-        input = file.read().split(', ')
-    
-    print(part_1(input))
-    print(part_2(input))
+def main():    
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     directions, pos, direction = [(0, 1), (1, 0), (0, -1), (-1, 0)], [0, 0], 0
 
     for move in input:
@@ -17,10 +14,10 @@ def part_1(input):
     return abs(pos[0] + pos[1])
 
 
-def part_2(input_moves):
+def part_2():
     directions, visited, pos, direction = [(0, 1), (1, 0), (0, -1), (-1, 0)], set(), [0, 0], 0
 
-    for move in input_moves:
+    for move in input:
         direction = (direction + (1 if move[0] == 'R' else -1) + 4) % 4
         max_value = int(move[1:]) * directions[direction][int(directions[direction][0] == 0)]
         
@@ -35,5 +32,13 @@ def part_2(input_moves):
                 visited.add(tuple(pos))
 
 
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = file.read().split(', ')
+
+
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

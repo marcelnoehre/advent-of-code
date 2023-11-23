@@ -1,20 +1,24 @@
 def main():
-    with open('../puzzle.txt') as file:
-        input = [*file.read()]
-    
-    print(part_1(input))
-    print(part_2(input))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     sum = 0
     for char in input:
         sum += 1 if char == '(' else -1
     return sum
 
 
-def part_2(input):
+def part_2():
     return next((index + 1 for index, element in enumerate(input) if find_index_condition(element, index, input)), None)
+
+
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = [*file.read()]
 
 
 def find_index_condition(element, index, array):
@@ -22,4 +26,5 @@ def find_index_condition(element, index, array):
 
 
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

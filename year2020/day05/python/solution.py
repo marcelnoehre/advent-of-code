@@ -1,18 +1,22 @@
 def main():
-    with open('../puzzle.txt') as file:
-        input = setup_seats([[line[:7], line[-3:]] for line in file.read().split('\n')])
-
-    print(part_1(input))
-    print(part_2(input))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     return max(input)
 
 
 def part_2(input):
     input.sort()
     return next((seat - 1 for seat, prev_seat in zip(input[1:], input) if seat - prev_seat != 1), 0)
+
+
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = setup_seats([[line[:7], line[-3:]] for line in file.read().split('\n')])
 
 
 def setup_seats(input):
@@ -36,4 +40,5 @@ def setup_seats(input):
 
 
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

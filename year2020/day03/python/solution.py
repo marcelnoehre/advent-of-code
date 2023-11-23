@@ -1,21 +1,25 @@
 def main():
-    with open('../puzzle.txt') as file:
-        input = [row.rstrip() for row in file]
-    
-    print(part_1(input))
-    print(part_2(input))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     return check_trees(input, 3)
 
 
-def part_2(input):
+def part_2():
     product = 1
     for step in [1, 3, 5, 7]:
         product *= check_trees(input, step)
 
     return product * check_trees(input, 1, 1)
+
+
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = [row.rstrip() for row in file]
 
 
 def check_trees(input, step, skip=None):
@@ -32,4 +36,5 @@ def check_trees(input, step, skip=None):
  
 
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

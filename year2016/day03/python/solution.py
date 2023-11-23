@@ -1,23 +1,27 @@
 def main():
-    with open('../puzzle.txt') as file:
-        input = [list(map(int, row.strip().split())) for row in file.read().split('\n')]
-    
-    print(part_1(input))
-    print(part_2(input))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input_data):
-    return len([1 for a, b, c in input_data if check_triangle(a, b, c)])
+def part_1():
+    return len([1 for a, b, c in input if check_triangle(a, b, c)])
 
 
-def part_2(input_data):
+def part_2():
     sum = 0
-    for i in range(0, len(input_data), 3):
+    for i in range(0, len(input), 3):
         for j in range(3):
-            if check_triangle(input_data[i][j], input_data[i + 1][j], input_data[i + 2][j]):
+            if check_triangle(input[i][j], input[i + 1][j], input[i + 2][j]):
                 sum += 1
 
     return sum
+
+
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = [list(map(int, row.strip().split())) for row in file.read().split('\n')]
 
 
 def check_triangle(a, b, c):
@@ -25,4 +29,5 @@ def check_triangle(a, b, c):
 
 
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

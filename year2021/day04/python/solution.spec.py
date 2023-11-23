@@ -1,4 +1,4 @@
-from solution import part_1, part_2
+from solution import setup, part_1, part_2
 import unittest
 import logging
 
@@ -8,20 +8,16 @@ class UnitTest(unittest.TestCase):
     
     @classmethod
     def setUp(self):
+        setup('../example.txt')
         logging.addLevelName(111, 'part_1')
         logging.addLevelName(222, 'part_2')
-
-        with open('../example.txt') as file:
-            input = file.read().split('\n\n')
-            self.numbers = [int(num) for num in input[0].split(',')]
-            self.boards = [[[int(cell) for cell in row.split()] for row in board.split('\n')] for board in input[1:]]
 
 
     def test_part_1(self):
         print('\n----------------------------------------------------------------------')
 
         try:
-            solution_1, expected = part_1(self.numbers, self.boards), 4512
+            solution_1, expected = part_1(), 4512
             self.assertEqual(solution_1, expected)
             logging.getLogger(' SUCCESS').log(111, '')
             
@@ -33,7 +29,7 @@ class UnitTest(unittest.TestCase):
         print('\n----------------------------------------------------------------------')
         
         try:
-            solution_2, expected = part_2(self.numbers, self.boards), 1924
+            solution_2, expected = part_2(), 1924
             self.assertEqual(solution_2, expected)
             logging.getLogger(' SUCCESS').log(222, '')
             

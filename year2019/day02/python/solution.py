@@ -1,21 +1,25 @@
 def main():
-    with open('../puzzle.txt') as file:
-        input = [int(num) for num in file.read().split(',')]
-    
-    print(part_2(input))
-    print(part_1(input))
+    print(part_2())
+    print(part_1())
 
 
-def part_1(input):
+def part_1():
     return simulate(input, 12, 2)
 
 
-def part_2(input):
+def part_2():
     input.pop()
     for noun in range(len(input)):
         for verb in range(len(input)):
             if simulate(input[:], noun, verb) == 19690720:
                 return 100 * noun + verb
+
+
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = [int(num) for num in file.read().split(',')]
 
 
 def simulate(codes, noun, verb):
@@ -29,4 +33,5 @@ def simulate(codes, noun, verb):
 
 
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

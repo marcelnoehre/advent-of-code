@@ -1,19 +1,23 @@
 def main():
-    with open('../puzzle.txt') as file:
-        input = [row for row in file]
-    
-    print(part_1(input))
-    print(part_2(input))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     wire1, wire2 = map(parse_wire_1, input)
     return min(abs(x) + abs(y) for x, y in (wire1 & wire2))
 
 
-def part_2(input):
+def part_2():
     wire1, wire2 = map(parse_wire_2, input)
     return min(wire1[intersection] + wire2[intersection] for intersection in (wire1.keys() & wire2.keys()))
+
+
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = [row for row in file]
 
 
 def parse_wire_1(wire):
@@ -43,4 +47,5 @@ def parse_wire_2(wire):
 
 
 if __name__ == '__main__':
+    setup(('../puzzle.txt'))
     main()

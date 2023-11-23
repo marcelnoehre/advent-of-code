@@ -1,19 +1,23 @@
 import re
 
-def main():
-    with open('../puzzle.txt') as file:
-        input = [row for row in file]
-    
-    print(part_1(input))
-    print(part_2(input))
+def main():    
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     return validate([r'^(?!.*ab)(?!.*cd)(?!.*pq)(?!.*xy).*$', r'^(.*[aeiou]){3}.*$', r'(.)\1'], input)
 
 
-def part_2(input):
+def part_2():
     return validate([r'([a-z][a-z]).*\1', r'([a-z])[a-z]\1'], input)
+
+
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = [row for row in file]
 
 
 def validate(valid, input):
@@ -26,4 +30,5 @@ def validate(valid, input):
 
 
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

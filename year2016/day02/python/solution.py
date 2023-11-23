@@ -1,13 +1,9 @@
 def main():
-    with open('../puzzle.txt') as file:
-        input = file.read().split('\n')
-        directions = {'L': [-1, 0],'R': [1, 0],'U': [0, 1],'D': [0, -1]}
-    
-    print(part_1(input, directions))
-    print(part_2(input, directions))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input, directions):
+def part_1():
     password, x, y = '', 1, 1
     keypad = [
         [7, 4, 1],
@@ -25,7 +21,7 @@ def part_1(input, directions):
     return password
 
 
-def part_2(input, directions):
+def part_2():
     password, x, y = '', 1, 3
     keypad = [
         [None, None, None, None, None, None, None],
@@ -48,5 +44,15 @@ def part_2(input, directions):
     return password
 
 
+def setup(path):
+    global input
+    global directions
+    
+    with open(path, 'r') as file:
+        input = file.read().split('\n')
+        directions = {'L': [-1, 0],'R': [1, 0],'U': [0, 1],'D': [0, -1]}
+
+
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

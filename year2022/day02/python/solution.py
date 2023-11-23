@@ -1,12 +1,9 @@
 def main():
-    with open('../puzzle.txt') as file:
-        input = [row.replace('\n', '').split() for row in file]
-    
-    print(part_1(input))
-    print(part_2(input))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     sum = 0
     for round in input:
         if RPS[round[0]]['shape'] == RPS[round[1]]['shape']:
@@ -20,7 +17,7 @@ def part_1(input):
     return sum
 
 
-def part_2(input):
+def part_2():
     sum = 0
     for round in input:
         if RPS[round[1]]['result'] == 'win':
@@ -35,6 +32,13 @@ def part_2(input):
     return sum
 
 
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = [row.replace('\n', '').split() for row in file]
+
+
 RPS = {
     'A': {'shape': 'rock', 'score': 1, 'result': 'lose', 'nemesis': 'paper'},
     'B': {'shape': 'paper', 'score': 2, 'result': 'draw', 'nemesis': 'scissors'},
@@ -46,4 +50,5 @@ RPS = {
 
 
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

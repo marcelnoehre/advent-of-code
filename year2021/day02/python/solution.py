@@ -1,12 +1,9 @@
 def main():
-    with open('../puzzle.txt') as file:
-        input = [(dir, int(val)) for dir, val in (row.split() for row in file)]
-    
-    print(part_1(input))
-    print(part_2(input))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     h, d = 0, 0
 
     for (c,v) in input:
@@ -20,7 +17,7 @@ def part_1(input):
     return h * d
 
 
-def part_2(input):
+def part_2():
     a, h, d = 0, 0, 0
 
     for (c,v) in input:
@@ -35,5 +32,13 @@ def part_2(input):
     return h * d
 
 
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = [(dir, int(val)) for dir, val in (row.split() for row in file)]
+
+
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

@@ -1,15 +1,12 @@
 def main():
-    with open('../puzzle.txt') as file:
-        input = [int(num) for num in file]
-    
-    print(part_1(input))
-    print(part_2(input))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     return sum(input)
 
-def part_2(input):
+def part_2():
     frequencies, frequency = set(), 0
 
     while True:
@@ -22,5 +19,13 @@ def part_2(input):
             frequencies.add(frequency)
 
 
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = [int(num) for num in file]
+
+
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

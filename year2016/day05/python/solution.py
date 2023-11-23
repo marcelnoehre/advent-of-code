@@ -1,14 +1,11 @@
 import hashlib
 
-def main():
-    with open('../puzzle.txt') as file:
-        input = file.read()
-    
-    print(part_1(input))
-    print(part_2(input))
+def main():    
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     i, pw = 0, ''
     
     while len(pw) < 8:
@@ -20,7 +17,7 @@ def part_1(input):
     return pw
 
 
-def part_2(input):
+def part_2():
     i, pw = 0, ['_'] * 8
 
     while '_' in pw:
@@ -34,5 +31,13 @@ def part_2(input):
     return ''.join(pw)
 
 
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = file.read()
+
+
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

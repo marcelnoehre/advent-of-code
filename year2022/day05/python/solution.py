@@ -1,14 +1,9 @@
 def main():
-    with open('../puzzle.txt') as file:
-        input = file.read().split('\n\n')
-        intial_stacks = setup_stacks(input[0].split('\n')[:-1][::-1])
-        instructions = [[int(value) if value.isdigit() or (value[1:].isdigit() and value[0] == '-') else float('nan') for value in row.split(' ')] for row in input[1].split('\n')]
-        
-    print(part_1(intial_stacks, instructions))
-    print(part_2(intial_stacks, instructions))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(intial_stacks, instructions):
+def part_1():
     stacks = [list(stack) for stack in intial_stacks]
 
     for move in instructions:
@@ -18,7 +13,7 @@ def part_1(intial_stacks, instructions):
     return ''.join(str(stack.pop()) for stack in stacks)
 
 
-def part_2(intial_stacks, instructions):
+def part_2():
     stacks = [list(stack) for stack in intial_stacks]
     
     for move in instructions:
@@ -26,6 +21,16 @@ def part_2(intial_stacks, instructions):
         stacks[move[3] - 1] = stacks[move[3] - 1][:-move[1]]
 
     return ''.join(str(stack.pop()) for stack in stacks)
+
+
+def setup(path):
+    global intial_stacks
+    global instructions
+    
+    with open(path, 'r') as file:
+        input = file.read().split('\n\n')
+        intial_stacks = setup_stacks(input[0].split('\n')[:-1][::-1])
+        instructions = [[int(value) if value.isdigit() or (value[1:].isdigit() and value[0] == '-') else float('nan') for value in row.split(' ')] for row in input[1].split('\n')]
 
 
 def setup_stacks(arr):
@@ -38,4 +43,5 @@ def setup_stacks(arr):
 
 
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

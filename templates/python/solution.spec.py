@@ -1,4 +1,4 @@
-from solution import part_1, part_2
+from solution import setup, part_1, part_2
 import unittest
 import logging
 
@@ -8,18 +8,16 @@ class UnitTest(unittest.TestCase):
     
     @classmethod
     def setUp(self):
+        setup('../example.txt')
         logging.addLevelName(111, 'part_1')
         logging.addLevelName(222, 'part_2')
-
-        with open('../example.txt') as file:
-            self.input = [row for row in file]
 
 
     def test_part_1(self):
         print('\n----------------------------------------------------------------------')
 
         try:
-            solution_1, expected = part_1(self.input), None
+            solution_1, expected = part_1(), None
             self.assertEqual(solution_1, expected)
             logging.getLogger(' SUCCESS').log(111, '')
             
@@ -31,7 +29,7 @@ class UnitTest(unittest.TestCase):
         print('\n----------------------------------------------------------------------')
         
         try:
-            solution_2, expected = part_2(self.input), None
+            solution_2, expected = part_2(), None
             self.assertEqual(solution_2, expected)
             logging.getLogger(' SUCCESS').log(222, '')
             

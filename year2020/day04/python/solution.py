@@ -1,20 +1,24 @@
 import re
 
 def main():
-    with open('../puzzle.txt') as file:
-        input = [passport.split() for passport in file.read().split('\n\n')]
-    
-    print(part_1(input))
-    print(part_2(input))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     required = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid']
     return len([passport for passport in input if all(field in {seq.split(":")[0] for seq in passport} for field in required)])
 
 
-def part_2(input):
+def part_2():
     return len([passport for passport in input if validate(dict([entry.split(':') for entry in passport]))])
+
+
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = [passport.split() for passport in file.read().split('\n\n')]
 
 
 def validate(passport_dict):
@@ -56,4 +60,5 @@ def validate(passport_dict):
 
 
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

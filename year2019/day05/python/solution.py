@@ -1,17 +1,21 @@
 def main():
-    with open('../puzzle.txt') as file:
-        input = [int(num) for num in file.read().split(',')]
-    
-    print(part_1(input))
-    print(part_2(input))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     return calc(input, 1)
 
 
-def part_2(input):
+def part_2():
     return calc(input, 5)
+
+
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = [int(num) for num in file.read().split(',')]
 
 
 def calc(input, mode):
@@ -61,4 +65,5 @@ def calc(input, mode):
 
 
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

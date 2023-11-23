@@ -1,12 +1,9 @@
 def main():
-    with open('../puzzle.txt') as file:
-        input = [[[int(number) for number in side.split(',')] for side in row.split(' -> ')] for row in file.read().split('\n')]
-    
-    print(part_1(input))
-    print(part_2(input))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     seen, duplicated = set(), set()
     for row in input:
         if not (row[0][0] != row[1][0] and row[0][1] != row[1][1]):
@@ -15,12 +12,19 @@ def part_1(input):
     return len(duplicated)
 
 
-def part_2(input):
+def part_2():
     seen, duplicated = set(), set()
     for row in input:
         seen, duplicated = check_row(iterate(row), seen, duplicated)
 
     return len(duplicated)
+
+
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = [[[int(number) for number in side.split(',')] for side in row.split(' -> ')] for row in file.read().split('\n')]
 
 
 def check_row(iterator, seen, duplicated):
@@ -54,4 +58,5 @@ def iterate(row):
 
 
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

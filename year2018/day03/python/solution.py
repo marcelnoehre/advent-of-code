@@ -1,14 +1,11 @@
 import re
 
 def main():
-    with open('../puzzle.txt') as file:
-        input = [list(map(int, re.findall(r'\d+', claim))) for claim in file.readlines()]
-    
-    print(part_1(input))
-    print(part_2(input))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     fabric, overlaps = [[0] * 1000 for _ in range(1000)], 0
 
     for _, x, y, w, h in input:
@@ -22,7 +19,7 @@ def part_1(input):
     return overlaps
 
 
-def part_2(input):
+def part_2():
     fabric, no_overlap = [[0] * 1000 for _ in range(1000)], set()
 
     for claim_id, x, y, w, h in input:
@@ -40,5 +37,13 @@ def part_2(input):
     return int(",".join(map(str, no_overlap)))
 
 
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = [list(map(int, re.findall(r'\d+', claim))) for claim in file.readlines()]
+
+
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

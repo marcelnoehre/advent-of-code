@@ -1,14 +1,11 @@
 import re
 
 def main():
-    with open('../puzzle.txt') as file:
-        input = setup(sorted([row for row in file]))
-    
-    print(part_1(input))
-    print(part_2(input))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     s_guard, s_total = 0, 0
 
     for guard, record in input.items():
@@ -24,7 +21,7 @@ def part_1(input):
     return s_guard * s_min
 
 
-def part_2(input):
+def part_2():
     s_min, s_freq, s_guard = 0, 0, 0
 
     for guard, record in input.items():
@@ -35,7 +32,14 @@ def part_2(input):
     return s_guard * s_min
 
 
-def setup(lines):
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = setup_lines(sorted([row for row in file]))
+
+
+def setup_lines(lines):
     records = {}
     currentGuard = 0
     sleepStart = 0
@@ -58,4 +62,5 @@ def setup(lines):
 
 
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

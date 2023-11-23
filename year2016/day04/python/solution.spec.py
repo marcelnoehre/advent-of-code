@@ -1,4 +1,4 @@
-from solution import part_1, part_2
+from solution import setup, part_1, part_2
 import unittest
 import logging
 import re
@@ -9,18 +9,15 @@ class UnitTest(unittest.TestCase):
     
     @classmethod
     def setUp(self):
+        setup('../example.txt')
         logging.addLevelName(111, 'part_1')
         logging.addLevelName(222, 'part_2')
-
-        with open('../example.txt') as file:
-            pattern = re.compile(r'^([a-z\-]+)-(\d+)\[([a-z]+)\]$')
-            self.input = [pattern.match(room).groups() for room in file.read().split('\n') if pattern.match(room)]
 
     def test_part_1(self):
         print('\n----------------------------------------------------------------------')
 
         try:
-            solution_1, expected = part_1(self.input), 278221
+            solution_1, expected = part_1(), 278221
             self.assertEqual(solution_1, expected)
             logging.getLogger(' SUCCESS').log(111, '')
             
@@ -32,7 +29,7 @@ class UnitTest(unittest.TestCase):
         print('\n----------------------------------------------------------------------')
         
         try:
-            solution_2, expected = part_2(self.input), 267
+            solution_2, expected = part_2(), 267
             self.assertEqual(solution_2, expected)
             logging.getLogger(' SUCCESS').log(222, '')
             

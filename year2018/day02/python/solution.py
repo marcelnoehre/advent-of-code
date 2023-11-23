@@ -1,12 +1,9 @@
 def main():
-    with open('../puzzle.txt') as file:
-        input = [row for row in file]
-    
-    print(part_1(input))
-    print(part_2(input))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     twice, thrice = 0, 0
     for row in input:
         counter = {}
@@ -20,7 +17,7 @@ def part_1(input):
     return twice * thrice
 
 
-def part_2(input):
+def part_2():
     for x in range(len(input)):
         for y in range(len(input)):
             if x != y and len(input[x]) == len(input[y]):
@@ -32,7 +29,15 @@ def part_2(input):
 
                 if difference == 1:
                     return (input[x][:position] + input[x][position + 1:]).rstrip()
+                
+        
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = [row for row in file]
 
 
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()

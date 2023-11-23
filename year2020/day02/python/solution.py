@@ -1,12 +1,9 @@
 def main():
-    with open('../puzzle.txt') as file:
-        input = [row.rstrip().split(' ') for row in file]
-    
-    print(part_1(input))
-    print(part_2(input))
+    print(part_1())
+    print(part_2())
 
 
-def part_1(input):
+def part_1():
     sum = 0
     for line in input:
         borders, char, password = line
@@ -18,7 +15,7 @@ def part_1(input):
     return sum
 
 
-def part_2(input):
+def part_2():
     sum = 0
     for line in input:
         borders, char, password = line
@@ -30,5 +27,13 @@ def part_2(input):
     return sum
 
 
+def setup(path):
+    global input
+    
+    with open(path, 'r') as file:
+        input = [int(row) for row in file]
+
+
 if __name__ == '__main__':
+    setup('../puzzle.txt')
     main()
