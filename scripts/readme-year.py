@@ -53,6 +53,7 @@ def remove_empty_folders(directory):
     for folder_name, subfolders, file_names in os.walk(directory, topdown=False):
         for subfolder in subfolders:
             folder_path = os.path.join(folder_name, subfolder)
+            
             if not any(os.listdir(folder_path)):
                 os.rmdir(folder_path)
                 print(f"Removed empty folder: {folder_path}")
