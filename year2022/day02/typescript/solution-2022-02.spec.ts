@@ -1,13 +1,4 @@
-import { part_1, part_2 } from './solution';
-
-const RPS = {
-  A: {shape: 'rock', score: 1, result: 'lose', nemesis: 'paper'},
-  B: {shape: 'paper', score: 2, result: 'draw', nemesis: 'scissors'},
-  C: {shape: 'scissors', score: 3, result: 'win', nemesis: 'rock'},
-  X: {shape: 'rock', score: 1, result: 'lose', nemesis: 'paper'},
-  Y: {shape: 'paper', score: 2, result: 'draw', nemesis: 'scissors'},
-  Z: {shape: 'scissors', score: 3, result: 'win', nemesis: 'rock'}
-}
+import { part_1, part_2, RPS } from './solution';
 
 describe('Advent of Code 2022, Day 02', () => {
   it('Part One', () => {
