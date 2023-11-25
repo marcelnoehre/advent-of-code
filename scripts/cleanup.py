@@ -2,7 +2,7 @@ import os
 import shutil
 
 def main():
-    for year in range(2022, 2014, -1):
+    for year in range(2023, 2014, -1):
         remove_unused_items('year' + str(year))
 
 

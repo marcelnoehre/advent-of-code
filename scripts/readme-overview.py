@@ -8,7 +8,7 @@ def main():
         readme = f.read()
 
     with open('README.md', 'w', encoding='utf-8') as f:
-        for year in range(2022, 2014, -1): 
+        for year in range(2023, 2014, -1): 
             readme += parse(str(year))
         f.write(readme)
 

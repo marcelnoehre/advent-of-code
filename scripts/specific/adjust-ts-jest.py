@@ -1,7 +1,7 @@
 import os
 
 def main():
-    for year in range(2022, 2014, -1): 
+    for year in range(2023, 2014, -1): 
         remove_empty_folders('year' + str(year))
         
         for day in range(1, 26):
