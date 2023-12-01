@@ -36,6 +36,150 @@ test.bat
 <table>
  <tr>
   <th colspan="10" style="text-align:center">
+   2023
+  </th>
+ </tr>
+ <tr>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day01">
+    01
+    <img height="20" src="assets/typescript.svg"/>
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day02">
+    02
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day03">
+    03
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day04">
+    04
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day05">
+    05
+   </a>
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day06">
+    06
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day07">
+    07
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day08">
+    08
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day09">
+    09
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day10">
+    10
+   </a>
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day11">
+    11
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day12">
+    12
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day13">
+    13
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day14">
+    14
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day15">
+    15
+   </a>
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day16">
+    16
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day17">
+    17
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day18">
+    18
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day19">
+    19
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day20">
+    20
+   </a>
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day21">
+    21
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day22">
+    22
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day23">
+    23
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day24">
+    24
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day25">
+    25
+   </a>
+  </td>
+ </tr>
+</table>
+<hr/>
+<table>
+ <tr>
+  <th colspan="10" style="text-align:center">
    2022
   </th>
  </tr>
