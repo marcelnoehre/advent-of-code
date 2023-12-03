@@ -6,7 +6,7 @@
 
 ## TypeScript
 [<img src="https://badgen.net/badge/01/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day01/typescript)
-![02](https://badgen.net/badge/02/☆☆/black)
+[<img src="https://badgen.net/badge/02/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day02/typescript)
 ![03](https://badgen.net/badge/03/☆☆/black)
 ![04](https://badgen.net/badge/04/☆☆/black)
 ![05](https://badgen.net/badge/05/☆☆/black)
