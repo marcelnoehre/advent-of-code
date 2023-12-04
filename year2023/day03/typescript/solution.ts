@@ -15,8 +15,8 @@ export function part_2(): number {
   return calc(2);
 }
 
-export default function calc(part: number): number {
-  let [directions, ratios, sum] = [[[-1, 0],[-1, 1],[0, 1],[1, 1],[1, 0],[1, -1],[0, -1],[-1, -1]], new Map(), 0];
+function calc(part: number): number {
+  let [directions, ratios, sum] = [[[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]], new Map(), 0];
   for (let i = 0; i < input.length; i++) {
       for (let j = 0; j < input[i].length; j++) {
           if (!Number.isFinite(Number(input[i][j]))) continue;
