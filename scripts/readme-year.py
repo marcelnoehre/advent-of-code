@@ -5,7 +5,7 @@ import requests
 def main():
     year = input('Year:')
     remove_empty_folders('year' + year)
-    response = requests.get(f'https://adventofcode.com/{year}', cookies={'session': os.getenv('AOC_SESSION_COOKIE')})
+    response = requests.get(f'https://adventofcode.com/{year}', cookies={'session': os.getenv('AOC')})
 
     with open(os.path.join('templates', 'readme', 'readme-year.md'), 'r', encoding='utf-8') as f:
         readme = f.read()

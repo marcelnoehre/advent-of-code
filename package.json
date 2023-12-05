@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "pip": "pip3 install -r requirements.txt"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.7",
     "@types/node": "^18.11.2",

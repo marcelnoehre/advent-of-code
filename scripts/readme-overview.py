@@ -15,7 +15,7 @@ def main():
 
 def parse(year):
     remove_empty_folders('year' + year)
-    response = requests.get(f'https://adventofcode.com/{year}', cookies={'session': os.getenv('AOC_SESSION_COOKIE')})
+    response = requests.get(f'https://adventofcode.com/{year}', cookies={'session': os.getenv('AOC')})
 
     templates = {
         'start': '<table><tr><th colspan="10" style="text-align:center">{YYYY}</th></tr>',

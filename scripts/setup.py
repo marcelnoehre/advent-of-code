@@ -9,7 +9,7 @@ def main():
     while lang not in ['typescript', 'java', 'python']: lang = input('Lang:').lower()
 
     remove_empty_folders('year' + year)
-    response = requests.get(f'https://adventofcode.com/{year}/day/{day}/input', cookies={'session': os.getenv('AOC_SESSION_COOKIE')})
+    response = requests.get(f'https://adventofcode.com/{year}/day/{day}/input', cookies={'session': os.getenv('AOC')})
 
     if response.status_code == 200:
         os.makedirs(os.path.dirname(os.path.join(f'year{year}', f'day{day if int(day) > 9 else "0" + day}')), exist_ok=True)
