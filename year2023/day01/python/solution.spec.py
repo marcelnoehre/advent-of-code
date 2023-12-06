@@ -17,7 +17,7 @@ class UnitTest(unittest.TestCase):
     print('\n----------------------------------------------------------------------')
 
     try:
-      solution_1, expected = part_1(), None
+      solution_1, expected = part_1(), 209
       self.assertEqual(solution_1, expected)
       logging.getLogger(' SUCCESS').log(111, '')
 
@@ -29,7 +29,7 @@ class UnitTest(unittest.TestCase):
     print('\n----------------------------------------------------------------------')
 
     try:
-      solution_2, expected = part_2(), None
+      solution_2, expected = part_2(), 281
       self.assertEqual(solution_2, expected)
       logging.getLogger(' SUCCESS').log(222, '')
 
