@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 
 const file: any = readFileSync('../' + (process.argv[2] === 'puzzle' ? 'puzzle' : 'example') + '.txt', 'utf-8');
-const input: [any, any] = [file.toString().split('\n\n')[0].split('').map((char) => +(char === 'R')), file.toString().split('\n\n')[1].split('\n').reduce((acc, line) => (([left, right]) => (acc[left] = right.match(/\w+/g), acc)) (line.split(' = ')), {})];
+const input: [string[], {[key: string]: string[]}] = [file.toString().split('\n\n')[0].split('').map((char) => +(char === 'R')), file.toString().split('\n\n')[1].split('\n').reduce((acc, line) => (([left, right]) => (acc[left] = right.match(/\w+/g), acc)) (line.split(' = ')), {})];
 if(process.argv[2] === 'puzzle') {
   console.log(part_1());
   console.log(part_2());
