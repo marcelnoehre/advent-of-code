@@ -151,12 +151,13 @@ test.bat
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day18">
     18
+    <img height="20" src="assets/typescript.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day19">
+   <a href="https://github.com/marcelnoehre/advent-of-code">
     19
    </a>
   </td>
