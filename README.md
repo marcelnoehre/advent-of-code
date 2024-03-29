@@ -165,32 +165,33 @@ test.bat
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day20">
     20
+    <img height="20" src="assets/typescript.svg"/>
    </a>
   </td>
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day21">
+   <a href="https://github.com/marcelnoehre/advent-of-code">
     21
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day22">
+   <a href="https://github.com/marcelnoehre/advent-of-code">
     22
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day23">
+   <a href="https://github.com/marcelnoehre/advent-of-code">
     23
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day24">
+   <a href="https://github.com/marcelnoehre/advent-of-code">
     24
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day25">
+   <a href="https://github.com/marcelnoehre/advent-of-code">
     25
    </a>
   </td>
