@@ -23,7 +23,7 @@ def parse(year):
         'row0': '<td><a href="{HREF}">{DD}{LANGS}</a></td></tr>',
         'row': '<td><a href="{HREF}">{DD}{LANGS}</a></td>',
         'lang': '<img height="20" src="assets/{LANG}.svg">',
-        'href': 'https://github.com/marcelnoehre/advent-of-code/tree/master/year{YYYY}/day{DD}',
+        'href': 'https://github.com/marcelnoehre/advent-of-code/tree/main/year{YYYY}/day{DD}',
         'aoc': 'https://github.com/marcelnoehre/advent-of-code',
         'end': '</table><hr>'
     }
@@ -36,7 +36,7 @@ def parse(year):
             href, langs = templates['aoc'], ''
         else:
             href = templates['href'].replace('{YYYY}', year).replace('{DD}', day_str)
-            langs = ''.join(templates['lang'].replace('{LANG}', lang) for lang in ['typescript', 'java', 'python'] if os.path.exists(os.path.join('year' + year, 'day' + day_str, lang)))
+            langs = ''.join(templates['lang'].replace('{LANG}', lang) if os.path.exists(os.path.join('year' + year, 'day' + day_str, lang)) else templates['lang'].replace('{LANG}', 'transparent') for lang in ['typescript', 'python', 'java'])
 
         html += (templates['row1'] if day % 5 == 1 else (templates['row0'] if day % 5 == 0 else templates['row'])).replace('{HREF}', href).replace('{DD}', day_str).replace('{LANGS}', langs)
 

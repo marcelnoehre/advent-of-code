@@ -5,13 +5,13 @@
 # 🎄 Advent of Code 2021 🎄
 
 ## TypeScript
-[<img src="https://badgen.net/badge/01/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day01/typescript)
-[<img src="https://badgen.net/badge/02/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day02/typescript)
-[<img src="https://badgen.net/badge/03/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day03/typescript)
-[<img src="https://badgen.net/badge/04/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day04/typescript)
-[<img src="https://badgen.net/badge/05/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day05/typescript)
+[<img src="https://badgen.net/badge/01/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day01/typescript)
+[<img src="https://badgen.net/badge/02/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day02/typescript)
+[<img src="https://badgen.net/badge/03/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day03/typescript)
+[<img src="https://badgen.net/badge/04/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day04/typescript)
+[<img src="https://badgen.net/badge/05/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day05/typescript)
 
-[<img src="https://badgen.net/badge/06/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day06/typescript)
+[<img src="https://badgen.net/badge/06/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day06/typescript)
 ![07](https://badgen.net/badge/07/☆☆/black)
 ![08](https://badgen.net/badge/08/☆☆/black)
 ![09](https://badgen.net/badge/09/☆☆/black)
@@ -36,11 +36,11 @@
 ![25](https://badgen.net/badge/25/☆☆/black)
 
 ## Java
-[<img src="https://badgen.net/badge/01/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day01/java)
-[<img src="https://badgen.net/badge/02/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day02/java)
-[<img src="https://badgen.net/badge/03/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day03/java)
-[<img src="https://badgen.net/badge/04/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day04/java)
-[<img src="https://badgen.net/badge/05/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day05/java)
+[<img src="https://badgen.net/badge/01/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day01/java)
+[<img src="https://badgen.net/badge/02/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day02/java)
+[<img src="https://badgen.net/badge/03/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day03/java)
+[<img src="https://badgen.net/badge/04/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day04/java)
+[<img src="https://badgen.net/badge/05/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day05/java)
 
 ![06](https://badgen.net/badge/06/☆☆/black)
 ![07](https://badgen.net/badge/07/☆☆/black)
@@ -67,11 +67,11 @@
 ![25](https://badgen.net/badge/25/☆☆/black)
 
 ## Python
-[<img src="https://badgen.net/badge/01/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day01/python)
-[<img src="https://badgen.net/badge/02/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day02/python)
-[<img src="https://badgen.net/badge/03/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day03/python)
-[<img src="https://badgen.net/badge/04/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day04/python)
-[<img src="https://badgen.net/badge/05/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day05/python)
+[<img src="https://badgen.net/badge/01/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day01/python)
+[<img src="https://badgen.net/badge/02/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day02/python)
+[<img src="https://badgen.net/badge/03/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day03/python)
+[<img src="https://badgen.net/badge/04/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day04/python)
+[<img src="https://badgen.net/badge/05/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day05/python)
 
 ![06](https://badgen.net/badge/06/☆☆/black)
 ![07](https://badgen.net/badge/07/☆☆/black)

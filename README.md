@@ -41,163 +41,211 @@ test.bat
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day01">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day01">
     01
     <img height="20" src="assets/typescript.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day02">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day02">
     02
     <img height="20" src="assets/typescript.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day03">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day03">
     03
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day04">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day04">
     04
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day05">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day05">
     05
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day06">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day06">
     06
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day07">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day07">
     07
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day08">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day08">
     08
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day09">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day09">
     09
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day10">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day10">
     10
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day11">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day11">
     11
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day12">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day12">
     12
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day13">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day13">
     13
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day14">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day14">
     14
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day15">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day15">
     15
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day16">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day16">
     16
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day17">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day17">
     17
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day18">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day18">
     18
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day19">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day19">
     19
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day20">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day20">
     20
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day21">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day21">
     21
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day22">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day22">
     22
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day23">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day23">
     23
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day24">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day24">
     24
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day25">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2023/day25">
     25
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -211,173 +259,211 @@ test.bat
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day01">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day01">
     01
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day02">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day02">
     02
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day03">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day03">
     03
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day04">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day04">
     04
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day05">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day05">
     05
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day06">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day06">
     06
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day07">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day07">
     07
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day08">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day08">
     08
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day09">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day09">
     09
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day10">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day10">
     10
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day11">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day11">
     11
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day12">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day12">
     12
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day13">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day13">
     13
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day14">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day14">
     14
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day15">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day15">
     15
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day16">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day16">
     16
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day17">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day17">
     17
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day18">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day18">
     18
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day19">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day19">
     19
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day20">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day20">
     20
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day21">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day21">
     21
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day22">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day22">
     22
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day23">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day23">
     23
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day24">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day24">
     24
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2022/day25">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2022/day25">
     25
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -391,51 +477,53 @@ test.bat
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day01">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day01">
     01
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day02">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day02">
     02
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day03">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day03">
     03
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day04">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day04">
     04
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day05">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day05">
     05
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2021/day06">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day06">
     06
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
@@ -550,43 +638,43 @@ test.bat
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2020/day01">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2020/day01">
     01
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2020/day02">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2020/day02">
     02
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2020/day03">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2020/day03">
     03
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2020/day04">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2020/day04">
     04
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2020/day05">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2020/day05">
     05
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
  </tr>
@@ -708,43 +796,43 @@ test.bat
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2019/day01">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2019/day01">
     01
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2019/day02">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2019/day02">
     02
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2019/day03">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2019/day03">
     03
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2019/day04">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2019/day04">
     04
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2019/day05">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2019/day05">
     05
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
  </tr>
@@ -866,43 +954,43 @@ test.bat
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2018/day01">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2018/day01">
     01
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2018/day02">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2018/day02">
     02
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2018/day03">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2018/day03">
     03
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2018/day04">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2018/day04">
     04
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2018/day05">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2018/day05">
     05
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
  </tr>
@@ -1024,43 +1112,43 @@ test.bat
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2017/day01">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2017/day01">
     01
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2017/day02">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2017/day02">
     02
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2017/day03">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2017/day03">
     03
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2017/day04">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2017/day04">
     04
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2017/day05">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2017/day05">
     05
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
  </tr>
@@ -1182,43 +1270,43 @@ test.bat
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2016/day01">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2016/day01">
     01
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2016/day02">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2016/day02">
     02
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2016/day03">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2016/day03">
     03
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2016/day04">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2016/day04">
     04
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2016/day05">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2016/day05">
     05
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
  </tr>
@@ -1340,51 +1428,53 @@ test.bat
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2015/day01">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2015/day01">
     01
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2015/day02">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2015/day02">
     02
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2015/day03">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2015/day03">
     03
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2015/day04">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2015/day04">
     04
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2015/day05">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2015/day05">
     05
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/java.svg"/>
     <img height="20" src="assets/python.svg"/>
+    <img height="20" src="assets/java.svg"/>
    </a>
   </td>
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2015/day06">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2015/day06">
     06
     <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>

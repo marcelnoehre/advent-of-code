@@ -20,8 +20,8 @@ def main():
 
 def parser(response, year):
     templates = {
-        2: '[<img src="https://badgen.net/badge/{DAY}/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year{YEAR}/day{DAY}/{LANG})\n',
-        1: '[<img src="https://badgen.net/badge/{DAY}/★☆/gray">](https://github.com/marcelnoehre/advent-of-code/tree/master/year{YEAR}/day{DAY}/{LANG})\n',
+        2: '[<img src="https://badgen.net/badge/{DAY}/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year{YEAR}/day{DAY}/{LANG})\n',
+        1: '[<img src="https://badgen.net/badge/{DAY}/★☆/gray">](https://github.com/marcelnoehre/advent-of-code/tree/main/year{YEAR}/day{DAY}/{LANG})\n',
         0: '![{DAY}](https://badgen.net/badge/{DAY}/☆☆/black)\n',
     }
 
