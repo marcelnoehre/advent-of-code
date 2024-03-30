@@ -171,8 +171,9 @@ test.bat
  </tr>
  <tr>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day21">
     21
+    <img height="20" src="assets/typescript.svg"/>
    </a>
   </td>
   <td>
