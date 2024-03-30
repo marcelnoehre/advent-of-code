@@ -33,7 +33,7 @@
 [<img src="https://badgen.net/badge/22/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day22/typescript)
 [<img src="https://badgen.net/badge/23/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day23/typescript)
 [<img src="https://badgen.net/badge/24/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day24/typescript)
-![25](https://badgen.net/badge/25/☆☆/black)
+[<img src="https://badgen.net/badge/25/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/master/year2023/day25/typescript)
 
 ## Java
 ![01](https://badgen.net/badge/01/☆☆/black)
