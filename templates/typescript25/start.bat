@@ -1,2 +1,2 @@
 @echo off
-ts-node solution.ts
+ts-node solution.ts puzzle
