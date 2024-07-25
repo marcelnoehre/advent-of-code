@@ -4,6 +4,9 @@ import requests
 from bs4 import BeautifulSoup
 
 def main():
+    build()
+
+def build():
     with open(os.path.join('templates', 'readme', 'readme-overview.md'), 'r', encoding='utf-8') as f:
         readme = f.read()
 

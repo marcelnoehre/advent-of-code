@@ -6,7 +6,9 @@ def main():
     year = input('Year:')
     day = input('Day:')
     response = requests.get(f'https://adventofcode.com/{year}/day/{day}', cookies={'session': os.getenv('AOC')})
+    build(year, day, response)
 
+def build(year, day, response):
     with open(os.path.join('templates', 'readme', 'readme-day.md' if int(day) != 25 else 'readme-day-25.md'), 'r', encoding='utf-8') as f:
         readme = parser(f.read(), response.text, year, day)
     

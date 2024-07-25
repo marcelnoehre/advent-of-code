@@ -4,6 +4,9 @@ import requests
 
 def main():
     year = input('Year:')
+    build(year)
+
+def build(year):
     remove_empty_folders('year' + year)
     response = requests.get(f'https://adventofcode.com/{year}', cookies={'session': os.getenv('AOC')})
 
