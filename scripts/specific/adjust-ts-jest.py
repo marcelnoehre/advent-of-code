@@ -17,23 +17,11 @@ def main():
                 with open(os.path.join(f'year{year}', f'day{day_str}', 'typescript', 'start.sh'), 'w', encoding='utf-8') as f:
                     f.write(start_sh)
 
-                with open(os.path.join('templates', 'typescript', 'start.bat'), 'r', encoding='utf-8') as f:
-                    start_bat = f.read()
-    
-                with open(os.path.join(f'year{year}', f'day{day_str}', 'typescript', 'start.bat'), 'w', encoding='utf-8') as f:
-                    f.write(start_bat)
-
                 with open(os.path.join('templates', 'typescript', 'test.sh'), 'r', encoding='utf-8') as f:
                     test_sh = f.read()
     
                 with open(os.path.join(f'year{year}', f'day{day_str}', 'typescript', 'test.sh'), 'w', encoding='utf-8') as f:
                     f.write(test_sh.replace('jest solution-YYYY-DD.spec.ts', f'jest solution-{year}-{day_str}.spec.ts'))
-
-                with open(os.path.join('templates', 'typescript', 'test.bat'), 'r', encoding='utf-8') as f:
-                    test_bat = f.read()
-    
-                with open(os.path.join(f'year{year}', f'day{day_str}', 'typescript', 'test.bat'), 'w', encoding='utf-8') as f:
-                    f.write(test_bat.replace('jest solution-YYYY-DD.spec.ts', f'jest solution-{year}-{day_str}.spec.ts'))
 
                 with open(os.path.join(f'year{year}', f'day{day_str}', 'typescript', 'solution.ts'), 'r', encoding='utf-8') as f:
                     ts = f.read()

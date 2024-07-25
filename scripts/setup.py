@@ -35,12 +35,6 @@ def lang_specific_changes(lang, year, day):
         with open(os.path.join(f'year{year}', f'day{day if int(day) > 9 else "0" + day}', lang, 'test.sh'), 'w', encoding='utf-8') as f:
             f.write(ts_test_sh.replace('jest solution-YYYY-DD.spec.ts', f'jest solution-{year}-{day if int(day) > 9 else "0" + day}.spec.ts'))
 
-        with open(os.path.join(f'year{year}', f'day{day if int(day) > 9 else "0" + day}', lang, 'test.bat'), 'r', encoding='utf-8') as f:
-            ts_test_bat = f.read()
-
-        with open(os.path.join(f'year{year}', f'day{day if int(day) > 9 else "0" + day}', lang, 'test.bat'), 'w', encoding='utf-8') as f:
-            f.write(ts_test_bat.replace('jest solution-YYYY-DD.spec.ts', f'jest solution-{year}-{day if int(day) > 9 else "0" + day}.spec.ts'))
-
         with open(os.path.join(f'year{year}', f'day{day if int(day) > 9 else "0" + day}', lang, 'solution.spec.ts'), 'r', encoding='utf-8') as f:
             ts_spec = f.read()
 

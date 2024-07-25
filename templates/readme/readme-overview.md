@@ -5,7 +5,7 @@
 
 <hr/>
 
-## Unix-based (macOS, Linux)
+## Scripts
 
 Calculate solution:
 ```
@@ -15,18 +15,6 @@ sh start.sh
 Validate with example data:
 ```
 sh test.sh
-```
-
-## Windows
-
-Calculate solution:
-```
-start.bat
-```
-
-Validate with example data:
-```
-test.bat
 ```
 
 <hr>
