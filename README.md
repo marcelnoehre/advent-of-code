@@ -527,8 +527,11 @@ test.bat
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2021/day07">
     07
+    <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
