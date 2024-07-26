@@ -7,12 +7,12 @@
 
 ## Scripts
 
-Calculate solution:
+#### Calculate solution:
 ```
 sh start.sh
 ```
 
-Validate with example data:
+#### Validate with example data:
 ```
 sh test.sh
 ```
