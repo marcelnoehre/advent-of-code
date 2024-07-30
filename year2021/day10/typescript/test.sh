@@ -1,0 +1,1 @@
+jest solution-2021-10.spec.ts
