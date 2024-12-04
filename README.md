@@ -39,21 +39,33 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     02
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     03
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     04
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     05
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -61,26 +73,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     06
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     07
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     08
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     09
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     10
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -88,26 +115,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     11
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     12
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     13
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     14
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     15
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -115,26 +157,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     16
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     17
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     18
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     19
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     20
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -142,26 +199,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     21
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     22
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     23
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     24
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     25
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -697,26 +769,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     11
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     12
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     13
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     14
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     15
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -724,26 +811,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     16
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     17
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     18
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     19
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     20
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -751,26 +853,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     21
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     22
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     23
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     24
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     25
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -828,26 +945,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     06
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     07
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     08
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     09
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     10
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -855,26 +987,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     11
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     12
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     13
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     14
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     15
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -882,26 +1029,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     16
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     17
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     18
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     19
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     20
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -909,26 +1071,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     21
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     22
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     23
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     24
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     25
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -986,26 +1163,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     06
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     07
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     08
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     09
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     10
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1013,26 +1205,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     11
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     12
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     13
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     14
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     15
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1040,26 +1247,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     16
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     17
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     18
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     19
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     20
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1067,26 +1289,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     21
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     22
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     23
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     24
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     25
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1144,26 +1381,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     06
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     07
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     08
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     09
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     10
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1171,26 +1423,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     11
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     12
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     13
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     14
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     15
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1198,26 +1465,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     16
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     17
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     18
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     19
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     20
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1225,26 +1507,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     21
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     22
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     23
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     24
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     25
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1302,26 +1599,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     06
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     07
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     08
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     09
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     10
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1329,26 +1641,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     11
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     12
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     13
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     14
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     15
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1356,26 +1683,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     16
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     17
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     18
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     19
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     20
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1383,26 +1725,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     21
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     22
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     23
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     24
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     25
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1460,26 +1817,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     06
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     07
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     08
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     09
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     10
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1487,26 +1859,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     11
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     12
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     13
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     14
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     15
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1514,26 +1901,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     16
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     17
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     18
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     19
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     20
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1541,26 +1943,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     21
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     22
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     23
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     24
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     25
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1626,21 +2043,33 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     07
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     08
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     09
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     10
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1648,26 +2077,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     11
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     12
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     13
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     14
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     15
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1675,26 +2119,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     16
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     17
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     18
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     19
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     20
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>
@@ -1702,26 +2161,41 @@ sh test.sh
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     21
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     22
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     23
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     24
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
   <td>
    <a href="https://github.com/marcelnoehre/advent-of-code">
     25
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
  </tr>

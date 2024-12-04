@@ -18,7 +18,6 @@ def build():
 
 def parse(year):
     remove_empty_folders('year' + year)
-    response = requests.get(f'https://adventofcode.com/{year}', cookies={'session': os.getenv('AOC')})
 
     templates = {
         'start': '<table><tr><th colspan="10" style="text-align:center">{YYYY}</th></tr>',
@@ -35,14 +34,8 @@ def parse(year):
 
     for day in range(1, 26):
         day_str = ('0' + str(day)) if day < 10 else str(day)
-        if str(day) in re.findall(r'aria-label="Day (\d+)"', response.text, re.DOTALL):
-            href, langs = templates['aoc'], ''
-        elif os.path.exists(os.path.join('year' + year, 'day' + day_str)):
-            href = templates['href'].replace('{YYYY}', year).replace('{DD}', day_str)
-            langs = ''.join(templates['lang'].replace('{LANG}', lang) if os.path.exists(os.path.join('year' + year, 'day' + day_str, lang)) else templates['lang'].replace('{LANG}', 'transparent') for lang in ['typescript', 'python', 'java'])
-        else:
-            templates['aoc'], ''
-
+        langs = ''.join(templates['lang'].replace('{LANG}', lang) if os.path.exists(os.path.join('year' + year, 'day' + day_str, lang)) else templates['lang'].replace('{LANG}', 'transparent') for lang in ['typescript', 'python', 'java'])
+        href = templates['aoc'] if langs.count('transparent') == 3 else templates['href'].replace('{YYYY}', year).replace('{DD}', day_str)
         html += (templates['row1'] if day % 5 == 1 else (templates['row0'] if day % 5 == 0 else templates['row'])).replace('{HREF}', href).replace('{DD}', day_str).replace('{LANGS}', langs)
 
     return BeautifulSoup(html + templates['end'], "html.parser").prettify()
