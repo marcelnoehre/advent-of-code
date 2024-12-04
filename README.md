@@ -24,6 +24,152 @@ sh test.sh
 <table>
  <tr>
   <th colspan="10" style="text-align:center">
+   2024
+  </th>
+ </tr>
+ <tr>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2024/day01">
+    01
+    <img height="20" src="assets/typescript.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/transparent.svg"/>
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    02
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    03
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    04
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    05
+   </a>
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    06
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    07
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    08
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    09
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    10
+   </a>
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    11
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    12
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    13
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    14
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    15
+   </a>
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    16
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    17
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    18
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    19
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    20
+   </a>
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    21
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    22
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    23
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    24
+   </a>
+  </td>
+  <td>
+   <a href="https://github.com/marcelnoehre/advent-of-code">
+    25
+   </a>
+  </td>
+ </tr>
+</table>
+<hr/>
+<table>
+ <tr>
+  <th colspan="10" style="text-align:center">
    2023
   </th>
  </tr>
