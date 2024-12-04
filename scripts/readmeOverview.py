@@ -37,9 +37,11 @@ def parse(year):
         day_str = ('0' + str(day)) if day < 10 else str(day)
         if str(day) in re.findall(r'aria-label="Day (\d+)"', response.text, re.DOTALL):
             href, langs = templates['aoc'], ''
-        else:
+        elif os.path.exists(os.path.join('year' + year, 'day' + day_str)):
             href = templates['href'].replace('{YYYY}', year).replace('{DD}', day_str)
             langs = ''.join(templates['lang'].replace('{LANG}', lang) if os.path.exists(os.path.join('year' + year, 'day' + day_str, lang)) else templates['lang'].replace('{LANG}', 'transparent') for lang in ['typescript', 'python', 'java'])
+        else:
+            templates['aoc'], ''
 
         html += (templates['row1'] if day % 5 == 1 else (templates['row0'] if day % 5 == 0 else templates['row'])).replace('{HREF}', href).replace('{DD}', day_str).replace('{LANGS}', langs)
 
