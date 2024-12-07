@@ -79,9 +79,9 @@ sh test.sh
    </a>
   </td>
   <td>
-   <a href="https://github.com/marcelnoehre/advent-of-code">
+   <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2024/day07">
     07
-    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/typescript.svg"/>
     <img height="20" src="assets/transparent.svg"/>
     <img height="20" src="assets/transparent.svg"/>
    </a>
