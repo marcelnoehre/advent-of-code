@@ -17,7 +17,7 @@
 [<img src="https://badgen.net/badge/09/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2024/day09/typescript)
 [<img src="https://badgen.net/badge/10/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2024/day10/typescript)
 
-![11](https://badgen.net/badge/11/☆☆/black)
+[<img src="https://badgen.net/badge/11/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2024/day11/typescript)
 ![12](https://badgen.net/badge/12/☆☆/black)
 ![13](https://badgen.net/badge/13/☆☆/black)
 ![14](https://badgen.net/badge/14/☆☆/black)
