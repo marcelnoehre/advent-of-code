@@ -12,6 +12,7 @@ export function part_1(): number {
     if (d in m) return m[d] as boolean;
     if (!d) return true;
     for (const pa of p) if (d.startsWith(pa)) if (calc(d.slice(pa.length), p, m)) {m[d] = true; return true;}
+    return m[d] = false;
   }
   return input.slice(2).reduce((acc, e) => acc + (calc(e, input[0], {}) ? 1 : 0), 0);
 }
