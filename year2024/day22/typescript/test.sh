@@ -1,0 +1,1 @@
+jest solution-2024-22.spec.ts
