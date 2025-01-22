@@ -2036,7 +2036,7 @@ sh test.sh
    <a href="https://github.com/marcelnoehre/advent-of-code/tree/main/year2015/day06">
     06
     <img height="20" src="assets/typescript.svg"/>
-    <img height="20" src="assets/transparent.svg"/>
+    <img height="20" src="assets/python.svg"/>
     <img height="20" src="assets/transparent.svg"/>
    </a>
   </td>
