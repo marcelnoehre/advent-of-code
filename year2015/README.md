@@ -76,7 +76,7 @@
 [<img src="https://badgen.net/badge/06/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2015/day06/python)
 [<img src="https://badgen.net/badge/07/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2015/day07/python)
 [<img src="https://badgen.net/badge/08/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2015/day08/python)
-![09](https://badgen.net/badge/09/☆☆/black)
+[<img src="https://badgen.net/badge/09/★★/yellow">](https://github.com/marcelnoehre/advent-of-code/tree/main/year2015/day09/python)
 ![10](https://badgen.net/badge/10/☆☆/black)
 
 ![11](https://badgen.net/badge/11/☆☆/black)
