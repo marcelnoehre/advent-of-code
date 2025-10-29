@@ -17,7 +17,6 @@ def build(year):
         overview = parser(response.text, year)
         f.write(readme.replace('{YYYY}', year)
                 .replace('{TYPESCRIPT_OVERVIEW}', overview['typescript'])
-                .replace('{JAVA_OVERVIEW}', overview['java'])
                 .replace('{PYTHON_OVERVIEW}', overview['python']))
 
 
@@ -30,13 +29,12 @@ def parser(response, year):
 
     overview = {
         'typescript': '',
-        'java': '',
         'python': ''
     }
 
     two_stars = re.findall(r'aria-label="Day (\d+), two stars"', response, re.DOTALL)
 
-    for lang in ['typescript', 'java', 'python']:
+    for lang in ['typescript', 'python']:
         for day in range(1, 26):
             day_str = ('0' + str(day)) if day < 10 else str(day)
 
