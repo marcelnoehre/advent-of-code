@@ -35,7 +35,7 @@ def parse(year):
     for day in range(1, 26):
         day_str = ('0' + str(day)) if day < 10 else str(day)
         langs = ''.join(templates['lang'].replace('{LANG}', lang) if os.path.exists(os.path.join('year' + year, 'day' + day_str, lang)) else templates['lang'].replace('{LANG}', 'transparent') for lang in ['typescript', 'python'])
-        href = templates['aoc'] if langs.count('transparent') == 3 else templates['href'].replace('{YYYY}', year).replace('{DD}', day_str)
+        href = templates['aoc'] if langs.count('transparent') == 2 else templates['href'].replace('{YYYY}', year).replace('{DD}', day_str)
         html += (templates['row1'] if day % 5 == 1 else (templates['row0'] if day % 5 == 0 else templates['row'])).replace('{HREF}', href).replace('{DD}', day_str).replace('{LANGS}', langs)
 
     return BeautifulSoup(html + templates['end'], "html.parser").prettify()
