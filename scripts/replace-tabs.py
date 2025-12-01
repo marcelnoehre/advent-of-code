@@ -2,7 +2,7 @@ import os
 import shutil
 
 def main():
-    for year in range(2024, 2014, -1):
+    for year in range(2025, 2014, -1):
         remove_unused_items('year' + str(year))
         replace_tabs('year' + str(year))
 

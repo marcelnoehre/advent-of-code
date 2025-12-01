@@ -1,3 +1,5 @@
+import pathlib
+
 def main():
   print(part_1())
   print(part_2())
@@ -14,8 +16,7 @@ def part_2():
 def setup(path):
   global input
 
-  with open(path, 'r') as file:
-    input = [row for row in file]
+  input = pathlib.Path(path).read_text()
 
 
 if __name__ == '__main__':
